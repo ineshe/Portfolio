@@ -42,33 +42,33 @@ p {
 }
 
 article:first-of-type {
-    margin-top: calc(3 * 1.8rem + 25px); 
+    margin-top: calc(1.8rem * 1.5 + 55px);
 }
 
 article {
     background-color: white;
     margin: 0 40px 70px 40px;
     padding: 20px 30px 30px 20px; /* leaves more space on the right and bottom side of the text within articles */
-    scroll-margin-top: calc(3 * 1.8rem + 25px);
+    scroll-margin-top: calc(1.8rem * 1.5 + 55px);
 }
 
 @media (min-width: 768px) { /* ab Tablet*/
     article:first-of-type {
-        margin-top: calc(2.8rem * 1.5 + 55px);
+        margin-top: calc(2.8rem * 1.5 + 75px);
     }
 
     article {
-        scroll-margin-top: calc(2.8rem * 1.5 + 55px);
+        scroll-margin-top: calc(2.8rem * 1.5 + 75px);
     }
 }
 
 @media (min-width: 1024px) { /* ab Laptop bis Desktop*/
     article:first-of-type {
-        margin-top: calc(3 * 1.8rem + 25px);
+        margin-top: calc(1.8rem * 1.5 + 55px);
     }
 
     article {
-        scroll-margin-top: calc(3 * 1.8rem + 25px);
+        scroll-margin-top: calc(1.8rem * 1.5 + 55px);
         max-width: 1500px;
     }
 }

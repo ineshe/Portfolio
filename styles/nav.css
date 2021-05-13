@@ -11,7 +11,7 @@ header {
     justify-content: flex-end;
     flex-wrap: wrap;
     align-content: center;
-    height: calc(2 * 1.8rem * 1.5);
+    height: calc(1.8rem * 1.5 + 30px);
 }
 
 #hamburger {
@@ -22,7 +22,7 @@ header {
 nav {
     background-color: #B86E95;
     position: absolute;
-    top: calc(2 * 1.8rem * 1.5);
+    top: calc(1.8rem * 1.5 + 30px);
     width: 100%;
     text-align: center;
 }
@@ -55,13 +55,11 @@ nav a:hover {
 
 @media (min-width: 768px) { /* ab Tablet*/
     nav{
-        top: calc(1.8rem * 1.5);
         display: flex;
         justify-content: center;
     }
 
     nav a {
-        margin-top: 10px;
         padding: 10px;
     }
 
@@ -73,7 +71,6 @@ nav a:hover {
         width: 100%;
         flex-direction: column;
         justify-content: center;
-        height: calc(1.8rem * 1.5);
     }
 
     h1 {
@@ -100,7 +97,6 @@ nav a:hover {
         align-items: center;
         justify-content: space-between;
         flex-wrap: nowrap;
-        height: calc(2 * 1.8rem * 1.5);
         max-width: 1500px;
         padding: 0 20px;
         margin: 0 40px;
