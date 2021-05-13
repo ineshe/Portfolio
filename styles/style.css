@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background: #808080 url("../img/tile-blue.png");
+    background: #808080 url("../img/tile-blue.png") fixed;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5; /* sets recommended line-height */
     display: flex;
