@@ -1,0 +1,74 @@
+/* .color-primary-0 { color: #B86E95 }
+.color-primary-1 { color: #E8CADA }
+.color-primary-2 { color: #D59EBB }
+.color-primary-3 { color: #98426F }
+.color-primary-4 { color: #7A2351 }
+.color-hover { color: #a85e85 } */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #808080 url("../img/tile-blue.png");
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5; /* sets recommended line-height */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+h2 {
+    color: #b86e95;
+    text-align: center;
+    margin-top: 0.93em;
+    margin-bottom: 0.73em;
+}
+
+h2:first-child {
+    margin-top: 0;
+}
+
+p {
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+article:first-of-type {
+    margin-top: calc(3 * 1.8rem + 25px); 
+}
+
+article {
+    background-color: white;
+    margin: 0 40px 70px 40px;
+    padding: 20px 30px 30px 20px; /* leaves more space on the right and bottom side of the text within articles */
+    scroll-margin-top: calc(3 * 1.8rem + 25px);
+}
+
+@media (min-width: 768px) { /* ab Tablet*/
+    article:first-of-type {
+        margin-top: calc(2.8rem * 1.5 + 55px);
+    }
+
+    article {
+        scroll-margin-top: calc(2.8rem * 1.5 + 55px);
+    }
+}
+
+@media (min-width: 1024px) { /* ab Laptop bis Desktop*/
+    article:first-of-type {
+        margin-top: calc(3 * 1.8rem + 25px);
+    }
+
+    article {
+        scroll-margin-top: calc(3 * 1.8rem + 25px);
+        max-width: 1500px;
+    }
+}

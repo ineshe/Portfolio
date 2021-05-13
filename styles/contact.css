@@ -1,0 +1,95 @@
+#contact label {
+    /* background-color: cadetblue; */
+    display: block;
+    margin-top: 0.5rem;
+}
+
+#contact .text input,
+#contact .text textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 1.5;
+    margin-top: 0.2rem;
+    outline: none;
+    border: 1px solid #5d6970;
+}
+
+#contact .text input{
+    height: 1.5em;
+}
+
+#contact .text input:-webkit-autofill {
+    box-shadow: none;
+    -webkit-box-shadow: 0 0 0px calc(1rem * 0.75)  white inset;
+}
+
+/* Syling Radiobuttons */
+
+#contact .radio {
+    display: inline-flex;
+    margin-right: 1rem;
+}
+
+#contact input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;  
+}
+
+#contact .my-radio {
+    position: relative;
+    box-sizing: border-box;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid #5d6970;
+    margin-left: 0.5rem;
+}
+
+#contact .my-radio::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: #B86E95;
+    display: none;
+}
+
+#contact input[type="radio"]:checked ~ .my-radio::after {
+    display: inline-block;
+}
+
+@media (min-width: 768px) { /* ab Tablet*/
+
+    #contact form {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    #contact .text {
+        margin-top: 1rem;
+    }
+
+    #contact .text > div {
+        /* background-color: lavender; */
+        display: inline-block;
+        width: 20%;
+    }
+
+    #contact .text input,
+    #contact .text textarea {
+        display: inline-block;
+        margin-top: 0;
+        width: 80%;
+    }
+
+    #contact textarea {
+        resize: vertical;
+        vertical-align: top;
+    }
+}
