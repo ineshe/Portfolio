@@ -1,5 +1,3 @@
-//document.getElementById("nav-about-me").addEventListener("click", scrollSmooth("about-me"));
-
 (function() {
     controlNav();
 /*     if(!("ontouchstart" in document.documentElement)) {
