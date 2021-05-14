@@ -5,12 +5,8 @@
 .color-primary-4 { color: #7A2351 }
 .color-hover { color: #a85e85 } */
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    background: #808080 url("../img/tile-blue.png") fixed;
+    background: #5d6970 url("../img/tile-blue.png") fixed;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5; /* sets recommended line-height */
     display: flex;
@@ -41,6 +37,11 @@ p {
     -webkit-hyphens: auto;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 article:first-of-type {
     margin-top: calc(1.8rem * 1.5 + 55px);
 }
@@ -50,6 +51,19 @@ article {
     margin: 0 40px 70px 40px;
     padding: 20px 30px 30px 20px; /* leaves more space on the right and bottom side of the text within articles */
     scroll-margin-top: calc(1.8rem * 1.5 + 55px);
+}
+
+.btn {
+    border: none;
+    text-align: center;
+    color: white;
+    background-color: #b86e95;
+    padding: 5px 10px;
+    margin-right: 0.5rem;
+}
+
+.bluegray {
+    color: #5d6970;
 }
 
 @media (min-width: 768px) { /* ab Tablet*/
