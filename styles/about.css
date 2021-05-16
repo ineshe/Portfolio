@@ -6,9 +6,3 @@
 #about-me > p {
     text-align: justify;
 }
-
-@media (min-width: 426px) { /* larger than Mobile */
-    #about-me > p {
-        text-align: center;
-    }
-}
