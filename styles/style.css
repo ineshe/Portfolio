@@ -6,7 +6,7 @@
 .color-hover { color: #a85e85 } */
 
 body {
-    background: #5d6970 url("../img/tile-blue.png") fixed;
+    background: #5d6970 url("../data/tile-blue.png") fixed;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5; /* sets recommended line-height */
     display: flex;
