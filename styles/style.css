@@ -66,6 +66,10 @@ article {
     color: #5d6970;
 }
 
+.primary-3 {
+    color: #98426F;
+}
+
 @media (min-width: 768px) { /* ab Tablet*/
     article:first-of-type {
         margin-top: calc(2.8rem * 1.5 + 75px);
