@@ -8,7 +8,9 @@
         <link rel="stylesheet" href="../styles/style.css">
         <link rel="stylesheet" href="../styles/nav.css">
         <link rel="stylesheet" href="../styles/project.css">
+        <link rel="stylesheet" href="../styles/slideshow.css">
         <script src="../navigation.js" defer></script>
+        <script src="../slideshow.js" defer></script>
     </head>
     <body>
         <header>
@@ -28,20 +30,35 @@
                 <span class="bluegray">&#x25BA;</span>
                 Projekt1: Projektname
             </div>
-            <img class="media" src="../data/websiteplanet-dummy-960X540.png" alt="">
-            <!-- <img class="media" src="data/websiteplanet-dummy-900X600.png" alt="">             -->
-            <h2>Projektname</h2>
-            <!-- <button class="btn">&#x25BA; Live Demo</button> --><!-- 
-         --><button class="btn">&#x25BA; Git Repo</button>
-            <p>Jemand musste Josef K. verleumdet haben, denn ohne dass 
-                er etwas Böses getan hätte, wurde er eines Morgens verhaftet. 
-                »Wie ein Hund!« sagte er, es war, als sollte die Scham ihn überleben. 
-                Als Gregor hat. Jemand musste Josef K. verleumdet haben, denn ohne 
-                dass er etwas Böses getan hätte, wurde er eines Morgens verhaftet. 
-                »Wie ein Hund!« sagte er, es war, als sollte die Scham ihn überleben. 
-                Als Gregor hat.</p>
+            <div class="slideshow-container">
+                <img class="media slide" src="../data/gesine/gesine-960X540-1.png" alt="">
+                <img class="media slide" src="../data/gesine/gesine-960X540-2.png" alt="">
+                <!-- Next and previous buttons -->
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+            
+            <h2>Gesine</h2>
+            <a class="btn">&#x25BA;&nbsp;Praktikumszeugnis</a><!-- 
+         --><a class="btn">&#x25BA;&nbsp;Handbuch</a>
+            <p>Dieses Projekt wurde von mir während meines Praktikums bei der
+                Visual World GmbH in Chemnitz bearbeitet. Es sollte eine 
+                Webanwendung entwickelt werden, welche die Zusammenarbeit 
+                zwischen Unternehmen mit ausgebildeten Beratern zum 
+                Arbeitsschutz und Gesundheitsmanagement erleichtert. Für 
+                eine Bestandsaufnahme sollten dazu eine Checkliste ausgefüllt 
+                sowie eine Mitarbeiterbefragung durchgeführt werden können. Die 
+                Ergebnisse daraus sollten anschließend zur Ermittlung geeigneter 
+                Maßnahmen herangezogen werden.</p>
+            <h3>Ablauf des Praktikums:</h3>
+            <p>Innerhalb des 3-monatigen Praktikums sollten dazu zunächst ein 
+                Logo sowie eine Corporate Identity entwickelt werden. Danach 
+                sollten im Rahmen der Konzeption die Anforderungen ermittelt und 
+                ein Lasten- und Pflichtenheft formuliert werden. Darauf folgte 
+                die Entwicklungsphase des Prototyps mit anschließender 
+                Dokumentation durch ein Benutzerhandbuch.</p>
             <h3>Technologien:</h3>
-            <p>HTML, CSS, Javascript</p>
+            <p>HTML, SASS, Angular, Typescript, Bootstrap</p>
         </article>
     </body>
 </html>
