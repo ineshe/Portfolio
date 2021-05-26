@@ -18,13 +18,13 @@ nav.addEventListener("click", function(evt) {
 });
 
 function toggleNav() {
-    if(!window.matchMedia("(min-width: 768px)").matches) {
+    if(!window.matchMedia("(min-width: 769px)").matches) {
         document.querySelector("nav").classList.toggle("hidden");
     }
 }
 
 function controlNav() { // control nav visibility depending on viewport size
-    if(window.matchMedia("(min-width: 768px)").matches) {
+    if(window.matchMedia("(min-width: 769px)").matches) {
         document.querySelector("nav").classList.remove("hidden");
     } else {
         document.querySelector("nav").classList.add("hidden");

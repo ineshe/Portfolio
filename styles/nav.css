@@ -52,7 +52,7 @@ nav a:hover {
     background-color: #D59EBB;
 }
 
-@media (min-width: 768px) { /* ab Tablet*/
+@media (min-width: 769px) { /* ab Laptop */
     nav{
         display: flex;
         justify-content: center;
@@ -80,7 +80,7 @@ nav a:hover {
     }
 }
 
-@media (min-width: 1024px) { /* ab Laptop bis Desktop*/
+@media (min-width: 1025px) { /* ab Laptop L bis Desktop*/
     header {
         display: flex;
         justify-content: center;

@@ -1,7 +1,3 @@
-#projects {
-    padding: 20px 20px 30px 20px;
-}
-
 #projects-num-info {
     text-align: center;
     padding-bottom: 20px;
@@ -26,12 +22,6 @@
     width: 100%;
 }
 
-@media (min-width: 426px) { /* larger than Mobile */
-    #projects {
-        padding: 30px 30px 30px 30px;
-    }
-}
-
 @media (min-width: 596px) {
     #projects-content {
         grid-template-columns: repeat(2, [col-start] minmax(228px, 300px) [col-end]);
@@ -52,8 +42,8 @@
     }
 }
 
-@media (min-width: 1092px) {
+/* @media (min-width: 1092px) {
     #projects-content {
         grid-template-columns: repeat(4, [col-start] minmax(228px, 300px) [col-end]);
     }
-}
+} */

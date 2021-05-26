@@ -26,10 +26,6 @@ h2 {
     margin-bottom: 0.73em;
 }
 
-h2:first-child {
-    margin-top: 0;
-}
-
 p {
     hyphens: auto;
     -ms-hyphens: auto;
@@ -47,30 +43,32 @@ article:first-of-type {
 }
 
 article {
+    width: calc(100% - 80px);
     background-color: white;
-    margin: 0 40px 70px 40px;
-    padding: 20px 30px 30px 20px; /* leaves more space on the right and bottom side of the text within articles */
+    margin: 0 auto 70px auto;
+    padding: 20px 20px 30px 20px;
     scroll-margin-top: calc(1.8rem * 1.5 + 55px);
 }
 
 .btn {
-    border: none;
+    cursor: pointer;
+    display: inline-block;
     text-align: center;
     color: white;
     background-color: #b86e95;
     padding: 5px 10px;
-    margin-right: 0.5rem;
-}
-
-.bluegray {
-    color: #5d6970;
+    margin: 0.5rem 0.5rem 0.5rem 0;
 }
 
 .primary-3 {
     color: #98426F;
 }
 
-@media (min-width: 768px) { /* ab Tablet*/
+.border {
+    border: black solid 1px;
+}
+
+@media (min-width: 769px) { /* ab Laptop */
     article:first-of-type {
         margin-top: calc(2.8rem * 1.5 + 75px);
     }
@@ -80,7 +78,7 @@ article {
     }
 }
 
-@media (min-width: 1024px) { /* ab Laptop bis Desktop*/
+@media (min-width: 1025px) { /* ab Laptop L bis Desktop*/
     article:first-of-type {
         margin-top: calc(1.8rem * 1.5 + 55px);
     }
