@@ -38,6 +38,12 @@ a {
     color: black;
 }
 
+a.source {
+    display: block;
+    color: #5d6970;
+    font-size: 0.6em;
+}
+
 article:first-of-type {
     margin-top: calc(1.8rem * 1.5 + 55px);
 }
