@@ -1,49 +1,92 @@
-#contact label {
-    /* background-color: cadetblue; */
-    display: block;
+button, input, optgroup, select, textarea {
+    line-height: inherit;
+}
+
+#contact form > label {
+    display: inline-block;
     margin-top: 0.5rem;
 }
 
-#contact .text input,
-#contact .text textarea {
+#contact input:not([type="radio"]),
+#contact textarea {
     display: block;
     box-sizing: border-box;
     width: 100%;
-    line-height: 1.5;
     margin-top: 0.2rem;
     outline: none;
-    border: 1px solid #5d6970;
+    border: 1px solid black;
 }
 
-#contact .text input{
+/* #contact input:not([type="radio"]):invalid,
+#contact textarea:invalid {
+    border-color: #7A2351;
+} */
+
+#contact input:not([type="radio"]) {
     height: 1.5em;
 }
 
-#contact .text input:-webkit-autofill {
+#contact textarea {
+    white-space: pre-line;
+    padding: 2px;
+    height: calc(1rem * 1.5 * 10 + 6px);
+}
+
+#contact input:not([type="radio"]):-webkit-autofill {
     box-shadow: none;
     -webkit-box-shadow: 0 0 0px calc(1rem * 0.75)  white inset;
 }
 
+#contact .error {
+    display: none;
+}
+
+#contact .error.active {
+    display: inline-block;
+    margin: 0;
+}
+
+#contact .btn[type=submit] {
+    display: block;
+}
+
+#contact .confirm {
+    color: white;
+    padding: 5px 10px;
+}
+
+#contact .confirm.success{
+    background-color: teal;
+}
+
+#contact .confirm.fail{
+    background-color: #7A2351;
+}
+
 /* Syling Radiobuttons */
 
-#contact .radio {
-    display: inline-flex;
+#contact .radio-buttons label{
+    display: inline-block;
+    position: relative;
     margin-right: 1rem;
+    padding-right: 2rem;
+    cursor: pointer;
+    user-select: none;
 }
 
 #contact input[type="radio"] {
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;  
+    appearance: none; 
 }
 
 #contact .my-radio {
-    position: relative;
+    position: absolute;
     box-sizing: border-box;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    border: 1px solid #5d6970;
+    border: 1px solid black;
     margin-left: 0.5rem;
 }
 
@@ -71,25 +114,29 @@
         margin: 0 auto;
     }
 
-    #contact .text {
+    #contact form > label,
+    #contact textarea {
         margin-top: 1rem;
     }
 
-    #contact .text > div {
-        /* background-color: lavender; */
-        display: inline-block;
+    #contact form > label {
         width: 20%;
     }
 
-    #contact .text input,
-    #contact .text textarea {
+    #contact input:not([type="radio"]),
+    #contact textarea {
         display: inline-block;
-        margin-top: 0;
         width: 80%;
     }
 
     #contact textarea {
         resize: vertical;
         vertical-align: top;
+    }
+
+    #contact .btn[type=submit],
+    #contact .confirm,
+    #contact .radio-buttons {
+        margin-left: 20%;
     }
 }
