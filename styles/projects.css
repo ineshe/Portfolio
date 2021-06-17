@@ -11,11 +11,15 @@
 }
 
 #projects-content section p {
-    text-align: justify;
-    height: calc(6 * 1rem);
-    width: minmax(228px, 300px);
+    /* use line-clamp */  
+    display: -webkit-box;   
+    -webkit-line-clamp: 4;   
+    -webkit-box-orient: vertical;     
     overflow: hidden;
-}
+
+    text-align: justify;
+    width: minmax(228px, 300px);
+ }
 
 #projects-content section img {
     display: block;
