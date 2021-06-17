@@ -1,3 +1,6 @@
+<?php 
+    include("php/mail.php");
+?>
 <!DOCTYPE html>
 <html lang="de">
     <head>
@@ -6,11 +9,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="styles/about.css">
         <link rel="stylesheet" href="styles/nav.css">
+        <link rel="stylesheet" href="styles/about.css">
         <link rel="stylesheet" href="styles/projects.css">
         <link rel="stylesheet" href="styles/contact.css">
+        <script src="https://www.google.com/recaptcha/api.js" defer></script>
         <script src="navigation.js" defer></script>
+        <script src="validation.js" defer></script>
     </head>
     <body>
         <header>
@@ -122,28 +127,49 @@
         </article>
         <article id="contact">
             <h2>Kontakt</h2>
-            <form>
-                <label class="radio">Herr
-                    <input type="radio" name="salutation" value="male">
-                    <span class="my-radio"></span>
-                </label><!-- 
-                 --><label class="radio">Frau
-                    <input type="radio" name="salutation" value="female">
-                    <span class="my-radio"></span>
-                </label>
-                <label class="text"><div>Vorname*:</div><!-- 
-                     --><input type="text" name="fname">
-                </label>
-                <label class="text"><div>Nachname*:</div><!-- 
-                     --><input type="text" name="lname">
-                </label>
-                <label class="text"><div>E-Mail*:</div><!-- 
-                     --><input type="email" name="email">
-                </label>
-                <label class="text"><div>Nachricht*:</div><!-- 
-                     --><textarea name="message" rows="5"></textarea>
-                </label>
+            <form action="index.php#contact" method="POST" novalidate>
+                <div class="radio-buttons">
+                    <label for="male">Herr
+                        <input type="radio" id="male" name="salutation" value="Herr">
+                        <span class="my-radio"></span>
+                    </label>
+                    <label for="female">Frau
+                        <input type="radio" id="female" name="salutation" value="Frau">
+                        <span class="my-radio"></span>
+                    </label>
+                </div>
+
+                <p class="error">Errormessage wird hier ausgegeben.</p>
+                <label for="fname">Vorname*:</label><!-- 
+             --><input type="text" id= "fname" name="fname" required pattern='^[^0-9!"§$%&/()=?²³{}\[\]\\@€~#<>|,;.:_*-+]{1,30}$'>
+                
+                <p class="error">Errormessage wird hier ausgegeben.</p>
+                <label for="lname">Nachname*:</label><!-- 
+             --><input type="text" id= "lname" name="lname" required pattern='^[^0-9!"§$%&/()=?²³{}\[\]\\@€~#<>|,;.:_*-+]{1,30}$'>
+                
+                <p class="error">Errormessage wird hier ausgegeben.</p>
+                <label for="email">E-Mail*:</label><!-- 
+             --><input type="email" id="email" name="email" required>                    
+
+                <p class="error">Errormessage wird hier ausgegeben.</p>
+                <label for="message">Nachricht*:</label><!-- 
+             --><textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button class="btn g-recaptcha" type="submit" name="submit" 
+                    data-sitekey="6LendDkbAAAAAA1CvarNjpew0sDXJ1hzLa2wMeal" data-callback='onSubmit' data-action='submit'>Senden</button>
+                <?php
+                    if (isset($_SESSION['confirm'])) {
+                        echo $_SESSION['confirm'];
+                        unset($_SESSION['confirm']);
+                    }
+                ?>
             </form>
+
         </article>
+        <script>
+            function onSubmit(token) {
+                document.querySelector("form").submit();
+            }
+        </script>
     </body>
 </html>
