@@ -86,45 +86,6 @@
                     </a>    
                     <a class="source" href='https://de.freepik.com/fotos/werkzeuge'>Foto: azerbaijan_stockers - de.freepik.com</a>  
                 </section>              
-                
-
-                <!-- <section>
-                    <img class="picture" src="data/dummy2-228X152.png" alt="">
-                    <h2>Titel Projekt</h2>
-                    <p>Li nov lingua franca va esser plu simplic e regulari quam 
-                        li existent Europan lingues. It va esser tam simplic quam 
-                        Occidental in fact, it va esser Occidental. A un Angleso 
-                        it va semblar.</p>
-                </section>
-                <section>
-                    <img class="picture" src="data/dummy3-228X152.png" alt="">
-                    <h2>Titel Projekt</h2>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                        sed diam nonumy eirmod tempor invidunt ut labore.</p>
-                </section>
-                <section>
-                    <img class="picture" src="data/dummy1-228X152.png" alt="">
-                    <h2>Titel Projekt</h2>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                        sed diam nonumy eirmod tempor invidunt ut labore. Li 
-                        Europan lingues es membres del sam familie. Lor separat 
-                        existentie es un myth. Por scientie, musica, sport etc, 
-                        litot Europa usa li sam vocabular.</p>
-                </section>
-                <section>
-                    <img class="picture" src="data/dummy2-228X152.png" alt="">
-                    <h2>Titel Projekt</h2>
-                    <p>Li nov lingua franca va esser plu simplic e regulari quam 
-                        li existent Europan lingues. It va esser tam simplic quam 
-                        Occidental in fact, it va esser Occidental. A un Angleso 
-                        it va semblar.</p>
-                </section>
-                <section>
-                    <img class="picture" src="data/dummy3-228X152.png" alt="">
-                    <h2>Titel Projekt</h2>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                        sed diam nonumy eirmod tempor invidunt ut labore.</p>
-                </section> -->                 
             </div>
         </article>
         <article id="contact">
