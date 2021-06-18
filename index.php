@@ -119,7 +119,7 @@
              --><textarea id="message" name="message" rows="5" required></textarea>
                 
                 <button class="btn g-recaptcha" type="submit" name="submitBtn" 
-                    data-sitekey="<?php echo DEV_KEY; ?>" data-callback='onSubmit' data-action='homepage'>Senden</button>
+                    data-sitekey="<?php echo MAIN_KEY; ?>" data-callback='onSubmit' data-action='homepage'>Senden</button>
                 <?php
                     if (isset($_SESSION['confirm'])) {
                         echo $_SESSION['confirm'];
