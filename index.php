@@ -1,5 +1,7 @@
 <?php 
     include("php/mail.php");
+    define('MAIN_KEY', '6LendDkbAAAAAA1CvarNjpew0sDXJ1hzLa2wMeal');
+    define('DEV_KEY', '6LcG6T4bAAAAALAUT6mx6aoxEfDzT4GjdFJ3ZUh-');
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -13,7 +15,7 @@
         <link rel="stylesheet" href="styles/about.css">
         <link rel="stylesheet" href="styles/projects.css">
         <link rel="stylesheet" href="styles/contact.css">
-        <script src="https://www.google.com/recaptcha/api.js" defer></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="navigation.js" defer></script>
         <script src="validation.js" defer></script>
     </head>
@@ -83,7 +85,7 @@
                         Viel Spaß!</p>
                     </a>    
                     <a class="source" href='https://de.freepik.com/fotos/werkzeuge'>Foto: azerbaijan_stockers - de.freepik.com</a>  
-                </section>
+                </section>              
                 
 
                 <!-- <section>
@@ -127,7 +129,7 @@
         </article>
         <article id="contact">
             <h2>Kontakt</h2>
-            <form action="index.php#contact" method="POST" novalidate>
+            <form action="" method="POST" novalidate>
                 <div class="radio-buttons">
                     <label for="male">Herr
                         <input type="radio" id="male" name="salutation" value="Herr">
@@ -155,8 +157,8 @@
                 <label for="message">Nachricht*:</label><!-- 
              --><textarea id="message" name="message" rows="5" required></textarea>
                 
-                <button class="btn g-recaptcha" type="submit" name="submit" 
-                    data-sitekey="6LendDkbAAAAAA1CvarNjpew0sDXJ1hzLa2wMeal" data-callback='onSubmit' data-action='submit'>Senden</button>
+                <button class="btn g-recaptcha" type="submit" name="submitBtn" 
+                    data-sitekey="<?php echo DEV_KEY; ?>" data-callback='onSubmit' data-action='homepage'>Senden</button>
                 <?php
                     if (isset($_SESSION['confirm'])) {
                         echo $_SESSION['confirm'];
@@ -164,12 +166,6 @@
                     }
                 ?>
             </form>
-
         </article>
-        <script>
-            function onSubmit(token) {
-                document.querySelector("form").submit();
-            }
-        </script>
     </body>
 </html>

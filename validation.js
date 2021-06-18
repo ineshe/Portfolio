@@ -30,3 +30,7 @@ function showError(input, errorNode) {
     }
     errorNode.className = 'error active';
 }
+
+function onSubmit(token) {
+    document.querySelector("form").submit();
+}
