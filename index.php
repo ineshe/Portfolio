@@ -32,7 +32,7 @@
             </div>
         </header>
         <article id="about-me">
-            <img class="picture" src="data/dummy/cv-picture.png" alt="">
+            <img class="picture" src="data/me.jpg" alt="">
             <h2>Ines Heilmann<br>Frontend Entwicklerin</h2>
             <p>Guten Tag! Mein Name ist Ines und ich beschäftige mich 
                 seit meinem Abschluss im Fach &bdquo;Medieninformatik&ldquo; an der 
