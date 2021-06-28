@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="styles/about.css">
         <link rel="stylesheet" href="styles/work.css">
         <link rel="stylesheet" href="contact/contact.css">
+        <link rel="stylesheet" href="styles/footer.css">
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="header/navigation.js" defer></script>
         <script src="contact/validation.js" defer></script>
@@ -128,5 +129,8 @@
                 ?>
             </form>
         </article>
+        <footer>
+            <a href="impressum.html">Impressum</a>
+        </footer>
     </body>
 </html>
