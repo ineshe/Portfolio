@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="nav/navigation.css">
+        <link rel="stylesheet" href="header/header.css">
         <link rel="stylesheet" href="styles/about.css">
         <link rel="stylesheet" href="styles/work.css">
         <link rel="stylesheet" href="contact/contact.css">
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        <script src="nav/navigation.js" defer></script>
+        <script src="header/navigation.js" defer></script>
         <script src="contact/validation.js" defer></script>
     </head>
     <body>
