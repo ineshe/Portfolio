@@ -28,7 +28,11 @@ LinkedIn, Github -->
         <link rel="stylesheet" href="<?php echo $baseURL . '/pages/main/includes/contact/contact.css'?>">
         <link rel="stylesheet" href="<?php echo $baseURL . '/pages/main/includes/footer/footer.css'?>">
         <link rel="stylesheet" href="<?php echo $baseURL . '/pages/main/includes/cookie-consent/cookie-consent.css'?>">
-        <script async data-id="five-server" src="http://localhost:5500/fiveserver.js"></script>
+        <?php
+            if ($isDevelopment) {
+                echo '<script async data-id="five-server" src="http://localhost:5500/fiveserver.js"></script>';
+            }
+        ?>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="<?php echo $baseURL . '/pages/main/navigation.js'?>" defer></script>
 
