@@ -1,0 +1,31 @@
+#about-me {
+    display: flex;
+    justify-content: center;
+}
+
+#about-me .content {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    align-items: center;
+    padding: 40px 30px;
+}
+
+#about-me .text {
+    letter-spacing: 1px;
+    max-width: 600px;
+    margin: 0;
+}
+
+#about-me .picture {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+/* only mobile */
+@media screen and (max-width: 767px) {
+    #about-me .content {
+        flex-direction: column;
+    }
+}

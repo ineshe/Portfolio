@@ -1,0 +1,60 @@
+#project .breadcrumb {
+    padding-bottom: 20px;
+}
+
+/* #project {
+    display: flex;
+    justify-content: center;
+} */
+
+#project h2 {
+    font-size: 1.7em;
+    text-align: left;
+    /* color: red; */
+}
+
+.btn {
+    margin-top: 1rem;
+}
+
+.btn svg {
+    vertical-align: middle;
+}
+
+#project .grid .subline {
+    font-size: large;
+}
+
+@media (min-width: 1025px) { /* ab Laptop L bis Desktop*/
+
+    #project .grid {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: min-content min-content;
+        column-gap: 2rem;
+    }
+
+    #project .grid .col1 {
+        grid-area: 2 / 1 / 2 / 2;
+    }
+
+    #project .grid .col2 {
+        grid-area: 2 / 2 / 2 / 3;
+    }
+
+    #project .grid .headline {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    #project .grid > p {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    #project .grid > h3 {
+        font-size: 1.17rem;
+        margin-bottom: 1.5rem;
+    }
+    
+}
