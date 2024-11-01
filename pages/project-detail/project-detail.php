@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="<?php echo $baseURL . '/pages/main/includes/header/header.css'?>">
         <link rel="stylesheet" href="<?php echo $baseURL . '/pages/project-detail/project-detail.css'?>">
         <link rel="stylesheet" href="<?php echo $baseURL . '/pages/project-detail/slideshow/slideshow.css'?>">
+        <link rel="stylesheet" href="<?php echo $baseURL . '/pages/main/includes/footer/footer.css'?>">
+        <link rel="stylesheet" href="<?php echo $baseURL . '/pages/main/includes/cookie-consent/cookie-consent.css'?>">
         <script async data-id="five-server" src="http://localhost:5500/fiveserver.js"></script>
         <script src="<?php echo $baseURL . '/pages/main/navigation.js'?>" defer></script>
         <script src="<?php echo $baseURL . '/pages/project-detail/slideshow/slideshow.js'?>" defer></script>
@@ -76,5 +78,14 @@
                 </div>
             </div>
         </article>
+
+        <?php 
+            include("../main/includes/cookie-consent/cookie-consent.php");
+        ?>
+        <?php 
+            include("../main/includes/footer/footer.php");
+        ?>
+
+        <script src="<?php echo $baseURL . '/pages/main/includes/cookie-consent/cookie-consent.js'?>"></script>
     </body>
 </html>
