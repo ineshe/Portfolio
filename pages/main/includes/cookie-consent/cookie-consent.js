@@ -1,12 +1,12 @@
 function acceptCookies() {
     document.getElementById('cookie-banner').style.display = 'none';
-    localStorage.setItem('cookiesAccepted', 'true');
+    setCookie('cookiesAccepted', 'true', 30);
     loadGoogleAnalytics();
 }
 
 function declineCookies() {
     document.getElementById('cookie-banner').style.display = 'none';
-    localStorage.setItem('cookiesAccepted', 'false');
+    setCookie('cookiesAccepted', 'false', 30);
 }
 
 function loadGoogleAnalytics() {
@@ -26,8 +26,25 @@ function loadGoogleAnalytics() {
     document.head.prepend(script1);
 }
 
+function setCookie(name, value, days) {
+    let date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/; domain=.ines-heilmann.de; SameSite=Lax`;
+}
+
+function getCookie(name) {
+    let cookieArr = document.cookie.split("; ");
+    for (let cookie of cookieArr) {
+        let cookiePair = cookie.split("=");
+        if (name === cookiePair[0]) {
+            return cookiePair[1];
+        }
+    }
+    return null;
+}
+
 window.onload = function() {
-    var consent = localStorage.getItem('cookiesAccepted');
+    var consent = getCookie('cookiesAccepted');
 
 
     if (consent === 'true') {
