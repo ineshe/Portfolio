@@ -12,7 +12,6 @@ $projects = array(
             '../../data/ddoptics/landingpage_wz_s3.jpg',
             '../../data/ddoptics/landingpage_wz_s4.jpg',
             '../../data/ddoptics/landingpage_wz_s5.jpg'
-
         ),
         'buttons' => array(
             array(
@@ -30,7 +29,6 @@ $projects = array(
         'media' => array(
             '../../data/gesine/gesine-960X540-1.png',
             '../../data/gesine/gesine-960X540-2.png'
-
         ),
         'buttons' => array(
             array(
@@ -44,7 +42,7 @@ $projects = array(
                 'text' => 'Handbuch'
             )
         ),
-        'description' => '<p>Dieses Projekt wurde von mir während meines Praktikums bei der Visual World GmbH in Chemnitz bearbeitet. Es sollte eine Webanwendung entwickelt werden, welche die Zusammenarbeit zwischen Unternehmen mit ausgebildeten Beratern zum Arbeitsschutz und Gesundheitsmanagement erleichtert. Für  eine Bestandsaufnahme sollten dazu eine Checkliste ausgefüllt  sowie eine Mitarbeiterbefragung durchgeführt werden können. Die  Ergebnisse daraus sollten anschließend zur Ermittlung geeigneter  Maßnahmen herangezogen werden.</p> <h3>Ablauf des Praktikums:</h3> <p>Innerhalb des 3-monatigen Praktikums sollten dazu zunächst ein  Logo sowie eine Corporate Identity entwickelt werden. Danach  sollten im Rahmen der Konzeption die Anforderungen ermittelt und  ein Lasten- und Pflichtenheft formuliert werden. Darauf folgte  die Entwicklungsphase des Prototyps mit anschließender  Dokumentation durch ein Benutzerhandbuch.</p>',
+        'description' => '<p>Dieses Projekt wurde von mir während meines Praktikums bei der Visual World GmbH in Chemnitz bearbeitet. Es sollte eine Webanwendung entwickelt werden, welche die Zusammenarbeit zwischen Unternehmen mit ausgebildeten Beratern zum Arbeitsschutz und Gesundheitsmanagement erleichtert. Für  eine Bestandsaufnahme sollten dazu eine Checkliste ausgefüllt  sowie eine Mitarbeiterbefragung durchgeführt werden können. Die  Ergebnisse daraus sollten anschließend zur Ermittlung geeigneter Maßnahmen herangezogen werden.</p> <h3>Ablauf des Praktikums:</h3> <p>Innerhalb des 3-monatigen Praktikums sollten dazu zunächst ein  Logo sowie eine Corporate Identity entwickelt werden. Danach  sollten im Rahmen der Konzeption die Anforderungen ermittelt und  ein Lasten- und Pflichtenheft formuliert werden. Darauf folgte  die Entwicklungsphase des Prototyps mit anschließender Dokumentation durch ein Benutzerhandbuch.</p>',
         'technologies' => 'HTML, SASS, Angular, Typescript, Bootstrap'
     ),
     '3' => array(
@@ -68,7 +66,6 @@ $projects = array(
         'subline' => 'Ein Tool, das alle möglichen Anordungen von Buchstaben eines Wortes findet und anzeigt.',
         'media' => array(
             '../../data/permutator/permutator-960X540.png'
-
         ),
         'buttons' => array(
             array(
@@ -80,6 +77,31 @@ $projects = array(
         'description' => ' <p>Was haben Petihanse, Nepathise und Hepenatis gemeinsam? Weder handelt es sich hierbei um die Namen von Medikamenten, noch um ägyptische Pharaonen. Viel mehr handelt es sich um 3 von 181.440 Permutationen die sich aus dem Namen &bdquo;Stephanie&ldquo; bilden lassen. Mit dieser Anwendung kannst du das auch mit deinem eigenen Namen ausprobieren. Viel Spaß!</p>',
         'technologies' => 'JavaScript, HTML, CSS'
     ),
+    '5' => array(
+        'title' => 'Recines',
+        'subline' => 'Webanwendung für die Anzeige von Rezepten.',
+        'media' => array(
+            '../../data/recines/recines-960X540-1.webp',
+            '../../data/recines/recines-960X540-2.webp',
+            '../../data/recines/recines-960X540-3.webp',
+            '../../data/recines/recines-960X540-4.webp'
+        ),
+        'buttons' => array(
+            array(
+                'link' => 'https://github.com/ineshe/recipes-manager.git',
+                'target' => '_blank',
+                'text' => 'Git Repo'
+            ),
+            array(
+                'link' => 'https://recines.ines-heilmann.de',
+                'target' => '_blank',
+                'text' => 'Zur Seite'
+            )
+        ),
+        'description' => '<p>Recines zeigt Rezepte an. Diese sind Kategorien zugeordnet und mit der integrierten Suchfunktion kann in der Sammlung nach Rezepten gesucht werden, die den Suchbegriff im Titel enthalten oder in der Zutatenliste.</p>',
+        'description' => '<p>Diese Webanwendung bietet eine übersichtliche und optisch ansprechende Plattform zur Darstellung von Rezepten. Die Rezepte sind spezifischen Kategorien zugeordnet, die im Hauptmenü gelistet sind. Die Startseite zeigt eine Auswahl aller Rezepte, sodass Besucher schnell auf eine Vielfalt an Ideen zugreifen können.</p><p>Besonders hervorzuheben ist die integrierte Suchfunktion, die Rezepte anhand des Titels oder der Zutatenliste findet – ideal, um schnell Rezepte mit Zutaten zu finden, die bereits zur Hand sind.</p>',
+        'technologies' => 'Symfony, Tailwind, MariaDB'
+    ),    
 );
 
 ?>

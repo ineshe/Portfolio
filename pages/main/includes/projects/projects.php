@@ -3,6 +3,15 @@
         <h2 class="section-title">Projekte</h2>
         <div class="project-cards">
             <section class="project">
+                <a href="<?php echo $baseURL . '/pages/project-detail/project-detail.php?id=5'?>">
+                    <img class="card-img" src="<?php echo $baseURL . '/data/recines/recines-300X200.webp'?>" alt="">
+                    <div class="card-text">
+                        <h3 class="project-title">Recines</h3>
+                        <p>Website für die ansprechende Präsentation von Rezepten.</p>
+                    </div>
+                </a>
+            </section>            
+            <section class="project">
                 <a href="<?php echo $baseURL . '/pages/project-detail/project-detail.php?id=1'?>">
                     <img class="card-img" src="<?php echo $baseURL . '/data/ddoptics/vogel-300X200.png'?>" alt="">
                     <div class="card-text">
