@@ -116,7 +116,7 @@ a.source {
     font-family: 'Mukta';
     font-style: normal;
     font-weight: 200;
-    src: url('../../data/fonts/mukta-v14-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/mukta-v14-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* mukta-300 - latin */
@@ -125,7 +125,7 @@ a.source {
     font-family: 'Mukta';
     font-style: normal;
     font-weight: 300;
-    src: url('../../data/fonts/mukta-v14-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/mukta-v14-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* mukta-regular - latin */
@@ -134,7 +134,7 @@ a.source {
     font-family: 'Mukta';
     font-style: normal;
     font-weight: 400;
-    src: url('../../data/fonts/mukta-v14-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/mukta-v14-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* mukta-500 - latin */
@@ -143,7 +143,7 @@ a.source {
     font-family: 'Mukta';
     font-style: normal;
     font-weight: 500;
-    src: url('../../data/fonts/mukta-v14-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/mukta-v14-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* mukta-600 - latin */
@@ -152,7 +152,7 @@ a.source {
     font-family: 'Mukta';
     font-style: normal;
     font-weight: 600;
-    src: url('../../data/fonts/mukta-v14-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/mukta-v14-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* mukta-700 - latin */
@@ -161,7 +161,7 @@ a.source {
     font-family: 'Mukta';
     font-style: normal;
     font-weight: 700;
-    src: url('../../data/fonts/mukta-v14-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/mukta-v14-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* mukta-800 - latin */
@@ -170,7 +170,7 @@ a.source {
     font-family: 'Mukta';
     font-style: normal;
     font-weight: 800;
-    src: url('../../data/fonts/mukta-v14-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/mukta-v14-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
   /* kanit-100 - latin */
@@ -179,7 +179,7 @@ a.source {
     font-family: 'Kanit';
     font-style: normal;
     font-weight: 100;
-    src: url('../fonts/kanit-v13-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-100italic - latin */
@@ -188,7 +188,7 @@ a.source {
     font-family: 'Kanit';
     font-style: italic;
     font-weight: 100;
-    src: url('../fonts/kanit-v13-latin-100italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-100italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-200 - latin */
@@ -197,7 +197,7 @@ a.source {
     font-family: 'Kanit';
     font-style: normal;
     font-weight: 200;
-    src: url('../fonts/kanit-v13-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-200italic - latin */
@@ -206,7 +206,7 @@ a.source {
     font-family: 'Kanit';
     font-style: italic;
     font-weight: 200;
-    src: url('../fonts/kanit-v13-latin-200italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-200italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-300 - latin */
@@ -215,7 +215,7 @@ a.source {
     font-family: 'Kanit';
     font-style: normal;
     font-weight: 300;
-    src: url('../fonts/kanit-v13-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-300italic - latin */
@@ -224,7 +224,7 @@ a.source {
     font-family: 'Kanit';
     font-style: italic;
     font-weight: 300;
-    src: url('../fonts/kanit-v13-latin-300italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-300italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-regular - latin */
@@ -233,7 +233,7 @@ a.source {
     font-family: 'Kanit';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/kanit-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-italic - latin */
@@ -242,7 +242,7 @@ a.source {
     font-family: 'Kanit';
     font-style: italic;
     font-weight: 400;
-    src: url('../fonts/kanit-v13-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-500 - latin */
@@ -251,7 +251,7 @@ a.source {
     font-family: 'Kanit';
     font-style: normal;
     font-weight: 500;
-    src: url('../fonts/kanit-v13-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-500italic - latin */
@@ -260,7 +260,7 @@ a.source {
     font-family: 'Kanit';
     font-style: italic;
     font-weight: 500;
-    src: url('../fonts/kanit-v13-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-600 - latin */
@@ -269,7 +269,7 @@ a.source {
     font-family: 'Kanit';
     font-style: normal;
     font-weight: 600;
-    src: url('../fonts/kanit-v13-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-600italic - latin */
@@ -278,7 +278,7 @@ a.source {
     font-family: 'Kanit';
     font-style: italic;
     font-weight: 600;
-    src: url('../fonts/kanit-v13-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-700 - latin */
@@ -287,7 +287,7 @@ a.source {
     font-family: 'Kanit';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/kanit-v13-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-700italic - latin */
@@ -296,7 +296,7 @@ a.source {
     font-family: 'Kanit';
     font-style: italic;
     font-weight: 700;
-    src: url('../fonts/kanit-v13-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-800 - latin */
@@ -305,7 +305,7 @@ a.source {
     font-family: 'Kanit';
     font-style: normal;
     font-weight: 800;
-    src: url('../fonts/kanit-v13-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-800italic - latin */
@@ -314,7 +314,7 @@ a.source {
     font-family: 'Kanit';
     font-style: italic;
     font-weight: 800;
-    src: url('../fonts/kanit-v13-latin-800italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-800italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-900 - latin */
@@ -323,7 +323,7 @@ a.source {
     font-family: 'Kanit';
     font-style: normal;
     font-weight: 900;
-    src: url('../fonts/kanit-v13-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   /* kanit-900italic - latin */
@@ -332,7 +332,7 @@ a.source {
     font-family: 'Kanit';
     font-style: italic;
     font-weight: 900;
-    src: url('../fonts/kanit-v13-latin-900italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('assets/fonts/kanit-v13-latin-900italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
   

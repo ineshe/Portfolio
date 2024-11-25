@@ -7,15 +7,15 @@ $projects = array(
         'title' => 'DDOptics',
         'subline' => 'Landingpage für Ferngläser, die für die Vogelbeobachtung genutzt werden können.',
         'media' => array(
-            '../../data/ddoptics/landingpage_wz_s1.jpg',
-            '../../data/ddoptics/landingpage_wz_s2.jpg',
-            '../../data/ddoptics/landingpage_wz_s3.jpg',
-            '../../data/ddoptics/landingpage_wz_s4.jpg',
-            '../../data/ddoptics/landingpage_wz_s5.jpg'
+            '../../../public/assets/projects/ddoptics/landingpage_wz_s1.jpg',
+            '../../../public/assets/projects/ddoptics/landingpage_wz_s2.jpg',
+            '../../../public/assets/projects/ddoptics/landingpage_wz_s3.jpg',
+            '../../../public/assets/projects/ddoptics/landingpage_wz_s4.jpg',
+            '../../../public/assets/projects/ddoptics/landingpage_wz_s5.jpg'
         ),
         'buttons' => array(
             array(
-                'link' => '../../data/ddoptics/landingpage_wz.jpg',
+                'link' => '../../../public/assets/projects/ddoptics/landingpage_wz.jpg',
                 'target' => '_blank',
                 'text' => 'Zum Design'
             )
@@ -27,17 +27,17 @@ $projects = array(
         'title' => 'Gesine',
         'subline' => 'Webanwendung zur Information und Beratung im Bereich Arbeitsschutz und Gesundheitsmanagement.',
         'media' => array(
-            '../../data/gesine/gesine-960X540-1.png',
-            '../../data/gesine/gesine-960X540-2.png'
+            '../../../public/assets/projects/gesine/gesine-960X540-1.png',
+            '../../../public/assets/projects/gesine/gesine-960X540-2.png'
         ),
         'buttons' => array(
             array(
-                'link' => '../../data/gesine/praktikumszeugnis-visualworld.pdf',
+                'link' => '../../../public/assets/projects/gesine/praktikumszeugnis-visualworld.pdf',
                 'target' => '_blank',
                 'text' => 'Praktikumszeugnis'
             ),
             array(
-                'link' => '../../data/gesine/bedienungsanleitung.pdf',
+                'link' => '../../../public/assets/projects/gesine/bedienungsanleitung.pdf',
                 'target' => '_blank',
                 'text' => 'Handbuch'
             )
@@ -49,7 +49,7 @@ $projects = array(
         'title' => 'ShepherdSim',
         'subline' => 'Top-Down-Simulationsspiel, bei dem der Spieler in der Rolle des Schäfers seine Herde in den Stall treibt.',
         'media' => array(
-            '../../data/shepherd/ShepherdSim-2021-05-17.mp4'
+            '../../../public/assets/projects/shepherd/ShepherdSim-2021-05-17.mp4'
         ),
         'buttons' => array(
             array(
@@ -65,7 +65,7 @@ $projects = array(
         'title' => 'Permutator',
         'subline' => 'Ein Tool, das alle möglichen Anordungen von Buchstaben eines Wortes findet und anzeigt.',
         'media' => array(
-            '../../data/permutator/permutator-960X540.png'
+            '../../../public/assets/projects/permutator/permutator-960X540.png'
         ),
         'buttons' => array(
             array(
@@ -81,10 +81,10 @@ $projects = array(
         'title' => 'Recines',
         'subline' => 'Webanwendung für die Anzeige von Rezepten.',
         'media' => array(
-            '../../data/recines/recines-960X540-1.webp',
-            '../../data/recines/recines-960X540-2.webp',
-            '../../data/recines/recines-960X540-3.webp',
-            '../../data/recines/recines-960X540-4.webp'
+            '../../../public/assets/projects/recines/recines-960X540-1.webp',
+            '../../../public/assets/projects/recines/recines-960X540-2.webp',
+            '../../../public/assets/projects/recines/recines-960X540-3.webp',
+            '../../../public/assets/projects/recines/recines-960X540-4.webp'
         ),
         'buttons' => array(
             array(
