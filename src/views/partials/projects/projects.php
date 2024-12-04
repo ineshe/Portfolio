@@ -3,7 +3,7 @@
         <h2 class="section-title">Projekte</h2>
         <div class="project-cards">
             <section class="project">
-                <a href="<?php echo $baseURL?>/views/project-detail/5">
+                <a href="<?php echo $baseURL?>/project/recines">
                     <img class="card-img" src="<?php echo $baseURL?>/assets/projects/recines/recines-300X200.webp" alt="">
                     <div class="card-text">
                         <h3 class="project-title">Recines</h3>
@@ -12,7 +12,7 @@
                 </a>
             </section>            
             <section class="project">
-                <a href="<?php echo $baseURL?>/views/project-detail/1">
+                <a href="<?php echo $baseURL?>/project/ddoptics">
                     <img class="card-img" src="<?php echo $baseURL?>/assets/projects/ddoptics/vogel-300X200.png" alt="">
                     <div class="card-text">
                         <h3 class="project-title">DDOptics</h3>
@@ -21,7 +21,7 @@
                 </a>
             </section>
             <section class="project">
-                <a href="<?php echo $baseURL?>/views/project-detail/2">
+                <a href="<?php echo $baseURL?>/project/gesine">
                     <img class="card-img white" src="<?php echo $baseURL?>/assets/projects/gesine/gesine-300X200.png" alt="">
                     <div class="card-text">
                         <h3 class="project-title">Gesine</h3>
@@ -30,7 +30,7 @@
                 </a>
             </section>
             <section class="project">
-                <a href="<?php echo $baseURL?>/views/project-detail/3">
+                <a href="<?php echo $baseURL?>/project/shepherd-sim">
                     <img class="card-img" src="<?php echo $baseURL?>/assets/projects/shepherd/shepherd-300X200.png" alt="">
                     <div class="card-text">
                         <h3 class="project-title">ShepherdSim</h3>
@@ -39,7 +39,7 @@
                 </a>
             </section>  
             <section class="project">
-                <a href="<?php echo $baseURL?>/views/project-detail/4">
+                <a href="<?php echo $baseURL?>/project/permutator">
                     <img class="card-img" src="<?php echo $baseURL?>/assets/projects/permutator/permutator-300X200.png" alt="">
                     <div class="card-text">
                         <h3 class="project-title">Permutator</h3>

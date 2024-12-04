@@ -25,8 +25,8 @@
         ?>
         <?php
 
-        if(isset($_GET['id'])) {
-            $project = $_GET['id'];
+        if(isset($_GET['slug'])) {
+            $project = $_GET['slug'];
 
             include('config.php');
 
