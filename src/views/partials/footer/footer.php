@@ -1,4 +1,4 @@
 <footer>
-    <a href="<?php echo $baseURL . '/pages/impressum/impressum.php'?>">Impressum</a>
-    <a href="<?php echo $baseURL . '/pages/datenschutz/datenschutz.php'?>">Datenschutzerklärung</a>
+    <a href="<?php echo $baseURL . '/impressum'?>">Impressum</a>
+    <a href="<?php echo $baseURL . '/datenschutz'?>">Datenschutzerklärung</a>
 </footer>

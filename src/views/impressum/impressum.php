@@ -7,22 +7,19 @@
         <title>Ines Heilmann</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="<?php echo $baseURL . '/pages/main/normalize.css'?>">
-        <link rel="stylesheet" href="<?php echo $baseURL . '/pages/main/style.css'?>">
-        <link rel="stylesheet" href="<?php echo $baseURL . '/pages/main/includes/header/header.css'?>">
-        <link rel="stylesheet" href="<?php echo $baseURL . '/pages/main/includes/projects/projects.css'?>">
-        <link rel="stylesheet" href="<?php echo $baseURL . '/pages/main/includes/footer/footer.css'?>">
-        <link rel="stylesheet" href="<?php echo $baseURL . '/pages/main/includes/cookie-consent/cookie-consent.css'?>">
+        <link rel="stylesheet" href="<?php echo $baseURL?>/css/projects.css">
         <?php
-            if ($isDevelopment) {
+            include_once dirname(__DIR__, 1).'/global-styles.php';
+        
+            if ($isDevelopment === true) {
                 echo '<script async data-id="five-server" src="http://localhost:5500/fiveserver.js"></script>';
             }
         ?>
-        <script src="<?php echo $baseURL . '/pages/main/navigation.js'?>" defer></script>
+        <script src="<?php echo $baseURL . '/js/navigation.js'?>" defer></script>
     </head>
     <body>
         <?php
-            include(dirname(__DIR__, 1).'/main/includes/header/header.php');
+            include_once dirname(__DIR__, 1).'/partials/header/header.php';
         ?>
         <article id="project" class="section">
         <div class="content">
@@ -90,12 +87,9 @@
         </article>
 
         <?php 
-            include("../main/includes/cookie-consent/cookie-consent.php");
+            include_once dirname(__DIR__, 1).'/partials/cookie-consent/cookie-consent.php';
+            include_once dirname(__DIR__, 1).'/partials/footer/footer.php';
         ?>
-        <?php 
-            include("../main/includes/footer/footer.php");
-        ?>
-
-        <script src="<?php echo $baseURL . '/pages/main/includes/cookie-consent/cookie-consent.js'?>"></script>
+        <script src="<?php echo $baseURL?>/js/cookie-consent.js"></script>
     </body>
 </html>
