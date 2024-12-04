@@ -1,6 +1,6 @@
 <header class="top-bar">
     <div class="content">
-        <a href="<?php echo $baseURL?>/index.php">
+        <a href="<?php echo $baseURL?>">
             <h1 class="title">Ines&nbsp;Heilmann
                 <span>Webdesign & Webentwicklung</span>
             </h1>
@@ -13,9 +13,9 @@
         </button>
         <nav class="navigation">
             <ul class="menu">
-                <li><a href="<?php echo $baseURL?>/index.php#about-me">Über&nbsp;mich</a></li>
+                <li><a href="<?php echo $baseURL?>#about-me">Über&nbsp;mich</a></li>
                 <!-- <li><a href="#about-me">Technologien</a></li> -->
-                <li><a href="<?php echo $baseURL?>/index.php#projects">Projekte</a></li>
+                <li><a href="<?php echo $baseURL?>#projects">Projekte</a></li>
                 <!-- <li><a href="#contact">Kontakt</a></li> -->
             </ul>
         </nav>
