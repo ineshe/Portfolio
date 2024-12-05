@@ -1,10 +1,24 @@
 <?php 
-    include(dirname(__DIR__, 2).'/config.php');
+    include_once dirname(__DIR__, 2).'/config.php' ;
+    
+    if(isset($_GET['slug'])) {
+        include_once 'config.php';
+        $project = $_GET['slug'];
+
+        if (array_key_exists($project, $projects)) {
+            $title = $projects[$project]['title'];
+            $subline = $projects[$project]['subline'];
+            $media = $projects[$project]['media'];
+            $buttons = $projects[$project]['buttons'];
+            $description = $projects[$project]['description'];
+            $technologies = $projects[$project]['technologies'];
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <title>Ines Heilmann</title>
+        <title><?php echo $title ?> | Ines Heilmann</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <?php
@@ -23,24 +37,6 @@
         <?php
             include(dirname(__DIR__, 1).'/partials/header/header.php');
         ?>
-        <?php
-
-        if(isset($_GET['slug'])) {
-            $project = $_GET['slug'];
-
-            include('config.php');
-
-            if (array_key_exists($project, $projects)) {
-                $title = $projects[$project]['title'];
-                $subline = $projects[$project]['subline'];
-                $media = $projects[$project]['media'];
-                $buttons = $projects[$project]['buttons'];
-                $description = $projects[$project]['description'];
-                $technologies = $projects[$project]['technologies'];
-            }
-        }
-        ?>
-
         <article id="project" class="section">
 
             <div class="content">

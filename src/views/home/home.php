@@ -8,7 +8,7 @@ LinkedIn, Github -->
 
 <html lang="de">
     <head>
-        <title>Ines Heilmann</title>
+        <title>Ines Heilmann – Full-Stack Webentwicklerin</title>
         <base href="<?php $baseURL ?>"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
