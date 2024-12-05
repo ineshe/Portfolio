@@ -7,7 +7,6 @@
         <title>Ines Heilmann</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="<?php echo $baseURL?>/css/projects.css">
         <?php
             include_once dirname(__DIR__, 1).'/global-styles.php';
         
@@ -15,6 +14,7 @@
                 echo '<script async data-id="five-server" src="http://localhost:5500/fiveserver.js"></script>';
             }
         ?>
+        <link rel="stylesheet" href="<?php echo $baseURL?>/css/projects.css">
         <script src="<?php echo $baseURL . '/js/navigation.js'?>" defer></script>
     </head>
     <body>
