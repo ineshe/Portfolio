@@ -2,7 +2,7 @@
     <div class="content">
         <a href="<?php echo $baseURL?>">
             <h1 class="title">Ines&nbsp;Heilmann
-                <span>Webdesign & Webentwicklung</span>
+                <span>Full-Stack Webentwicklung</span>
             </h1>
         </a>
         <button id="hamburger" class="">
