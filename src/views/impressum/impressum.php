@@ -27,15 +27,15 @@
             <div class="grid">
                 <h3>Angaben gemäß § 5 TMG</h3>
                 <p>Ines Heilmann<br> 
-                    Wilhelminenberg 11<br> 
-                    09328 Sachsen - Lunzenau<br> 
+                    Waldstraße 8<br> 
+                    12487 Berlin<br> 
                 </p>
                 <p><h3>Vertreten durch:</h3>
                     Ines Heilmann
                 </p>
                 <p><h3>Kontakt:</h3>
                     Telefon: +49 176 55923795<br>
-                    E-Mail: <a href='mailto:ines.heilmann1@gmx.de'>ines.heilmann1@gmx.de</a></br>
+                    E-Mail: <a href='mailto:contact@ines-heilmann.de'>contact@ines-heilmann.de</a></br>
                 </p>
                 <p><h3>Haftungsausschluss: </h3>
 
