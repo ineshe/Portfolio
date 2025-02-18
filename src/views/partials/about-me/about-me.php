@@ -1,7 +1,6 @@
 <article id="about-me" class="section">
     <div class="content">
         <img class="picture" src="<?php echo $baseURL?>/assets/images/profilbild.webp" alt="">
-        <p class="text">Hallo, ich bin Ines und beschäftige mich seit meinem Studium der Medieninformatik mit Webentwicklung. Durch meine Ausbildung zur gestaltungstechnischen Assistentin verfüge ich neben dem technischen Know&#8209;how auch über ein Gespür für gutes Design.</p>
-        <!--<p class="text">Guten Tag! Mein Name ist Ines und ich beschäftige mich seit meinem Abschluss im Fach &bdquo;Medieninformatik&ldquo; an der Hochschule Mittweida mit der Entwicklung von Webanwendungen. Dank meiner Ausbildung als &bdquo;gestaltungstechnische Assistentin&ldquo; bringe ich dafür neben dem technischen Know&#8209;how auch ein Gespür für gutes Design mit. Das Lösen von Programmierproblemen gehört so wie das Lösen von Kreuzworträtseln in meiner Freizeit zu meinen Leidenschaften.</p> -->
+        <p class="text">Hallo, ich bin Ines. Ich entwickle und optimiere Webshops und Webseiten – mit Erfahrung in Shopware, Symfony und anderen modernen Webtechnologien. Durch mein Know-how in der Webentwicklung und mein Gespür für Design entstehen Weblösungen, die sowohl technisch als auch optisch überzeugen.</p>
     </div>
 </article>
