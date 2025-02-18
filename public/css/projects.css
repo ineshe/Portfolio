@@ -1,25 +1,12 @@
-/* #projects {
-    display: flex;
-    justify-content: center;
-} */
-
-/* #projects .content{
-    width: auto;
-    max-width: 1140px;
-} */
-
 .card-text {
     padding: 15px;
 }
 
 .project {
     background-color: #3d5666;
-    /* box-shadow: 5px 5px 5px #1a1a1a55; */
     box-shadow: 5px 5px 5px #28323c;
     border-radius: 3px;
-    /* max-width: 400px; */
     justify-self: center;
-
 }
 
 .project .card-img {
@@ -73,10 +60,6 @@
     .project-cards section p {
         text-align: left;
     }
-}
-
-@media (min-width: 844px) {
-
 }
 
 /* only mobile */
