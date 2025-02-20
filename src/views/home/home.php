@@ -24,8 +24,6 @@ LinkedIn, Github -->
         <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
         <!-- <script src="includes/contact/validation.js" defer></script> -->
         <script src="<?php echo $baseURL?>/js/navigation.js" defer></script>
-
-        
     </head>
     <body>
         <?php             
