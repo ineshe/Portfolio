@@ -12,6 +12,9 @@ switch ($request) {
     case '/':
         require $viewDir . '/home/home.php';
         break;
+    case '/more-projects':
+        require $viewDir . '/more-projects/more-projects.php';
+        break;
     case (bool) preg_match('#^/project/([\w-]+)$#', $request, $matches):
         $_GET['slug'] = $matches[1];
 
