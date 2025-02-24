@@ -7,7 +7,7 @@
                     <img class="card-img" src="<?php echo $baseURL?>/assets/projects/recines/recines-300X200.webp" alt="">
                     <div class="card-text">
                         <h3 class="project-title">Recines</h3>
-                        <p>Website für die ansprechende Präsentation von Rezepten.</p>
+                        <p>Website für die Präsentation von Rezepten.</p>
                     </div>
                 </a>
             </section>
