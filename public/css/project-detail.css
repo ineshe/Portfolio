@@ -2,15 +2,9 @@
     padding-bottom: 20px;
 }
 
-/* #project {
-    display: flex;
-    justify-content: center;
-} */
-
 #project h2 {
     font-size: 1.7em;
     text-align: left;
-    /* color: red; */
 }
 
 .btn {
