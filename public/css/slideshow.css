@@ -1,7 +1,7 @@
 .slideshow-container {
     position: relative;
     padding: 20px 45px 40px;
-    background-color: var(--slideshow-bg);
+    background-color: var(--dark-bg);
     max-height: 520px;
     width: inherit;
 }
