@@ -10,7 +10,7 @@
     display: none;
 }
 #cookie-banner button {
-    background-color: #b86e95;
+    background-color: var(--primary-accent);
     border: none;
     padding: 10px 20px;
     cursor: pointer;

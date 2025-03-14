@@ -1,9 +1,20 @@
+/* content-width: 1140px + 30px + 30px = 1200px */
+
+:root {
+  --card-bg: #3d5666;
+  --primary-accent: #b86e95;
+  --body-bg: #2e3e4d;
+  --header-bg: #314252;
+  --shadow: #28323c;
+  --dark-bg: #1d2730;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-    background-color: #2e3e4d;
+    background-color: var(--body-bg);
     /* background-color: #98426F; */
     font-family: Mukta, sans-serif;
     color: white;
@@ -27,12 +38,12 @@ body {
 }
 
 .content {
-  width: 1140px;
+  width: min(100%, 1200px);
+  box-sizing: border-box;
 }
 
 h2 {
   margin-top: 0;
-  /* color: red; */
 }
 
 a {
@@ -84,7 +95,7 @@ a.source {
     text-align: center;
     vertical-align: middle;
     color: white;
-    background-color: #b86e95;
+    background-color: var(--primary-accent);
     border: none;
     padding: 5px 10px;
     margin: 0.5rem 0.5rem 0.5rem 0;
@@ -93,23 +104,6 @@ a.source {
 .primary-3 {
     color: #98426F;
 }
-
-
-
-/* @media (min-width: 769px) { ab Laptop
-
-    article {
-        scroll-maurl('../../data/fontsrgin-top: calc(2.8rem * 1.5 + 75px);
-    }
-}
-
-@media (min-width: 1025px) { ab Laptop L bis Desktop
-
-
-    article {
-        scroll-margin-top: calc(1.8rem * 1.5 + 55px);
-    }
-} */
 
 /* mukta-200 - latin */
 @font-face {

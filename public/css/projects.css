@@ -1,7 +1,3 @@
-:root {
-    --card-bg: #3d5666;
-}
-
 .project-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -11,7 +7,7 @@
 .project {
     background-color: var(--card-bg);
     border-radius: 3px;
-    box-shadow: 5px 5px 5px #28323c;
+    box-shadow: 5px 5px 5px var(--shadow);
     justify-self: stretch;
 }
 

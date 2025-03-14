@@ -106,7 +106,7 @@ button, input, optgroup, select, textarea {
     width: 0.7rem;
     height: 0.7rem;
     border-radius: 50%;
-    background: #B86E95;
+    background: var(--primary-accent);
     display: none;
 }
 

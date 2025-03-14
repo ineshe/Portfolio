@@ -100,7 +100,7 @@ $projects = array(
         ),
         'description' => '<p>Recines zeigt Rezepte an. Diese sind Kategorien zugeordnet und mit der integrierten Suchfunktion kann in der Sammlung nach Rezepten gesucht werden, die den Suchbegriff im Titel enthalten oder in der Zutatenliste.</p>',
         'description' => '<p>Diese Webanwendung bietet eine übersichtliche und optisch ansprechende Plattform zur Darstellung von Rezepten. Die Rezepte sind spezifischen Kategorien zugeordnet, die im Hauptmenü gelistet sind. Die Startseite zeigt eine Auswahl aller Rezepte, sodass Besucher schnell auf eine Vielfalt an Ideen zugreifen können.</p><p>Besonders hervorzuheben ist die integrierte Suchfunktion, die Rezepte anhand des Titels oder der Zutatenliste findet – ideal, um schnell Rezepte mit Zutaten zu finden, die bereits zur Hand sind.</p>',
-        'technologies' => 'Symfony, Tailwind, MariaDB'
+        'technologies' => 'Symfony, Tailwind, MySQL'
     ),    
 );
 
