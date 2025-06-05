@@ -2,7 +2,7 @@
 
 :root {
   --card-bg: #3d5666;
-  --primary-accent: #b86e95;
+  --primary-accent: #d47479; /* Altrosa  */
   --body-bg: #2e3e4d;
   --header-bg: #314252;
   --shadow: #28323c;
@@ -102,7 +102,7 @@ a.source {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
-    color: white;
+    color: #1d1d1d;
     background-color: var(--primary-accent);
     border: none;
     padding: 5px 10px;
