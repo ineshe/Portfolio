@@ -34,6 +34,7 @@
             "slug": "ddoptics",
             "visibility": "0",
             "shortDescription": "Landingpage für Ferngläser, die für die Vogelbeobachtung genutzt werden können.",
+            "mainImage": "/assets/projects/ddoptics/vogel-300X200.png",
             "media": [
                 "../../../assets/projects/ddoptics/landingpage_wz_s1.jpg",
                 "../../../assets/projects/ddoptics/landingpage_wz_s2.jpg",
@@ -58,6 +59,7 @@
             "slug": "gesine",
             "visibility": "0",
             "shortDescription": "Webanwendung zur Information und Beratung im Bereich Arbeitsschutz und Gesundheitsmanagement.",
+            "mainImage": "/assets/projects/gesine/gesine-300X200.png",
             "media": [
                 "../../../assets/projects/gesine/gesine-960X540-1.png",
                 "../../../assets/projects/gesine/gesine-960X540-2.png"
@@ -84,6 +86,7 @@
             "slug": "shepherd-sim",
             "visibility": "0",
             "shortDescription": "Top-Down-Simulationsspiel, bei dem der Spieler in der Rolle des Schäfers seine Herde in den Stall treibt.",
+            "mainImage": "/assets/projects/shepherd/shepherd-300X200.png",
             "media": [
                 "../../../assets/projects/shepherd/ShepherdSim-2021-05-17.mp4"
             ],
