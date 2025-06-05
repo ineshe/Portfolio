@@ -16,13 +16,18 @@
                 {
                     "link": "https://github.com/ineshe/recipes-manager.git",
                     "target": "_blank",
-                    "text": "Git Repo"
+                    "text": "Git"
                 },
                 {
                     "link": "https://recines.ines-heilmann.de",
                     "target": "_blank",
-                    "text": "Zur Seite"
-                }
+                    "text": "Frontend"
+                },
+                {
+                    "link": "https://recines.ines-heilmann.de/login",
+                    "target": "_blank",
+                    "text": "Backend"
+                }                
             ],
             "description": "<p>Diese Webanwendung bietet eine übersichtliche und optisch ansprechende Plattform zur Darstellung von Rezepten. Die Rezepte sind spezifischen Kategorien zugeordnet, die im Hauptmenü gelistet sind. Die Startseite zeigt eine Auswahl aller Rezepte, sodass Besucher schnell auf eine Vielfalt an Ideen zugreifen können.</p><p>Besonders hervorzuheben ist die integrierte Suchfunktion, die Rezepte anhand des Titels oder der Zutatenliste findet – ideal, um schnell Rezepte mit Zutaten zu finden, die bereits zur Hand sind.</p>",
             "technologies": "Symfony, Tailwind, MySQL"
