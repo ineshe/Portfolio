@@ -27,12 +27,18 @@ LinkedIn, Github -->
         <script src="<?= $baseURL ?>/js/cookie-consent.js" defer></script>
     </head>
     <body>
-        <?php             
-            include_once dirname(__DIR__, 1).'/partials/header/header.php';
-            include_once dirname(__DIR__, 1).'/partials/about-me/about-me.php';
-            include_once dirname(__DIR__, 1).'/partials/projects/projects.php';
-            include_once dirname(__DIR__, 1).'/partials/cookie-consent/cookie-consent.php';
-            include_once dirname(__DIR__, 1).'/partials/footer/footer.php';
-        ?>
+        <div class="page">
+            <?php include_once dirname(__DIR__, 1).'/partials/header/header.php'; ?>
+            <main>
+                <?php 
+                    include_once dirname(__DIR__, 1).'/partials/about-me/about-me.php';
+                    include_once dirname(__DIR__, 1).'/partials/projects/projects.php';
+                ?>
+            </main>
+            <?php 
+                include_once dirname(__DIR__, 1).'/partials/cookie-consent/cookie-consent.php';
+                include_once dirname(__DIR__, 1).'/partials/footer/footer.php';
+            ?>
+        </div>
     </body>
 </html>

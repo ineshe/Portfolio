@@ -9,18 +9,26 @@
   --dark-bg: #1d2730;
 }
 
+:root, body {
+    height: 100%;
+    margin: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--body-bg);
-    /* background-color: #98426F; */
-    font-family: Mukta, sans-serif;
-    color: white;
-    /* sets recommended line-height */
-    line-height: 1.5;
-    
+  background-color: var(--body-bg);
+  font-family: Mukta, sans-serif;
+  color: white;
+  line-height: 1.5;
+}
+
+.page {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .rounded {
