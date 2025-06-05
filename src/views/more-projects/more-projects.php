@@ -39,7 +39,7 @@
                                                 <img class="card-img" src="<?= $baseURL . $project->mainImage ?>" alt="" style="background-color: white;">
                                                 <div class="card-text">
                                                     <h3 class="project-title"><?= $project->title ?></h3>
-                                                    <p><?= $project->shortDescription ?></p>
+                                                    <p><?= $project->technologies ?></p>
                                                 </div>
                                             </a>
                                         </section>
