@@ -80,12 +80,14 @@
 }
 
 .menu a.active {
-    color: var(--primary-accent);
+    text-decoration: underline;
+    text-underline-offset: 4px;    
 }
 
 @media (hover: hover) {
     .menu a:hover {
-        color: var(--primary-accent);
+        text-decoration: underline;
+        text-underline-offset: 4px;          
     }
 }
 
