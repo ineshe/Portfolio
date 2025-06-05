@@ -1,3 +1,6 @@
+<?php 
+    $projects = json_decode(file_get_contents(__DIR__ . "/../../data/projects.json"));
+?>
 <!DOCTYPE html>
 
 <html lang="de">
@@ -13,65 +16,45 @@
                 echo '<script async data-id="five-server" src="http://localhost:5500/fiveserver.js"></script>';
             }
         ?>
-        <link rel="stylesheet" href="<?php echo $baseURL?>/css/projects.css">
+        <link rel="stylesheet" href="<?= $baseURL ?>/css/projects.css">
         <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
         <!-- <script src="includes/contact/validation.js" defer></script> -->
-        <script src="<?php echo $baseURL?>/js/navigation.js" defer></script>
+        <script src="<?= $baseURL ?>/js/navigation.js" defer></script>
+        <script src="<?= $baseURL ?>/js/cookie-consent.js" defer></script>
     </head>
     <body>
-        <?php             
-            include_once dirname(__DIR__, 1).'/partials/header/header.php';
-        ?>
+        <div class="page">
+            <?php include_once dirname(__DIR__, 1).'/partials/header/header.php'; ?>
+            <main>
+                <section id="projects" class="section">
+                    <div class="content">
+                        <h2 class="section-title"> Weitere Projekte</h2>
+                        <div class="project-cards">
+                            <?php if(isset($projects)): ?>
+                                <?php foreach ($projects as $project): ?>
+                                    <?php if ($project->visibility == "0"): ?>
 
-        <section id="projects" class="section">
-            <div class="content">
-                <h2 class="section-title"> Weitere Projekte</h2>
-                <div class="project-cards">
-                    <section class="project">
-                        <a href="<?php echo $baseURL?>/project/ddoptics">
-                            <img class="card-img" src="<?php echo $baseURL?>/assets/projects/ddoptics/vogel-300X200.png" alt="">
-                            <div class="card-text">
-                                <h3 class="project-title">DDOptics</h3>
-                                <p>Landingpage für Ferngläser, die für die Vogelbeobachtung genutzt werden können.</p>
-                            </div>
-                        </a>
-                    </section>
-                    <section class="project">
-                        <a href="<?php echo $baseURL?>/project/gesine">
-                            <img class="card-img white" src="<?php echo $baseURL?>/assets/projects/gesine/gesine-300X200.png" alt="">
-                            <div class="card-text">
-                                <h3 class="project-title">Gesine</h3>
-                                <p>Webanwendung zur Information und Beratung im Bereich Arbeitsschutz und Gesundheitsmanagement.</p>
-                            </div>
-                        </a>
-                    </section>
-                    <section class="project">
-                        <a href="<?php echo $baseURL?>/project/shepherd-sim">
-                            <img class="card-img" src="<?php echo $baseURL?>/assets/projects/shepherd/shepherd-300X200.png" alt="">
-                            <div class="card-text">
-                                <h3 class="project-title">ShepherdSim</h3>
-                                <p>Top-Down-Simulationsspiel, bei dem der Spieler in der Rolle des Schäfers seine Herde in den Stall treibt.</p>
-                            </div>    
-                        </a>
-                    </section>  
-                    <section class="project">
-                        <a href="<?php echo $baseURL?>/project/permutator">
-                            <img class="card-img" src="<?php echo $baseURL?>/assets/projects/permutator/permutator-300X200.png" alt="">
-                            <div class="card-text">
-                                <h3 class="project-title">Permutator</h3>
-                                <p>Ein Tool, das alle möglichen Anordungen von Buchstaben eines Wortes findet und anzeigt.</p>
-                            </div>
-                        </a> 
-                        <a class="source" href='https://de.freepik.com/fotos/werkzeuge'>Foto: azerbaijan_stockers - de.freepik.com</a>
-                    </section>
-                </div> 
-            </div>
-        </section>
+                                        <section class="project">
+                                            <a href="<?= $baseURL . '/project/' . $project->slug ?>">
+                                                <img class="card-img" src="<?= $baseURL . $project->mainImage ?>" alt="" style="background-color: white;">
+                                                <div class="card-text">
+                                                    <h3 class="project-title"><?= $project->title ?></h3>
+                                                    <p><?= $project->technologies ?></p>
+                                                </div>
+                                            </a>
+                                        </section>
 
-        <?php 
-            include_once dirname(__DIR__, 1).'/partials/cookie-consent/cookie-consent.php';
-            include_once dirname(__DIR__, 1).'/partials/footer/footer.php';
-        ?>
-        <script src="<?php echo $baseURL?>/js/cookie-consent.js"></script>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </div> 
+                    </div>
+                </section>
+            </main>
+            <?php 
+                include_once dirname(__DIR__, 1).'/partials/cookie-consent/cookie-consent.php';
+                include_once dirname(__DIR__, 1).'/partials/footer/footer.php';
+            ?>
+        </div>
     </body>
 </html>

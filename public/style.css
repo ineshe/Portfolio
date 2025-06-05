@@ -2,11 +2,16 @@
 
 :root {
   --card-bg: #3d5666;
-  --primary-accent: #b86e95;
+  --primary-accent: #d47479; /* Altrosa  */
   --body-bg: #2e3e4d;
   --header-bg: #314252;
   --shadow: #28323c;
   --dark-bg: #1d2730;
+}
+
+:root, body {
+    height: 100%;
+    margin: 0;
 }
 
 html {
@@ -14,13 +19,16 @@ html {
 }
 
 body {
-    background-color: var(--body-bg);
-    /* background-color: #98426F; */
-    font-family: Mukta, sans-serif;
-    color: white;
-    /* sets recommended line-height */
-    line-height: 1.5;
-    
+  background-color: var(--body-bg);
+  font-family: Mukta, sans-serif;
+  color: white;
+  line-height: 1.5;
+}
+
+.page {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .rounded {
@@ -94,7 +102,7 @@ a.source {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
-    color: white;
+    color: #1d1d1d;
     background-color: var(--primary-accent);
     border: none;
     padding: 5px 10px;
