@@ -14,8 +14,9 @@
                 echo '<script async data-id="five-server" src="http://localhost:5500/fiveserver.js"></script>';
             }
         ?>
-        <link rel="stylesheet" href="<?php echo $baseURL . '/css/projects.css'?>">
-        <script src="<?php echo $baseURL . '/pages/main/navigation.js'?>" defer></script>
+        <link rel="stylesheet" href="<?= $baseURL ?>/css/projects.css">
+        <script src="<?= $baseURL ?>/pages/main/navigation.js" defer></script>
+        <script src="<?= $baseURL ?>/js/cookie-consent.js" defer></script>
     </head>
     <body>
         <?php
@@ -109,6 +110,5 @@
             include_once dirname(__DIR__, 1).'/partials/cookie-consent/cookie-consent.php';
             include_once dirname(__DIR__, 1).'/partials/footer/footer.php';
         ?>
-        <script src="<?php echo $baseURL?>/js/cookie-consent.js"></script>
     </body>
 </html>
