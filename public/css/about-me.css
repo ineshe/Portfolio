@@ -1,6 +1,7 @@
 #about-me {
     display: flex;
     justify-content: center;
+    line-height: 1.7;
 }
 
 #about-me .content {
