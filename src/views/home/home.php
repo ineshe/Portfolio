@@ -24,7 +24,7 @@ LinkedIn, Github -->
         <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
         <!-- <script src="includes/contact/validation.js" defer></script> -->
         <script src="<?= $baseURL ?>/js/navigation.js" defer></script>
-        <script src="<?= $baseURL ?>/js/cookie-consent.js" defer></script>
+        <script src="<?= $baseURL ?>js/cookie-consent.js" defer></script>
     </head>
     <body>
         <div class="page">

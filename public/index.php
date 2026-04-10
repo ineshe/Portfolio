@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require_once dirname(__DIR__, 1).'/src/config.php';
 
-$request = $_SERVER['REQUEST_URI'];
+$request = $_SERVER['REQUEST_URI'] ?? '/';
 $viewDir = dirname(__DIR__, 1).'/src/views';
 
 switch ($request) {
