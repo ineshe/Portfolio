@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="<?= $baseURL ?>/css/project-detail.css">
         <link rel="stylesheet" href="<?= $baseURL ?>/css/slideshow.css">
         <script src="<?= $baseURL ?>/js/navigation.js" defer></script>
-        <script src="<?= $baseURL ?>/js/cookie-consent.js" defer></script>
+        <script src="<?= $baseURL ?>/js/c-consent.js" defer></script>
         <script src="<?= $baseURL ?>/js/slideshow.js" defer></script>
     </head>
     <body>
