@@ -81,13 +81,13 @@
 
 .menu a.active {
     text-decoration: underline;
-    text-underline-offset: 4px;    
+    text-underline-offset: 3px;    
 }
 
 @media (hover: hover) {
     .menu a:hover {
         text-decoration: underline;
-        text-underline-offset: 4px;          
+        text-underline-offset: 3px;          
     }
 }
 
