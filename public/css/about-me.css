@@ -1,6 +1,7 @@
 #about-me {
     display: flex;
     justify-content: center;
+    line-height: 1.7;
 }
 
 #about-me .content {
@@ -12,7 +13,6 @@
 }
 
 #about-me .text {
-    letter-spacing: 1px;
     max-width: 600px;
     margin: 0;
 }

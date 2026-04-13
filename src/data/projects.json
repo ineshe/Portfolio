@@ -1,4 +1,30 @@
 {
+    "lumines":
+        {
+            "title": "Lumines",
+            "slug": "lumines",
+            "visibility": "1",
+            "shortDescription": "Interaktive Landingpage für Lippenstiftserie.",
+            "mainImage": "/assets/projects/lumines/lumines-300X200.webp",
+            "media": [
+                "../../../assets/projects/lumines/chrome_HAau4pinx4.mp4"
+            ],
+            "buttons": [
+                {
+                    "link": "https://github.com/ineshe/lipstick-app.git",
+                    "target": "_blank",
+                    "text": "Git"
+                },
+                {
+                    "link": "https://lumines.ines-heilmann.de",
+                    "target": "_blank",
+                    "text": "Frontend"
+                }               
+            ],
+            "description": "<p>Dieses Projekt ist eine interaktive Landingpage für eine Lippenstiftserie, entwickelt mit React und Vite. Eine scrollgesteuerte Canvas-Animation präsentiert die Produkte dynamisch. Ergänzt wird die Experience durch animierte USP-Abschnitte, einen Review-Slider und ein responsives UI.</p>\n\n<h3>Tätigkeiten</h3>\n<ul>\n    <li>Konzeption und Gestaltung des UI/UX-Designs</li>\n    <li>Umsetzung interaktiver Animationen mit React und Motion</li>\n    <li>Entwicklung einer responsiven, scrollgesteuerten Frontend-Experience</li>\n</ul>",
+            "technologies": "React, Motion, JavaScript, CSS"
+        },
+
     "recines":
         {
             "title": "Recines",

@@ -16,7 +16,7 @@
         ?>
         <link rel="stylesheet" href="<?= $baseURL ?>/css/projects.css">
         <script src="<?= $baseURL ?>/pages/main/navigation.js" defer></script>
-        <script src="<?= $baseURL ?>/js/cookie-consent.js" defer></script>
+        <script src="<?= $baseURL ?>/js/c-consent.js" defer></script>
     </head>
     <body>
         <div class="page">

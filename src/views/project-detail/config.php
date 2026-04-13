@@ -3,6 +3,35 @@
 // Konfigurationsdatei mit Projekttexten
 
 $projects = array(
+    'lumines' => array(
+        'title' => 'Lumines',
+        'subline' => 'Interaktive Landingpage für Lippenstiftserie.',
+        'media' => array(
+            '../../../assets/projects/lumines/lumines-960X540-1.webp',
+            '../../../assets/projects/lumines/lumines-960X540-2.webp',
+            '../../../assets/projects/lumines/lumines-960X540-3.webp',
+            '../../../assets/projects/lumines/lumines-960X540-4.webp'
+        ),
+        'buttons' => array(
+            array(
+                'link' => '../../../assets/projects/lumines/lumines-960X540-1.webp',
+                'target' => '_blank',
+                'text' => 'Zum Design'
+            )
+        ),
+        'description' => <<<HTML
+    <p>Dieses Projekt ist eine interaktive Landingpage für eine Lippenstiftserie, entwickelt mit React und Vite. Eine scrollgesteuerte Canvas-Animation präsentiert die Produkte dynamisch. Ergänzt wird die Experience durch animierte USP-Abschnitte, einen Review-Slider und ein responsives UI.</p>
+
+    <h3>Tätigkeiten</h3>
+    <ul>
+        <li>Konzeption und Gestaltung des UI/UX-Designs</li>
+        <li>Umsetzung interaktiver Animationen mit React und Motion</li>
+        <li>Entwicklung einer responsiven, scrollgesteuerten Frontend-Experience</li>
+    </ul>
+    HTML,
+
+        'technologies' => 'React, Motion, JavaScript, CSS'
+    ),    
     'ddoptics' => array(
         'title' => 'DDOptics',
         'subline' => 'Landingpage für Ferngläser, die für die Vogelbeobachtung genutzt werden können.',
