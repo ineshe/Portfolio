@@ -5,26 +5,19 @@
         $slug = $_GET['slug'];
         $project = $projects->$slug;
     }
+
+    $pageTitle = $project->title . ' | Ines Heilmann';
+    $pageStyles = [
+        '/css/project-detail.css',
+        '/css/slideshow.css',
+    ];
+    $pageScripts = [
+        '/js/slideshow.js',
+    ];
 ?>
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <title><?= $project->title ?> | Ines Heilmann</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <?php
-            include_once dirname(__DIR__, 1).'/global-styles.php';
-
-            if ($isDevelopment === true) {
-                echo '<script async data-id="five-server" src="http://localhost:5500/fiveserver.js"></script>';
-            }
-        ?>
-        <link rel="stylesheet" href="<?= $baseURL ?>/css/project-detail.css">
-        <link rel="stylesheet" href="<?= $baseURL ?>/css/slideshow.css">
-        <script src="<?= $baseURL ?>/js/navigation.js" defer></script>
-        <script src="<?= $baseURL ?>/js/c-consent.js" defer></script>
-        <script src="<?= $baseURL ?>/js/slideshow.js" defer></script>
-    </head>
+    <?php include_once dirname(__DIR__, 1).'/layout/head.php'; ?>
     <body>
         <div class="page">
             <?php

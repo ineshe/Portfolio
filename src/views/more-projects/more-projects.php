@@ -1,27 +1,15 @@
 <?php 
     $projects = json_decode(file_get_contents(__DIR__ . "/../../data/projects.json"));
+
+    $pageTitle = 'Weitere Projekte | Ines Heilmann – Full-Stack Webentwicklerin';
+    $pageStyles = [
+        '/css/projects.css',
+    ];
 ?>
 <!DOCTYPE html>
 
 <html lang="de">
-    <head>
-        <title>Weitere Projekte | Ines Heilmann – Full-Stack Webentwicklerin</title>
-        <base href="<?php $baseURL ?>"/>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <?php
-            include_once dirname(__DIR__, 1).'/global-styles.php';
-        
-            if ($isDevelopment === true) {
-                echo '<script async data-id="five-server" src="http://localhost:5500/fiveserver.js"></script>';
-            }
-        ?>
-        <link rel="stylesheet" href="<?= $baseURL ?>/css/projects.css">
-        <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
-        <!-- <script src="includes/contact/validation.js" defer></script> -->
-        <script src="<?= $baseURL ?>/js/navigation.js" defer></script>
-        <script src="<?= $baseURL ?>/js/c-consent.js" defer></script>
-    </head>
+    <?php include_once dirname(__DIR__, 1).'/layout/head.php'; ?>
     <body>
         <div class="page">
             <?php include_once dirname(__DIR__, 1).'/partials/header/header.php'; ?>
