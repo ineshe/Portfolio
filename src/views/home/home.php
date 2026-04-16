@@ -9,8 +9,8 @@ LinkedIn, Github -->
 <?php
     $pageTitle = 'Ines Heilmann – Full-Stack Webentwicklerin';
     $pageStyles = [
-        '/css/pages/about-me.css',
-        '/css/pages/projects.css',
+        '/css/components/about-me.css',
+        '/css/components/projects.css',
     ];
 ?>
 <html lang="de">
