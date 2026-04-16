@@ -4,7 +4,7 @@
 
     $pageTitle = 'Impressum | Ines Heilmann';
     $pageStyles = [
-        '/css/projects.css',
+        '/css/pages/projects.css',
     ];
 ?>
 <html lang="de">

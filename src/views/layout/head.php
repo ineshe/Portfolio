@@ -4,14 +4,14 @@ declare(strict_types=1);
 $defaultStyles = [
     '/css/normalize.css',
     '/style.css',
-    '/css/header.css',
-    '/css/footer.css',
-    '/css/cookie-consent.css',
+    '/css/components/header.css',
+    '/css/components/footer.css',
+    '/css/components/cookie-consent.css',
 ];
 
 $defaultScripts = [
-    '/js/navigation.js',
-    '/js/c-consent.js',
+    '/js/components/navigation.js',
+    '/js/components/c-consent.js',
 ];
 
 $styles = array_values(array_unique(array_merge($defaultStyles, $pageStyles ?? [])));

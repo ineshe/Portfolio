@@ -8,11 +8,11 @@
 
     $pageTitle = $project->title . ' | Ines Heilmann';
     $pageStyles = [
-        '/css/project-detail.css',
-        '/css/slideshow.css',
+        '/css/pages/project-detail.css',
+        '/css/components/slideshow.css',
     ];
     $pageScripts = [
-        '/js/slideshow.js',
+        '/js/components/slideshow.js',
     ];
 ?>
 <!DOCTYPE html>

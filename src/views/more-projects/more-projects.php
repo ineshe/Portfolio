@@ -3,7 +3,7 @@
 
     $pageTitle = 'Weitere Projekte | Ines Heilmann – Full-Stack Webentwicklerin';
     $pageStyles = [
-        '/css/projects.css',
+        '/css/pages/projects.css',
     ];
 ?>
 <!DOCTYPE html>
