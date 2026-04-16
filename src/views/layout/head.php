@@ -24,9 +24,6 @@ $scripts = array_values(array_unique(array_merge($defaultScripts, $pageScripts ?
     <?php foreach ($styles as $style): ?>
         <link rel="stylesheet" href="<?= $baseURL . $style ?>">
     <?php endforeach; ?>
-    <?php if ($isDevelopment === true): ?>
-        <script async data-id="five-server" src="http://localhost:5500/fiveserver.js"></script>
-    <?php endif; ?>
     <?php foreach ($scripts as $script): ?>
         <script src="<?= $baseURL . $script ?>" defer></script>
     <?php endforeach; ?>
