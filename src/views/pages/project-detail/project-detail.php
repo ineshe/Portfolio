@@ -1,5 +1,5 @@
 <?php 
-    $projects = json_decode(file_get_contents(__DIR__ . "/../../data/projects.json"));
+    $projects = json_decode(file_get_contents(__DIR__ . "/../../../data/projects.json"));
     
     if (isset($_GET['slug'])) {
         $slug = $_GET['slug'];
@@ -17,11 +17,11 @@
 ?>
 <!DOCTYPE html>
 <html lang="de">
-    <?php include_once dirname(__DIR__, 1).'/layout/head.php'; ?>
+    <?php include_once dirname(__DIR__, 2).'/layout/head.php'; ?>
     <body>
         <div class="page">
             <?php
-                include(dirname(__DIR__, 1).'/partials/header/header.php');
+                include(dirname(__DIR__, 2).'/partials/header/header.php');
             ?>
             <main>
                 <article id="project" class="section">
@@ -56,8 +56,8 @@
             </main>
         </div>
         <?php 
-            include_once dirname(__DIR__, 1).'/partials/cookie-consent/cookie-consent.php';
-            include_once dirname(__DIR__, 1).'/partials/footer/footer.php';
+            include_once dirname(__DIR__, 2).'/partials/cookie-consent/cookie-consent.php';
+            include_once dirname(__DIR__, 2).'/partials/footer/footer.php';
         ?>
     </body>
 </html>

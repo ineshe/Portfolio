@@ -10,27 +10,27 @@ $viewDir = dirname(__DIR__, 1).'/src/views';
 switch ($request) {
     case '':
     case '/':
-        require $viewDir . '/home/home.php';
+        require $viewDir . '/pages/home/home.php';
         break;
     case '/more-projects':
-        require $viewDir . '/more-projects/more-projects.php';
+        require $viewDir . '/pages/more-projects/more-projects.php';
         break;
     case (bool) preg_match('#^/project/([\w-]+)$#', $request, $matches):
         $_GET['slug'] = $matches[1];
 
-        include dirname(__DIR__, 1).'/src/views/project-detail/config.php';
+        include dirname(__DIR__, 1).'/src/views/pages/project-detail/config.php';
 
         if (array_key_exists($matches[1], $projects)) {
-            require $viewDir . '/project-detail/project-detail.php';
+            require $viewDir . '/pages/project-detail/project-detail.php';
         } else {
             echo ' 404 - Seite nicht gefunden';
         }
         break;
     case '/impressum':
-        require $viewDir . '/impressum/impressum.php';
+        require $viewDir . '/pages/impressum/impressum.php';
         break;
     case '/datenschutz':
-        require $viewDir . '/datenschutz/datenschutz.php';
+        require $viewDir . '/pages/datenschutz/datenschutz.php';
         break;
     default:
         echo ' 404 - Seite nicht gefunden';

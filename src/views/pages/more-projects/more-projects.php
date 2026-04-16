@@ -1,5 +1,5 @@
 <?php 
-    $projects = json_decode(file_get_contents(__DIR__ . "/../../data/projects.json"));
+    $projects = json_decode(file_get_contents(__DIR__ . "/../../../data/projects.json"));
 
     $pageTitle = 'Weitere Projekte | Ines Heilmann – Full-Stack Webentwicklerin';
     $pageStyles = [
@@ -9,10 +9,10 @@
 <!DOCTYPE html>
 
 <html lang="de">
-    <?php include_once dirname(__DIR__, 1).'/layout/head.php'; ?>
+    <?php include_once dirname(__DIR__, 2).'/layout/head.php'; ?>
     <body>
         <div class="page">
-            <?php include_once dirname(__DIR__, 1).'/partials/header/header.php'; ?>
+            <?php include_once dirname(__DIR__, 2).'/partials/header/header.php'; ?>
             <main>
                 <section id="projects" class="section">
                     <div class="content">
@@ -40,8 +40,8 @@
                 </section>
             </main>
             <?php 
-                include_once dirname(__DIR__, 1).'/partials/cookie-consent/cookie-consent.php';
-                include_once dirname(__DIR__, 1).'/partials/footer/footer.php';
+                include_once dirname(__DIR__, 2).'/partials/cookie-consent/cookie-consent.php';
+                include_once dirname(__DIR__, 2).'/partials/footer/footer.php';
             ?>
         </div>
     </body>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-    include(dirname(__DIR__, 2).'/config.php');
+    include(dirname(__DIR__, 3).'/config.php');
 
     $pageTitle = 'Datenschutzerklärung | Ines Heilmann';
     $pageStyles = [
@@ -8,11 +8,11 @@
     ];
 ?>
 <html lang="de">
-    <?php include_once dirname(__DIR__, 1).'/layout/head.php'; ?>
+    <?php include_once dirname(__DIR__, 2).'/layout/head.php'; ?>
     <body>
         <div class="page">
             <?php
-                include_once dirname(__DIR__, 1).'/partials/header/header.php';
+                include_once dirname(__DIR__, 2).'/partials/header/header.php';
             ?>
             <main>
                 <article class="section">
@@ -99,8 +99,8 @@
                 </article>
             </main>
             <?php
-                include_once dirname(__DIR__, 1).'/partials/cookie-consent/cookie-consent.php';
-                include_once dirname(__DIR__, 1).'/partials/footer/footer.php';
+                include_once dirname(__DIR__, 2).'/partials/cookie-consent/cookie-consent.php';
+                include_once dirname(__DIR__, 2).'/partials/footer/footer.php';
             ?>
         </div>
     </body>
