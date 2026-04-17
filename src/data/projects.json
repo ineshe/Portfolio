@@ -55,7 +55,7 @@
                     "text": "Backend"
                 }                
             ],
-            "description": "<p>Full-Stack-Webanwendung zur Verwaltung von Rezepten, entwickelt mit Symfony, Stimulus und Tailwind CSS. Der integrierte Kochmodus führt Nutzer interaktiv durch jeden Zubereitungsschritt. Ideal für entspanntes Kochen ohne ständiges Scrollen.</p>\n\n<h3>Features</h3>\n<ul>\n    <li>Rezeptverwaltung mit Zutaten, Schritten und Kategorien</li>\n    <li>Interaktiver Kochmodus mit Schritt-für-Schritt-Navigation</li>\n    <li>Suche nach Rezeptnamen und Zutaten</li>\n   <li>Admin-Panel zur Inhaltsverwaltung und Benutzerauthentifizierung</li>\n    <li>Responsives Design mit Tailwind CSS</li>\n</ul>",
+            "description": "<p>Full-Stack-Webanwendung zur Verwaltung von Rezepten, entwickelt mit Symfony, Stimulus und Tailwind CSS. Der integrierte Kochmodus führt Nutzer interaktiv durch jeden Zubereitungsschritt. Ideal für entspanntes Kochen ohne ständiges Scrollen.</p>\n\n<h3>Features</h3>\n<ul>\n    <li>Rezeptverwaltung mit Kategorien, Zutaten und Schritten</li>\n    <li>Kochmodus mit Schritt-für-Schritt-Navigation</li>\n    <li>Suche nach Rezeptnamen und Zutaten</li>\n   <li>Benutzerauthentifizierung und Admin-Panel zur Inhaltsverwaltung</li>\n    <li>Responsives Design mit Tailwind CSS</li>\n</ul>",
             "technologies": "Symfony | Tailwind CSS | MySQL"
         },
     
