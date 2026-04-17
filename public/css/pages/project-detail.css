@@ -8,7 +8,6 @@
 }
 
 #project .btn {
-    margin-block: 0 0.75rem;
     background-color: var(--primary-accent);
     border: 1px solid var(--primary-accent-border);
     padding: 0.5rem 1rem;
@@ -30,10 +29,6 @@
     font-size: large;
 }
 
-#project .grid .col1 *:first-child {
-    margin-top: 0;
-}
-
 @media (min-width: 1025px) { /* ab Laptop L bis Desktop*/
 
     #project .grid {
@@ -42,6 +37,14 @@
         grid-template-columns: 2fr 1fr;
         grid-template-rows: min-content min-content;
         gap: 3rem 2rem;
+    }
+
+    #project .btn {
+        margin-block: 0 0.75rem;
+    }
+
+    #project .grid .col1 *:first-child {
+        margin-top: 0;
     }
 
     #project .grid .col1 {
