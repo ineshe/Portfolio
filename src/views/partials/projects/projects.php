@@ -13,7 +13,7 @@
             ?>
                 <div class="project">
                     <a href="<?= $baseURL . '/project/' . $project->slug ?>">
-                        <img class="card-img" src="<?= $baseURL . $project->mainImage ?>" alt="" height="200" width="300" loading="eager" decoding="async" fetchpriority="high">
+                        <img class="card-img white" src="<?= $baseURL . $project->mainImage ?>" alt="" height="200" width="300" loading="eager" decoding="async" fetchpriority="high">
                         <div class="card-text">
                             <h3 class="project-title"><?= $project->title ?></h3>
                             <p><?= $project->technologies ?></p>
