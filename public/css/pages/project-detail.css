@@ -8,13 +8,12 @@
 }
 
 #project .btn {
-    margin-top: 1rem;
+    margin-block: 0 0.75rem;
     background-color: var(--primary-accent);
     border: 1px solid var(--primary-accent-border);
     padding: 0.5rem 1rem;
     cursor: pointer;
     color: #111111;
-    border-radius: 0;
 }
 
 #project .btn:hover {
@@ -29,6 +28,10 @@
     font-size: large;
 }
 
+#project .grid .col1 *:first-child {
+    margin-top: 0;
+}
+
 @media (min-width: 1025px) { /* ab Laptop L bis Desktop*/
 
     #project .grid {
@@ -36,7 +39,7 @@
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: min-content min-content;
-        column-gap: 2rem;
+        gap: 3rem 2rem;
     }
 
     #project .grid .col1 {
