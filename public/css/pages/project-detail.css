@@ -16,8 +16,10 @@
     color: #111111;
 }
 
-#project .btn:hover {
-    background-color: var(--primary-accent-hover);
+@media (hover: hover) {
+    #project .btn:hover {
+        background-color: var(--primary-accent-hover);
+    }
 }
 
 .btn svg {

@@ -39,6 +39,8 @@
     font-weight: bold;
 }
 
-#cookie-banner button:hover {
-    background-color: var(--primary-accent-hover);
+@media (hover: hover) {
+    #cookie-banner button:hover {
+        background-color: var(--primary-accent-hover);
+    }
 }
