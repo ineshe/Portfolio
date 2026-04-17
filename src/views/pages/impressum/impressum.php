@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <?php 
-    include(dirname(__DIR__, 2).'/config.php');
+    include(dirname(__DIR__, 3).'/config.php');
+
+    $pageTitle = 'Impressum | Ines Heilmann';
+    $pageStyles = [
+        '/css/components/projects.css',
+    ];
 ?>
 <html lang="de">
-    <head>
-        <title>Impressum | Ines Heilmann</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <?php
-            include_once dirname(__DIR__, 1).'/global-styles.php';
-        
-            if ($isDevelopment === true) {
-                echo '<script async data-id="five-server" src="http://localhost:5500/fiveserver.js"></script>';
-            }
-        ?>
-        <link rel="stylesheet" href="<?= $baseURL ?>/css/projects.css">
-        <script src="<?= $baseURL ?>/js/navigation.js" defer></script>
-        <script src="<?= $baseURL ?>/js/c-consent.js" defer></script>
-    </head>
+    <?php include_once dirname(__DIR__, 2).'/layout/head.php'; ?>
     <body>
         <div class="page">
             <?php
-                include_once dirname(__DIR__, 1).'/partials/header/header.php';
+                include_once dirname(__DIR__, 2).'/partials/header/header.php';
             ?>
             <main>
                 <article id="project" class="section">
@@ -90,8 +81,8 @@
                 </article>
             </main>
             <?php 
-                include_once dirname(__DIR__, 1).'/partials/cookie-consent/cookie-consent.php';
-                include_once dirname(__DIR__, 1).'/partials/footer/footer.php';
+                include_once dirname(__DIR__, 2).'/partials/cookie-consent/cookie-consent.php';
+                include_once dirname(__DIR__, 2).'/partials/footer/footer.php';
             ?>
         </div>
     </body>

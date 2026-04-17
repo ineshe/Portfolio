@@ -7,8 +7,18 @@
     text-align: left;
 }
 
-.btn {
-    margin-top: 1rem;
+#project .btn {
+    background-color: var(--primary-accent);
+    border: 1px solid var(--primary-accent-border);
+    padding: 0.375rem 1rem;
+    cursor: pointer;
+    color: #111111;
+}
+
+@media (hover: hover) {
+    #project .btn:hover {
+        background-color: var(--primary-accent-hover);
+    }
 }
 
 .btn svg {
@@ -26,7 +36,15 @@
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: min-content min-content;
-        column-gap: 2rem;
+        gap: 3rem 2rem;
+    }
+
+    #project .btn {
+        margin-block: 0 0.75rem;
+    }
+
+    #project .grid .col1 *:first-child {
+        margin-top: 0;
     }
 
     #project .grid .col1 {

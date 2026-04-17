@@ -3,13 +3,13 @@
     <div class="slideshow">
         <?php $media = $project->media; ?>
 
-        <?php foreach ($media as $medium): ?>    
+        <?php foreach ($media as $index => $medium): ?>    
             <?php if(substr($medium, -4) == ".mp4"): ?>
-                <video class="slide" controls>
+                <video class="slide" controls preload="metadata">
                     <source src="<?= $medium ?>" type="video/mp4">
                 </video>
             <?php else: ?>
-                <img class="slide" src="<?= $medium ?>" alt="">
+                <img class="slide" src="<?= $medium ?>" alt="" width="960" height="540" loading="<?= $index === 0 ? 'eager' : 'lazy' ?>" decoding="async" fetchpriority="<?= $index === 0 ? 'high' : 'auto' ?>">
             <?php endif; ?>
         <?php endforeach; ?>
 

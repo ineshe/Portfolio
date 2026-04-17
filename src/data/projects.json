@@ -4,10 +4,10 @@
             "title": "Lumines",
             "slug": "lumines",
             "visibility": "1",
-            "shortDescription": "Interaktive Landingpage für Lippenstiftserie.",
+            "shortDescription": "Interaktive Landingpage für Lippenstiftserie",
             "mainImage": "/assets/projects/lumines/lumines-300X200.webp",
             "media": [
-                "../../../assets/projects/lumines/chrome_HAau4pinx4.mp4"
+                "../../../assets/projects/lumines/lumines-video-cutted.mp4"
             ],
             "buttons": [
                 {
@@ -21,8 +21,8 @@
                     "text": "Frontend"
                 }               
             ],
-            "description": "<p>Dieses Projekt ist eine interaktive Landingpage für eine Lippenstiftserie, entwickelt mit React und Vite. Eine scrollgesteuerte Canvas-Animation präsentiert die Produkte dynamisch. Ergänzt wird die Experience durch animierte USP-Abschnitte, einen Review-Slider und ein responsives UI.</p>\n\n<h3>Tätigkeiten</h3>\n<ul>\n    <li>Konzeption und Gestaltung des UI/UX-Designs</li>\n    <li>Umsetzung interaktiver Animationen mit React und Motion</li>\n    <li>Entwicklung einer responsiven, scrollgesteuerten Frontend-Experience</li>\n</ul>",
-            "technologies": "React, Motion, JavaScript, CSS"
+            "description": "<p>Dieses Projekt ist eine interaktive Landingpage für eine Lippenstiftserie, entwickelt mit React und Vite. Eine scrollgesteuerte Canvas-Animation präsentiert die Produkte dynamisch. Ergänzt wird die Experience durch animierte USP-Abschnitte, einen Review-Slider und ein responsives UI.</p>\n\n<h3>Features</h3>\n<ul>\n    <li>Konzeption und Gestaltung des UI/UX-Designs</li>\n    <li>Umsetzung interaktiver Animationen mit React und Motion</li>\n    <li>Entwicklung einer responsiven, scrollgesteuerten Frontend-Experience</li>\n</ul>",
+            "technologies": "React | JavaScript | CSS"
         },
 
     "recines":
@@ -30,7 +30,7 @@
             "title": "Recines",
             "slug": "recines",
             "visibility": "1",
-            "shortDescription": "Website für die Präsentation von Rezepten.",
+            "shortDescription": "Full-Stack-Webanwendung zur Verwaltung von Rezepten",
             "mainImage": "/assets/projects/recines/recines-300X200.webp",
             "media": [
                 "../../../assets/projects/recines/recines-960X540-1.webp",
@@ -55,8 +55,8 @@
                     "text": "Backend"
                 }                
             ],
-            "description": "<p>Diese Webanwendung bietet eine übersichtliche und optisch ansprechende Plattform zur Darstellung von Rezepten. Die Rezepte sind spezifischen Kategorien zugeordnet, die im Hauptmenü gelistet sind. Die Startseite zeigt eine Auswahl aller Rezepte, sodass Besucher schnell auf eine Vielfalt an Ideen zugreifen können.</p><p>Besonders hervorzuheben ist die integrierte Suchfunktion, die Rezepte anhand des Titels oder der Zutatenliste findet – ideal, um schnell Rezepte mit Zutaten zu finden, die bereits zur Hand sind.</p>",
-            "technologies": "Symfony, Tailwind, MySQL"
+            "description": "<p>Full-Stack-Webanwendung zur Verwaltung von Rezepten, entwickelt mit Symfony, Stimulus und Tailwind CSS. Der integrierte Kochmodus führt Nutzer interaktiv durch jeden Zubereitungsschritt. Ideal für entspanntes Kochen ohne ständiges Scrollen.</p>\n\n<h3>Features</h3>\n<ul>\n    <li>Rezeptverwaltung mit Zutaten, Schritten und Kategorien</li>\n    <li>Interaktiver Kochmodus mit Schritt-für-Schritt-Navigation</li>\n    <li>Suche nach Rezeptnamen und Zutaten</li>\n   <li>Admin-Panel zur Inhaltsverwaltung und Benutzerauthentifizierung</li>\n    <li>Responsives Design mit Tailwind CSS</li>\n</ul>",
+            "technologies": "Symfony | Tailwind CSS | MySQL"
         },
     
     "ddoptics": 
@@ -81,7 +81,7 @@
                 }
             ],
             "description": "<p>Während meines zweiwöchigen Praktikums bei DDOptics in Chemnitz erarbeitete ich ein Design für eine Landingpage eines Onlineshops. Auf dieser Seite sollten die Ferngläser des Unternehmens präsentiert werden, welche sich am besten für Vogel- und Naturbeobachtungen eignen. Bei der Umsetzung arbeitete ich mit Shopware.</p>",
-            "technologies": "HTML, CSS, Javascript, Shopware, Adobe Photoshop"
+            "technologies": "HTML | CSS | Javascript | Shopware | Adobe Photoshop"
         },
 
     "gesine":
@@ -108,7 +108,7 @@
                 }
             ],
             "description": "<p>Dieses Projekt wurde von mir während meines Praktikums bei der Visual World GmbH in Chemnitz bearbeitet. Es sollte eine Webanwendung entwickelt werden, welche die Zusammenarbeit zwischen Unternehmen mit ausgebildeten Beratern zum Arbeitsschutz und Gesundheitsmanagement erleichtert. Für  eine Bestandsaufnahme sollten dazu eine Checkliste ausgefüllt  sowie eine Mitarbeiterbefragung durchgeführt werden können. Die  Ergebnisse daraus sollten anschließend zur Ermittlung geeigneter Maßnahmen herangezogen werden.</p> <h3>Ablauf des Praktikums:</h3> <p>Innerhalb des 3-monatigen Praktikums sollten dazu zunächst ein  Logo sowie eine Corporate Identity entwickelt werden. Danach  sollten im Rahmen der Konzeption die Anforderungen ermittelt und  ein Lasten- und Pflichtenheft formuliert werden. Darauf folgte  die Entwicklungsphase des Prototyps mit anschließender Dokumentation durch ein Benutzerhandbuch.</p>",
-            "technologies": "HTML, SASS, Angular, Typescript, Bootstrap"
+            "technologies": "HTML | SASS | Angular | Typescript | Bootstrap"
         },
         
     "shepherd-sim":

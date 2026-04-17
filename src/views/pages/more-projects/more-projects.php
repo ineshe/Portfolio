@@ -1,30 +1,18 @@
 <?php 
-    $projects = json_decode(file_get_contents(__DIR__ . "/../../data/projects.json"));
+    $projects = json_decode(file_get_contents(__DIR__ . "/../../../data/projects.json"));
+
+    $pageTitle = 'Weitere Projekte | Ines Heilmann – Full-Stack Webentwicklerin';
+    $pageStyles = [
+        '/css/components/projects.css',
+    ];
 ?>
 <!DOCTYPE html>
 
 <html lang="de">
-    <head>
-        <title>Weitere Projekte | Ines Heilmann – Full-Stack Webentwicklerin</title>
-        <base href="<?php $baseURL ?>"/>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <?php
-            include_once dirname(__DIR__, 1).'/global-styles.php';
-        
-            if ($isDevelopment === true) {
-                echo '<script async data-id="five-server" src="http://localhost:5500/fiveserver.js"></script>';
-            }
-        ?>
-        <link rel="stylesheet" href="<?= $baseURL ?>/css/projects.css">
-        <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
-        <!-- <script src="includes/contact/validation.js" defer></script> -->
-        <script src="<?= $baseURL ?>/js/navigation.js" defer></script>
-        <script src="<?= $baseURL ?>/js/c-consent.js" defer></script>
-    </head>
+    <?php include_once dirname(__DIR__, 2).'/layout/head.php'; ?>
     <body>
         <div class="page">
-            <?php include_once dirname(__DIR__, 1).'/partials/header/header.php'; ?>
+            <?php include_once dirname(__DIR__, 2).'/partials/header/header.php'; ?>
             <main>
                 <section id="projects" class="section">
                     <div class="content">
@@ -36,13 +24,14 @@
 
                                         <section class="project">
                                             <a href="<?= $baseURL . '/project/' . $project->slug ?>">
-                                                <img class="card-img" src="<?= $baseURL . $project->mainImage ?>" alt="" style="background-color: white;">
+                                                <img class="card-img white" src="<?= $baseURL . $project->mainImage ?>" alt="" loading="eager" decoding="async" fetchpriority="heigh">
                                                 <div class="card-text">
                                                     <h3 class="project-title"><?= $project->title ?></h3>
                                                     <p><?= $project->technologies ?></p>
                                                 </div>
                                             </a>
                                         </section>
+
 
                                     <?php endif; ?>
                                 <?php endforeach; ?>
@@ -52,8 +41,8 @@
                 </section>
             </main>
             <?php 
-                include_once dirname(__DIR__, 1).'/partials/cookie-consent/cookie-consent.php';
-                include_once dirname(__DIR__, 1).'/partials/footer/footer.php';
+                include_once dirname(__DIR__, 2).'/partials/cookie-consent/cookie-consent.php';
+                include_once dirname(__DIR__, 2).'/partials/footer/footer.php';
             ?>
         </div>
     </body>

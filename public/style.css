@@ -2,7 +2,9 @@
 
 :root {
   --card-bg: #3d5666;
-  --primary-accent: #d47479; /* Altrosa  */
+  --primary-accent: #c05f67; /* Altrosa  */
+  --primary-accent-hover: #ad535a; /* Altrosa dunkler */
+  --primary-accent-border: #93474d; /* Altrosa noch dunkler */
   --body-bg: #2e3e4d;
   --header-bg: #314252;
   --shadow: #28323c;

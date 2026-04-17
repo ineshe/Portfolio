@@ -57,8 +57,10 @@
     transform: translateY(-50%);
 }
 
-.slideshow-container button:hover {
-    background-color: #121212;
+@media (hover: hover) {
+    .slideshow-container button:hover {
+        background-color: #121212;
+    }
 }
 
 .dots {
