@@ -18,19 +18,22 @@
                     <div class="content">
                         <h2 class="section-title"> Weitere Projekte</h2>
                         <div class="project-cards">
+                            <?php $imageIndex = 0; ?>
                             <?php if(isset($projects)): ?>
                                 <?php foreach ($projects as $project): ?>
                                     <?php if ($project->visibility == "0"): ?>
 
                                         <section class="project">
                                             <a href="<?= $baseURL . '/project/' . $project->slug ?>">
-                                                <img class="card-img" src="<?= $baseURL . $project->mainImage ?>" alt="" style="background-color: white;">
+                                                <img class="card-img" src="<?= $baseURL . $project->mainImage ?>" alt="" loading="<?= $imageIndex === 0 ? 'eager' : 'lazy' ?>" decoding="async" fetchpriority="<?= $imageIndex === 0 ? 'high' : 'auto' ?>" style="background-color: black;">
                                                 <div class="card-text">
                                                     <h3 class="project-title"><?= $project->title ?></h3>
                                                     <p><?= $project->technologies ?></p>
                                                 </div>
                                             </a>
                                         </section>
+
+                                        <?php $imageIndex++; ?>
 
                                     <?php endif; ?>
                                 <?php endforeach; ?>
