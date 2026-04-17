@@ -4,26 +4,41 @@
     bottom: 0;
     width: 100%;
     background-color: #2f3640; /* Rauchblau */
+    border-top: 1px solid rgb(58, 68, 80);
     color: #fff;
     padding-inline: 1.875rem;
-    padding-block-start: 1rem;
+    padding-block-start: 1.875rem;
     padding-block-end: 2.125rem;
     text-align: center;
     display: none;
 }
 
+#cookie-banner *:first-child {
+    margin-top: 0;
+}
+
 #cookie-banner .buttons {
     display: grid;
     justify-content: center;
-    gap: 0.75rem;
-    grid-template-columns: repeat(auto-fit, 10em);
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(9.5rem, 12rem));
+}
+
+@media (max-width: 480px) {
+    #cookie-banner .buttons {
+        grid-template-columns: 1fr;
+    }
 }
 
 #cookie-banner button {
     background-color: var(--primary-accent);
-    border: none;
-    padding: 10px 20px;
+    border: 1px solid var(--primary-accent-border);
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    color: #1d1d1d;
+    color: #111111;
     font-weight: bold;
+}
+
+#cookie-banner button:hover {
+    background-color: var(--primary-accent-hover);
 }

@@ -7,8 +7,18 @@
     text-align: left;
 }
 
-.btn {
+#project .btn {
     margin-top: 1rem;
+    background-color: var(--primary-accent);
+    border: 1px solid var(--primary-accent-border);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: #111111;
+    border-radius: 0;
+}
+
+#project .btn:hover {
+    background-color: var(--primary-accent-hover);
 }
 
 .btn svg {
