@@ -10,7 +10,7 @@
 #project .btn {
     background-color: var(--primary-accent);
     border: 1px solid var(--primary-accent-border);
-    padding: 0.5rem 1rem;
+    padding: 0.375rem 1rem;
     cursor: pointer;
     color: #111111;
 }
