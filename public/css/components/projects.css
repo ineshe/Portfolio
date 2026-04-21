@@ -32,7 +32,7 @@
 
 .project-title {
     color: white;
-    font-size: 1.25rem;
+    font-size: clamp(1.05rem, 0.95rem + 0.45vw, 1.3rem);
     margin: 0;
 }
 
