@@ -10,7 +10,7 @@
 
 .project {
     background-color: var(--card-bg);
-    border-radius: 3px;
+    border-radius: var(--radius-sm);
     box-shadow: 5px 5px 5px var(--shadow);
     height: 100%;
 }
@@ -27,7 +27,7 @@
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 3px 3px 0 0;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 }
 
 .project-title {

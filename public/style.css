@@ -2,6 +2,7 @@
 
 :root {
   --card-bg: #3d5666;
+  --radius-sm: 3px;
   --primary-accent: #c05f67; /* Altrosa  */
   --primary-accent-hover: #ad535a; /* Altrosa dunkler */
   --primary-accent-border: #93474d; /* Altrosa noch dunkler */
@@ -34,7 +35,7 @@ body {
 }
 
 .rounded {
-  border-radius: 3px;
+  border-radius: var(--radius-sm);
 }
 
 .section {

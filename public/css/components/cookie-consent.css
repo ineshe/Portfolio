@@ -38,6 +38,7 @@
 #cookie-banner button {
     background-color: var(--primary-accent);
     border: 1px solid var(--primary-accent-border);
+    border-radius: var(--radius-sm);
     padding: 0.5rem 1rem;
     cursor: pointer;
     color: #111111;
