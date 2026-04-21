@@ -11,15 +11,15 @@
                     foreach ($projects as $project):
                         if ($project->visibility == "1"): 
             ?>
-                <div class="project">
-                    <a href="<?= $baseURL . '/project/' . $project->slug ?>">
-                        <img class="card-img white" src="<?= $baseURL . $project->mainImage ?>" alt="" height="200" width="300" loading="eager" decoding="async" fetchpriority="high">
-                        <div class="card-text">
+                <a href="<?= $baseURL . '/project/' . $project->slug ?>">                            
+                    <article class="project">
+                        <img class="white" src="<?= $baseURL . $project->mainImage ?>" alt="" height="200" width="300" loading="eager" decoding="async" fetchpriority="high">
+                        <div class="project-content">
                             <h3 class="project-title"><?= $project->title ?></h3>
                             <p><?= $project->technologies ?></p>
                         </div>
-                    </a>
-                </div>
+                    </article>
+                </a>
             <?php 
                         endif;
                     endforeach;
@@ -28,7 +28,7 @@
             <div class="project">
                 <a href="<?php echo $baseURL?>/more-projects">
                     <img class="card-img" src="<?php echo $baseURL?>/assets/projects/more-projects.png" alt="Weiter" height="200" width="300" loading="eager" decoding="async" fetchpriority="high">
-                    <div class="card-text">
+                    <div class="project-content">
                         <h3 class="project-title">Mehr Projekte ansehen</h3>
                     </div>
                 </a>
