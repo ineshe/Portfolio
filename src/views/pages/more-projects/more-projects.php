@@ -15,7 +15,7 @@
     <?php include_once dirname(__DIR__, 2).'/layout/head.php'; ?>
     <body>
         <div class="page">
-            <?php include_once dirname(__DIR__, 2).'/partials/header/header.php'; ?>
+            <?php include_once dirname(__DIR__, 2).'/components/header/header.php'; ?>
             <main>
                 <section id="projects" class="section">
                     <div class="content">
@@ -45,8 +45,8 @@
                 </section>
             </main>
             <?php 
-                include_once dirname(__DIR__, 2).'/partials/cookie-consent/cookie-consent.php';
-                include_once dirname(__DIR__, 2).'/partials/footer/footer.php';
+                include_once dirname(__DIR__, 2).'/components/cookie-consent/cookie-consent.php';
+                include_once dirname(__DIR__, 2).'/components/footer/footer.php';
             ?>
         </div>
     </body>

@@ -21,7 +21,7 @@
     <body>
         <div class="page">
             <?php
-                include(dirname(__DIR__, 2).'/partials/header/header.php');
+                include(dirname(__DIR__, 2).'/components/header/header.php');
             ?>
             <main>
                 <article id="project" class="section">
@@ -77,8 +77,8 @@
             </main>
         </div>
         <?php 
-            include_once dirname(__DIR__, 2).'/partials/cookie-consent/cookie-consent.php';
-            include_once dirname(__DIR__, 2).'/partials/footer/footer.php';
+            include_once dirname(__DIR__, 2).'/components/cookie-consent/cookie-consent.php';
+            include_once dirname(__DIR__, 2).'/components/footer/footer.php';
         ?>
     </body>
 </html>
