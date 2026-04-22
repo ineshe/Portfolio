@@ -12,11 +12,11 @@
                         if ($project->visibility == "1"): 
             ?>
                 <li class="project-item">
-                    <article class="project">
+                    <article class="project js-redundant-click-card">
                         <img class="white" src="<?= $baseURL . $project->mainImage ?>" alt="" height="200" width="300" loading="eager" decoding="async" fetchpriority="high">
                         <div class="project-content">
                             <h3 class="project-title">
-                                <a href="<?= $baseURL . '/project/' . $project->slug ?>"><?= $project->title ?></a>
+                                <a class="js-primary-link" href="<?= $baseURL . '/project/' . $project->slug ?>"><?= $project->title ?></a>
                             </h3>
                             <p class="project-technologies"><?= $project->technologies ?></p>
                         </div>
@@ -28,11 +28,11 @@
                 endif;
             ?>
             <li class="project-item">
-                <article class="project">
+                <article class="project js-redundant-click-card">
                     <img class="card-img" src="<?php echo $baseURL?>/assets/projects/more-projects.png" alt="Weiter" height="200" width="300" loading="eager" decoding="async" fetchpriority="high">
                     <div class="project-content">
                         <h3 class="project-title">
-                            <a href="<?php echo $baseURL?>/more-projects">Mehr Projekte ansehen</a>
+                            <a class="js-primary-link" href="<?php echo $baseURL?>/more-projects">Mehr Projekte ansehen</a>
                         </h3>
                     </div>
                 </article>

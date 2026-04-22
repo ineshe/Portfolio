@@ -12,6 +12,9 @@ LinkedIn, Github -->
         '/css/components/about-me.css',
         '/css/components/projects.css',
     ];
+    $pageScripts = [
+        '/js/components/redundant-card-click.js',
+    ];
 ?>
 <html lang="de">
     <?php include_once dirname(__DIR__, 2).'/layout/head.php'; ?>

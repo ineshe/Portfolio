@@ -11,7 +11,7 @@
 .project {
     background-color: var(--card-bg);
     border-radius: var(--radius-sm);
-    box-shadow: 5px 5px 5px var(--shadow);
+    box-shadow: 4px 4px 6px var(--shadow);
     height: 100%;
 }
 
@@ -41,12 +41,25 @@
     text-decoration: none;
 }
 
+.project.redundant-click:hover,
+.project.redundant-click:focus-within {
+    box-shadow: 0 0 0 2px #dddddd, 6px 6px 8px var(--shadow);
+}
+
+.project-title a:focus {
+    text-decoration: underline;
+}
+
+.project.redundant-click:focus-within .project-title a:focus {
+    text-decoration: none;
+}
+
 .project-content {
     padding: 1rem;
 }
 
 .project-technologies {
-    color: #d2f5fa;
+    color: #dddddd;
     font-size: 0.9rem;
 }
 
