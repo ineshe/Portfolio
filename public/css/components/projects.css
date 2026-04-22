@@ -45,6 +45,11 @@
     padding: 1rem;
 }
 
+.project-technologies {
+    color: #d2f5fa;
+    font-size: 0.9rem;
+}
+
 /* only mobile */
 @media screen and (max-width: 767px) {
     .project-cards {

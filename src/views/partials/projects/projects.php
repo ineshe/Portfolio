@@ -18,7 +18,7 @@
                             <h3 class="project-title">
                                 <a href="<?= $baseURL . '/project/' . $project->slug ?>"><?= $project->title ?></a>
                             </h3>
-                            <p><?= $project->technologies ?></p>
+                            <p class="project-technologies"><?= $project->technologies ?></p>
                         </div>
                     </article>
                 </li>
