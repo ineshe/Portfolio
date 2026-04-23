@@ -12,21 +12,24 @@ LinkedIn, Github -->
         '/css/components/about-me.css',
         '/css/components/projects.css',
     ];
+    $pageScripts = [
+        '/js/components/redundant-card-click.js',
+    ];
 ?>
 <html lang="de">
     <?php include_once dirname(__DIR__, 2).'/layout/head.php'; ?>
     <body>
         <div class="page">
-            <?php include_once dirname(__DIR__, 2).'/partials/header/header.php'; ?>
+            <?php include_once dirname(__DIR__, 2).'/components/header/header.php'; ?>
             <main>
                 <?php 
-                    include_once dirname(__DIR__, 2).'/partials/about-me/about-me.php';
-                    include_once dirname(__DIR__, 2).'/partials/projects/projects.php';
+                    include_once dirname(__DIR__, 2).'/components/about-me/about-me.php';
+                    include_once dirname(__DIR__, 2).'/components/projects/projects.php';
                 ?>
             </main>
             <?php 
-                include_once dirname(__DIR__, 2).'/partials/cookie-consent/cookie-consent.php';
-                include_once dirname(__DIR__, 2).'/partials/footer/footer.php';
+                include_once dirname(__DIR__, 2).'/components/cookie-consent/cookie-consent.php';
+                include_once dirname(__DIR__, 2).'/components/footer/footer.php';
             ?>
         </div>
     </body>

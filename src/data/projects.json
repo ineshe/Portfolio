@@ -21,7 +21,7 @@
                     "text": "Frontend"
                 }               
             ],
-            "description": "<p>Dieses Projekt ist eine interaktive Landingpage für eine Lippenstiftserie, entwickelt mit React und Vite. Eine scrollgesteuerte Canvas-Animation präsentiert die Produkte dynamisch. Ergänzt wird die Experience durch animierte USP-Abschnitte, einen Review-Slider und ein responsives UI.</p>\n\n<h3>Features</h3>\n<ul>\n    <li>Konzeption und Gestaltung des UI/UX-Designs</li>\n    <li>Umsetzung interaktiver Animationen mit React und Motion</li>\n    <li>Entwicklung einer responsiven, scrollgesteuerten Frontend-Experience</li>\n</ul>",
+            "description": "<p>Dieses Projekt ist eine interaktive Landingpage für eine Lippenstiftserie, entwickelt mit React und Vite. Eine scrollgesteuerte Canvas-Animation präsentiert die Produkte dynamisch. Ergänzt wird das Ganze durch animierte USP-Abschnitte, einen Review-Slider und ein responsives UI.</p>\n\n<h3>Features</h3>\n<ul>\n    <li>Konzeption und Gestaltung des UI/UX-Designs</li>\n    <li>Umsetzung interaktiver Animationen mit React und Motion</li>\n    <li>Entwicklung eines responsiven, scrollgesteuerten Frontends</li>\n</ul>",
             "technologies": "React | JavaScript | CSS"
         },
 
@@ -102,7 +102,7 @@
                     "text": "Praktikumszeugnis"
                 },
                 {
-                    "link": "'../../../assets/projects/gesine/bedienungsanleitung.pdf",
+                    "link": "../../../assets/projects/gesine/bedienungsanleitung.pdf",
                     "target": "_blank",
                     "text": "Handbuch"
                 }

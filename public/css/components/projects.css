@@ -1,14 +1,18 @@
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;    
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: max(1rem + 1.5vw, 2rem);
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .project {
     background-color: var(--card-bg);
-    border-radius: 3px;
-    box-shadow: 5px 5px 5px var(--shadow);
-    justify-self: stretch;
+    border-radius: var(--radius-sm);
+    box-shadow: 4px 4px 6px var(--shadow);
+    height: 100%;
 }
 
 .white {
@@ -23,28 +27,54 @@
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 3px 3px 0 0;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 }
 
 .project-title {
     color: white;
-    font-size: 1.25rem;
+    font-size: clamp(1.16rem, 0.95rem + 0.45vw, 1.3rem);
     margin: 0;
 }
 
-.card-text {
+.project-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.project.redundant-click:hover,
+.project.redundant-click:focus-within {
+    box-shadow: 0 0 0 2px #dddddd, 6px 6px 8px var(--shadow);
+}
+
+.project-title a:focus {
+    text-decoration: underline;
+}
+
+.project.redundant-click:focus-within .project-title a:focus {
+    text-decoration: none;
+}
+
+.project-content {
     padding: 1rem;
 }
 
-/* only mobile */
-@media screen and (max-width: 767px) {
+.project-technologies {
+    color: #dddddd;
+    font-size: 0.9rem;
+}
+
+/* 2 columns on medium screens and up */
+@media screen and (min-width: 481px) {
     .project-cards {
         grid-template-columns: repeat(2, 1fr);
+        row-gap: max(0.75rem + 1.5vw, 1.5rem);
     }
 }
 
-@media only screen and (max-width: 480px) {
+/* 3 columns on large screens and up */
+@media screen and (min-width: 768px) {
     .project-cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, minmax(230px, 1fr));
+        row-gap: max(0.75rem + 1.5vw, 1.5rem);
     }
 }

@@ -5,6 +5,9 @@
     $pageStyles = [
         '/css/components/projects.css',
     ];
+    $pageScripts = [
+        '/js/components/redundant-card-click.js',
+    ];
 ?>
 <!DOCTYPE html>
 
@@ -12,37 +15,38 @@
     <?php include_once dirname(__DIR__, 2).'/layout/head.php'; ?>
     <body>
         <div class="page">
-            <?php include_once dirname(__DIR__, 2).'/partials/header/header.php'; ?>
+            <?php include_once dirname(__DIR__, 2).'/components/header/header.php'; ?>
             <main>
                 <section id="projects" class="section">
                     <div class="content">
                         <h2 class="section-title"> Weitere Projekte</h2>
-                        <div class="project-cards">
+                        <ul class="project-cards">
                             <?php if(isset($projects)): ?>
                                 <?php foreach ($projects as $project): ?>
                                     <?php if ($project->visibility == "0"): ?>
 
-                                        <section class="project">
-                                            <a href="<?= $baseURL . '/project/' . $project->slug ?>">
-                                                <img class="card-img white" src="<?= $baseURL . $project->mainImage ?>" alt="" loading="eager" decoding="async" fetchpriority="heigh">
-                                                <div class="card-text">
-                                                    <h3 class="project-title"><?= $project->title ?></h3>
-                                                    <p><?= $project->technologies ?></p>
+                                        <li class="project-item">
+                                            <article class="project js-redundant-click-card">
+                                                <img class="card-img white" src="<?= $baseURL . $project->mainImage ?>" alt="" height="200" width="300" loading="eager" decoding="async" fetchpriority="high">
+                                                <div class="project-content">
+                                                    <h3 class="project-title">
+                                                        <a class="js-primary-link" href="<?= $baseURL . '/project/' . $project->slug ?>"><?= $project->title ?></a>
+                                                    </h3>
+                                                    <p class="project-technologies"><?= $project->technologies ?></p>
                                                 </div>
-                                            </a>
-                                        </section>
-
+                                            </article>
+                                        </li>
 
                                     <?php endif; ?>
                                 <?php endforeach; ?>
                             <?php endif; ?>
-                        </div> 
+                        </ul> 
                     </div>
                 </section>
             </main>
             <?php 
-                include_once dirname(__DIR__, 2).'/partials/cookie-consent/cookie-consent.php';
-                include_once dirname(__DIR__, 2).'/partials/footer/footer.php';
+                include_once dirname(__DIR__, 2).'/components/cookie-consent/cookie-consent.php';
+                include_once dirname(__DIR__, 2).'/components/footer/footer.php';
             ?>
         </div>
     </body>

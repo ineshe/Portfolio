@@ -18,7 +18,7 @@ switch ($request) {
     case (bool) preg_match('#^/project/([\w-]+)$#', $request, $matches):
         $_GET['slug'] = $matches[1];
 
-        include dirname(__DIR__, 1).'/src/views/pages/project-detail/config.php';
+        $projects = json_decode(file_get_contents(dirname(__DIR__, 1).'/src/data/projects.json'), true);
 
         if (array_key_exists($matches[1], $projects)) {
             require $viewDir . '/pages/project-detail/project-detail.php';
