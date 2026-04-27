@@ -25,6 +25,7 @@
 
 /* Card */
 .project-card {
+  height: 100%;
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -33,6 +34,7 @@
   transition: border-color 0.25s ease;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 .project-card:hover { border-color: rgba(255,255,255,0.35); }
 
