@@ -9,6 +9,8 @@
   max-width: var(--max-width);
   margin: 0 auto;
   text-align: center;
+  hyphenate-limit-chars: auto 5;
+  hyphenate-limit-lines: 2;
 }
 
 .about-inner > div {
