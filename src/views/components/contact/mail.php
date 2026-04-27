@@ -5,8 +5,6 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
-    session_start();
-
     if($_POST) {
 
         //Load Composer's autoloader

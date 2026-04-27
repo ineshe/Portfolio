@@ -4,7 +4,9 @@
             "title": "Lumines",
             "slug": "lumines",
             "visibility": "1",
-            "shortDescription": "Interaktive Landingpage für Lippenstiftserie",
+            "subtitle": "Interaktive Landingpage",
+            "tech": ["React", "JavaScript", "CSS", "Motion"],
+            "shortDescription": "Scrollgesteuerte Canvas-Animation für eine Lippenstiftserie mit React & Vite.",
             "mainImage": "/assets/projects/lumines/lumines-300X200.webp",
             "media": [
                 "../../../assets/projects/lumines/lumines-video-cutted.mp4"
@@ -30,7 +32,9 @@
             "title": "Recines",
             "slug": "recines",
             "visibility": "1",
-            "shortDescription": "Full-Stack-Webanwendung zur Verwaltung von Rezepten",
+            "subtitle": "Full-Stack Webanwendung",
+            "tech": ["Symfony", "Tailwind CSS", "MySQL", "Stimulus"],
+            "shortDescription": "Rezeptverwaltung mit Kochmodus, Symfony, Stimulus und Tailwind CSS.",
             "mainImage": "/assets/projects/recines/recines-300X200.webp",
             "media": [
                 "../../../assets/projects/recines/recines-960X540-1.webp",
