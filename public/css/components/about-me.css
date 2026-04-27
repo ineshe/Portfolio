@@ -1,31 +1,32 @@
-#about-me {
-    display: flex;
-    justify-content: center;
-    line-height: 1.7;
+#about {
+  padding: 100px 40px;
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
 }
 
-#about-me .content {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 30px;
-    align-items: center;
-    padding: 40px 30px;
+.about-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
 }
 
-#about-me .text {
-    max-width: 600px;
-    margin: 0;
+.about-inner > div {
+  max-width: 680px;
+  margin: 0 auto;
 }
 
-#about-me .picture {
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
+.about-text {
+  color: rgba(232,232,240,0.72);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 16px;
+  hyphens: auto;
 }
+.about-text:last-child { margin-bottom: 0; }
+.about-text--dim { color: var(--text-muted); font-size: 0.98rem; }
 
-/* only mobile */
 @media screen and (max-width: 767px) {
-    #about-me .content {
-        flex-direction: column;
-    }
+  #about { padding: 80px 24px; }
 }
