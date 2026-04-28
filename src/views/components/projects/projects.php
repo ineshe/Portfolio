@@ -36,9 +36,7 @@
                     </div>
 
                     <div class="project-body">
-                        <?php if (!empty($project['subtitle'])): ?>
-                        <p class="project-subtitle"><?= htmlspecialchars($project['subtitle']) ?></p>
-                        <?php endif; ?>
+                        <p class="project-subtitle"><?= !empty($project['subtitle']) ? htmlspecialchars($project['subtitle']) : '' ?></p>
                         <h3 class="project-title">
                             <a class="project-link" href="<?= htmlspecialchars($baseURL . '/project/' . $project['slug']) ?>"><?= htmlspecialchars($project['title']) ?></a>
                         </h3>

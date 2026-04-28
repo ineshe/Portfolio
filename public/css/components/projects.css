@@ -14,35 +14,42 @@
   margin-bottom: 60px;
 }
 
+/* Outer grid — rows repeat a 5-track pattern: img | subtitle | title | desc | links */
 .project-cards {
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 28px;
+  column-gap: 28px;
+  row-gap: 28px;
 }
 
-/* Card */
-.project-card {
-  height: 100%;
+/* Card — subgrid over 5 tracks, carries all card visual styling */
+.project-item {
+  grid-row: span 5;
+  display: grid;
+  grid-template-rows: subgrid;
+  row-gap: 0;
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   cursor: pointer;
   transition: border-color 0.25s ease;
-  display: flex;
-  flex-direction: column;
   box-sizing: border-box;
 }
-.project-card:hover { border-color: rgba(255,255,255,0.35); }
+.project-item:hover { border-color: rgba(255,255,255,0.35); }
+
+/* Article is layout-transparent; data-href click still works via event bubbling */
+.project-card {
+  display: contents;
+}
 
 /* Image area */
 .project-img-wrap {
   position: relative;
   overflow: hidden;
-  height: 220px;
 }
 .project-img-wrap img {
   width: 100%;
@@ -51,7 +58,6 @@
   display: block;
   transition: transform 0.5s ease;
 }
-.project-card:hover .project-img-wrap img { transform: scale(1.04); }
 
 .project-img-overlay {
   position: absolute;
@@ -70,7 +76,7 @@
   transform: translateY(6px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.project-card:hover .project-tech-chips {
+.project-item:hover .project-tech-chips {
   opacity: 1;
   transform: translateY(0);
 }
@@ -88,15 +94,17 @@
   border: 1px solid rgba(255,255,255,0.12);
 }
 
-/* Body */
+/* Body — subgrid over the 4 text-section tracks */
 .project-body {
-  padding: 20px 24px 24px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  padding: 0 24px;
 }
 
 .project-subtitle {
+  grid-row: 1;
+  padding-top: 20px;
   font-size: 0.7rem;
   font-family: 'Mukta', sans-serif;
   font-weight: 600;
@@ -107,6 +115,7 @@
 }
 
 .project-title {
+  grid-row: 2;
   font-family: 'Kanit', sans-serif;
   font-weight: 700;
   font-size: 1.45rem;
@@ -117,18 +126,21 @@
 .project-link { color: inherit; text-decoration: none; }
 
 .project-desc {
+  grid-row: 3;
   font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.6;
   font-weight: 300;
   margin-bottom: 18px;
-  flex: 1;
 }
 
 .project-links {
+  grid-row: 4;
+  align-self: end;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  padding-bottom: 24px;
 }
 
 .project-btn {
