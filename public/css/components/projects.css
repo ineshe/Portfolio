@@ -1,5 +1,5 @@
 #projects {
-  padding: 100px 40px;
+  padding: 6.25rem 2.5rem;
   background: var(--body-bg);
   position: relative;
 }
@@ -11,7 +11,7 @@
 
 .projects-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
 }
 
 /* Outer grid — rows repeat a 5-track pattern: img | subtitle | title | desc | links */
@@ -21,8 +21,8 @@
   margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  column-gap: 28px;
-  row-gap: 28px;
+  column-gap: 1.75rem;
+  row-gap: 1.75rem;
 }
 
 /* Card — subgrid over 5 tracks, carries all card visual styling */
@@ -72,14 +72,14 @@
 /* Tech chips — visible on hover */
 .project-tech-chips {
   position: absolute;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
   display: flex;
-  gap: 6px;
+  gap: 0.375rem;
   flex-wrap: wrap;
   opacity: 0;
-  transform: translateY(6px);
+  transform: translateY(0.375rem);
   transition:
     opacity 0.3s ease,
     transform 0.3s ease;
@@ -93,10 +93,10 @@
   font-size: 0.68rem;
   font-family: "Mukta", sans-serif;
   font-weight: 600;
-  padding: 3px 9px;
+  padding: 0.1875rem 0.5625rem;
   background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(8px);
-  border-radius: 3px;
+  border-radius: 0.1875rem;
   color: rgba(255, 255, 255, 0.85);
   letter-spacing: 0.04em;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -107,19 +107,19 @@
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 4;
-  padding: 0 24px;
+  padding: 0 1.5rem;
 }
 
 .project-subtitle {
   grid-row: 1;
-  padding-top: 20px;
+  padding-top: 1.25rem;
   font-size: 0.7rem;
   font-family: "Mukta", sans-serif;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--text-dim);
-  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
 }
 
 .project-title {
@@ -128,7 +128,7 @@
   font-weight: 700;
   font-size: 1.45rem;
   color: var(--text);
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   letter-spacing: -0.01em;
 }
 .project-link {
@@ -142,27 +142,27 @@
   color: var(--text-muted);
   line-height: 1.6;
   font-weight: 300;
-  margin-bottom: 18px;
+  margin-bottom: 1.125rem;
 }
 
 .project-links {
   grid-row: 4;
   align-self: end;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
 }
 
 .project-btn {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.3125rem;
   font-size: 0.75rem;
   font-family: "Mukta", sans-serif;
   font-weight: 600;
-  padding: 5px 12px;
-  border-radius: 20px;
+  padding: 0.3125rem 0.75rem;
+  border-radius: 1.25rem;
   text-decoration: none;
   letter-spacing: 0.05em;
   transition:
@@ -191,19 +191,19 @@
 /* More link */
 .projects-more {
   text-align: center;
-  margin-top: 48px;
+  margin-top: 3rem;
 }
 .projects-more-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   color: var(--text-muted);
   font-size: 0.9rem;
   font-family: "Mukta", sans-serif;
   font-weight: 500;
   text-decoration: none;
   border: 1px solid var(--border);
-  padding: 10px 24px;
+  padding: 0.625rem 1.5rem;
   border-radius: var(--radius-sm);
   transition:
     border-color 0.2s,
@@ -217,7 +217,7 @@
 /* Mobile */
 @media screen and (max-width: 767px) {
   #projects {
-    padding: 80px 24px;
+    padding: 5rem 1.5rem;
   }
   .project-cards {
     grid-template-columns: 1fr;

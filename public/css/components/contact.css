@@ -1,5 +1,5 @@
 #contact {
-  padding: 100px 40px;
+  padding: 6.25rem 2.5rem;
   background: var(--body-bg);
   position: relative;
 }
@@ -11,7 +11,7 @@
 
 .contact-header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
 }
 
 .contact-sub {
@@ -24,13 +24,13 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .contact-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .contact-field input,
@@ -39,7 +39,7 @@
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-sm);
-  padding: 14px 16px;
+  padding: 0.875rem 1rem;
   color: var(--text);
   font-family: "Mukta", sans-serif;
   font-size: 0.95rem;
@@ -67,7 +67,7 @@
 /* Confirm message */
 .contact-confirm {
   text-align: center;
-  padding: 48px;
+  padding: 3rem;
   border-radius: var(--radius);
 }
 .contact-confirm--success {
@@ -80,7 +80,7 @@
 }
 .contact-confirm-icon {
   font-size: 2.5rem;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 .contact-confirm-title {
   font-family: "Kanit", sans-serif;
@@ -90,13 +90,13 @@
 }
 .contact-confirm-sub {
   color: var(--text-muted);
-  margin-top: 8px;
+  margin-top: 0.5rem;
   font-size: 0.95rem;
 }
 
 @media screen and (max-width: 767px) {
   #contact {
-    padding: 80px 24px;
+    padding: 5rem 1.5rem;
   }
   .contact-row {
     grid-template-columns: 1fr;

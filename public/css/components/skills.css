@@ -1,5 +1,5 @@
 #skills {
-  padding: 100px 40px;
+  padding: 6.25rem 2.5rem;
   background: var(--surface);
   position: relative;
 }
@@ -11,20 +11,20 @@
 
 .skills-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+  gap: 2rem;
 }
 
 .skill-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 28px;
+  padding: 1.75rem;
   position: relative;
   overflow: hidden;
 }
@@ -34,7 +34,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 0.125rem;
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
 }
 
@@ -45,12 +45,12 @@
   color: var(--accent);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .skill-pills {
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
 
@@ -58,8 +58,8 @@
   font-family: "Mukta", sans-serif;
   font-size: 0.83rem;
   font-weight: 500;
-  padding: 5px 14px;
-  border-radius: 20px;
+  padding: 0.3125rem 0.875rem;
+  border-radius: 1.25rem;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(232, 232, 240, 0.8);
@@ -78,7 +78,7 @@
 
 @media screen and (max-width: 767px) {
   #skills {
-    padding: 80px 24px;
+    padding: 5rem 1.5rem;
   }
   .skills-grid {
     grid-template-columns: 1fr;
