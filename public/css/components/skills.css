@@ -21,7 +21,7 @@
 }
 
 .skill-card {
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px;
@@ -31,13 +31,15 @@
 
 .skill-card-top-line {
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
 }
 
 .skill-category {
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
   color: var(--accent);
@@ -53,25 +55,32 @@
 }
 
 .skill-pill {
-  font-family: 'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   font-size: 0.83rem;
   font-weight: 500;
   padding: 5px 14px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: rgba(232,232,240,0.8);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(232, 232, 240, 0.8);
   letter-spacing: 0.03em;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
   cursor: default;
 }
 .skill-pill:hover {
-  background: rgba(192,95,103,0.15);
-  border-color: rgba(192,95,103,0.4);
+  background: rgba(192, 95, 103, 0.15);
+  border-color: rgba(192, 95, 103, 0.4);
   color: var(--text);
 }
 
 @media screen and (max-width: 767px) {
-  #skills { padding: 80px 24px; }
-  .skills-grid { grid-template-columns: 1fr; }
+  #skills {
+    padding: 80px 24px;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -36,25 +36,33 @@
 .contact-field input,
 .contact-field textarea {
   width: 100%;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-sm);
   padding: 14px 16px;
   color: var(--text);
-  font-family: 'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   font-size: 0.95rem;
   outline: none;
   transition: border-color 0.2s;
   box-sizing: border-box;
 }
 .contact-field input::placeholder,
-.contact-field textarea::placeholder { color: rgba(232,232,240,0.3); }
+.contact-field textarea::placeholder {
+  color: rgba(232, 232, 240, 0.3);
+}
 .contact-field input:focus,
-.contact-field textarea:focus { border-color: rgba(192,95,103,0.5); }
+.contact-field textarea:focus {
+  border-color: rgba(192, 95, 103, 0.5);
+}
 
-.contact-field textarea { resize: vertical; }
+.contact-field textarea {
+  resize: vertical;
+}
 
-.contact-submit { align-self: flex-start; }
+.contact-submit {
+  align-self: flex-start;
+}
 
 /* Confirm message */
 .contact-confirm {
@@ -63,19 +71,19 @@
   border-radius: var(--radius);
 }
 .contact-confirm--success {
-  background: rgba(192,95,103,0.08);
-  border: 1px solid rgba(192,95,103,0.2);
+  background: rgba(192, 95, 103, 0.08);
+  border: 1px solid rgba(192, 95, 103, 0.2);
 }
 .contact-confirm--fail {
-  background: rgba(192,95,103,0.05);
-  border: 1px solid rgba(192,95,103,0.15);
+  background: rgba(192, 95, 103, 0.05);
+  border: 1px solid rgba(192, 95, 103, 0.15);
 }
 .contact-confirm-icon {
   font-size: 2.5rem;
   margin-bottom: 12px;
 }
 .contact-confirm-title {
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 1.3rem;
   color: var(--accent);
   font-weight: 600;
@@ -87,6 +95,10 @@
 }
 
 @media screen and (max-width: 767px) {
-  #contact { padding: 80px 24px; }
-  .contact-row { grid-template-columns: 1fr; }
+  #contact {
+    padding: 80px 24px;
+  }
+  .contact-row {
+    grid-template-columns: 1fr;
+  }
 }

@@ -19,16 +19,23 @@
 }
 
 .about-text {
-  color: rgba(232,232,240,0.72);
+  color: rgba(232, 232, 240, 0.72);
   font-size: 1.05rem;
   line-height: 1.8;
   font-weight: 300;
   margin-bottom: 16px;
   hyphens: auto;
 }
-.about-text:last-child { margin-bottom: 0; }
-.about-text--dim { color: var(--text-muted); font-size: 0.98rem; }
+.about-text:last-child {
+  margin-bottom: 0;
+}
+.about-text--dim {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
 
 @media screen and (max-width: 767px) {
-  #about { padding: 80px 24px; }
+  #about {
+    padding: 80px 24px;
+  }
 }
