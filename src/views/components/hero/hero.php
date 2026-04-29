@@ -10,7 +10,7 @@
                 <span class="hero-name-last">Heilmann</span>
             </h1>
             <p class="hero-desc">
-                Ich entwickle durchdachte Web&shy;anwendungen — von der Idee bis zur fertigen Lösung, mit Blick für Design und Nutzererfahrung.
+                Ich entwickle durchdachte Web&shy;anwendungen — von der Idee bis zur fertigen Lösung. Mit Blick für Design und Nutzererfahrung.
             </p>
             <div class="hero-ctas">
                 <a href="<?php echo $baseURL?>#projects" class="btn-primary">
