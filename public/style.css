@@ -171,31 +171,6 @@ main {
 }
 .btn-primary:hover {
   background: var(--accent-hover);
-  transform: translateY(-2px);
-}
-
-.btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: transparent;
-  color: rgba(232, 232, 240, 0.8);
-  font-family: "Mukta", sans-serif;
-  font-weight: 500;
-  font-size: 0.9rem;
-  padding: 12px 28px;
-  border-radius: var(--radius-sm);
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  transition:
-    border-color 0.2s,
-    color 0.2s;
-  border: 1px solid rgba(232, 232, 240, 0.2);
-  cursor: pointer;
-}
-.btn-ghost:hover {
-  border-color: rgba(192, 95, 103, 0.5);
-  color: var(--accent);
 }
 
 /* Font faces */
