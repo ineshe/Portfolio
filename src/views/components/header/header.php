@@ -14,7 +14,7 @@
             </ul>
         </nav>
         <a href="https://github.com/ineshe" target="_blank" rel="noreferrer" class="header-github" aria-label="GitHub">
-            <img src="<?php echo $baseURL?>/assets/icons/github.svg" width="20" height="20" alt="" aria-hidden="true">
+            <img src="<?php echo $baseURL?>/assets/icons/github.svg" width="30" height="30" alt="" aria-hidden="true">
         </a>
     </div>
 </header>

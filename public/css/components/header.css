@@ -57,7 +57,7 @@
 }
 .menu a:hover,
 .menu a.active {
-  color: var(--accent);
+  color: #ffffff;
 }
 
 /* GitHub icon */
