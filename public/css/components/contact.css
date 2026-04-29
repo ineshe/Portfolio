@@ -1,5 +1,5 @@
 #contact {
-  padding: 6.25rem 2.5rem;
+  padding: 6.25rem var(--page-padding-x);
   background: var(--body-bg);
   position: relative;
 }

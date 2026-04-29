@@ -1,6 +1,5 @@
 <header class="top-bar">
     <div class="content">
-        <a href="<?php echo $baseURL?>" class="nav-logo" aria-label="Startseite">IH</a>
         <button id="hamburger" aria-label="Navigation öffnen" aria-expanded="false">
             <span class="line line-1"></span>
             <span class="line line-2"></span>
@@ -14,5 +13,8 @@
                 <li><a href="<?php echo $baseURL?>#contact">Kontakt</a></li>
             </ul>
         </nav>
+        <a href="https://github.com/ineshe" target="_blank" rel="noreferrer" class="header-github" aria-label="GitHub">
+            <img src="<?php echo $baseURL?>/assets/icons/github.svg" width="20" height="20" alt="" aria-hidden="true">
+        </a>
     </div>
 </header>

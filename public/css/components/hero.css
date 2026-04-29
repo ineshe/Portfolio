@@ -7,7 +7,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 5rem 2.5rem 3.75rem;
+  padding: 5rem var(--page-padding-x) 3.75rem;
 }
 
 .hero-bg-grid {

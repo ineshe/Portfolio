@@ -6,7 +6,6 @@
         '/css/components/projects.css',
         '/css/components/skills.css',
         '/css/components/contact.css',
-        '/css/components/sidebar.css',
     ];
     $pageScripts = [
         '/js/components/scroll-reveal.js',
@@ -17,7 +16,6 @@
     <body>
         <div class="page">
             <?php include_once dirname(__DIR__, 2).'/components/header/header.php'; ?>
-            <?php include_once dirname(__DIR__, 2).'/components/sidebar/sidebar.php'; ?>
             <main>
                 <?php
                     include_once dirname(__DIR__, 2).'/components/hero/hero.php';
