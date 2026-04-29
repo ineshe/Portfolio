@@ -13,17 +13,16 @@
 }
 
 @media (min-width: 1025px) {
-  /* ab Laptop L bis Desktop*/
   #cookie-banner {
     padding-block: 2.25rem 2.625rem;
   }
 }
 
-#cookie-banner p:first-child {
+.cookie-consent__text:first-child {
   margin-block: 0 1.25rem;
 }
 
-#cookie-banner .buttons {
+.cookie-consent__actions {
   display: grid;
   justify-content: center;
   gap: 1rem;
@@ -31,23 +30,23 @@
 }
 
 @media (max-width: 480px) {
-  #cookie-banner .buttons {
+  .cookie-consent__actions {
     grid-template-columns: 1fr;
   }
 }
 
-#cookie-banner button {
+.cookie-consent__btn {
   background-color: var(--accent);
   border: 1px solid var(--primary-accent-border);
   border-radius: var(--radius-sm);
   padding: 0.5rem 1rem;
   cursor: pointer;
-  color: #111111;
+  color: #fff;
   font-weight: bold;
 }
 
 @media (hover: hover) {
-  #cookie-banner button:hover {
+  .cookie-consent__btn:hover {
     background-color: var(--accent-hover);
   }
 }
