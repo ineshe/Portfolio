@@ -46,7 +46,7 @@
   padding: 0;
 }
 
-.menu a {
+.menu__link {
   color: rgba(232, 232, 240, 0.75);
   font-size: 0.9rem;
   font-family: "Mukta", sans-serif;
@@ -55,8 +55,8 @@
   text-decoration: none;
   transition: color 0.2s;
 }
-.menu a:hover,
-.menu a.active {
+.menu__link:hover,
+.menu__link.active {
   color: #ffffff;
 }
 
@@ -149,7 +149,7 @@
     gap: 1.75rem;
     text-align: center;
   }
-  .menu a {
+  .menu__link {
     font-size: 1.4rem;
     font-weight: 600;
     color: rgba(232, 232, 240, 0.85);

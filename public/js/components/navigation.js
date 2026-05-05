@@ -1,7 +1,7 @@
 const topBar = document.querySelector(".top-bar");
 const hamburger = document.getElementById("hamburger");
 const nav = document.getElementById("main-nav");
-const menuLinks = document.querySelectorAll(".menu a");
+const menuLinks = document.querySelectorAll(".menu__link");
 
 // Scrolled state
 window.addEventListener(
