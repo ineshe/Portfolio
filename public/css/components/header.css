@@ -48,7 +48,7 @@
 
 .menu__link {
   color: rgba(232, 232, 240, 0.75);
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 1vw, 1rem);
   font-family: "Mukta", sans-serif;
   font-weight: 500;
   letter-spacing: 0.03em;
@@ -82,7 +82,7 @@
 }
 
 /* ── Mobile ── */
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .header-github {
     display: none;
   }
