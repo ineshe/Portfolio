@@ -61,14 +61,18 @@
   font-size: clamp(3.5rem, 8vw, 7rem);
   line-height: 1;
   letter-spacing: normal;
-  margin-bottom: 1.5rem;
+  margin-block: 0.5em 1.5rem;
 }
-.hero__name-first {
+
+.hero__name > * {
   display: block;
+}
+
+.hero__name-first {
   color: var(--text);
 }
+
 .hero__name-last {
-  display: block;
   color: var(--accent);
 }
 
@@ -91,12 +95,12 @@
 .hero__photo {
   flex-shrink: 0;
   position: relative;
-  width: 17.25rem;
-  height: 17.25rem;
+  width: 20.25rem;
+  height: 20.25rem;
 }
 .hero__photo img {
-  width: 16.25rem;
-  height: 16.25rem;
+  width: 19.25rem;
+  height: 19.25rem;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
