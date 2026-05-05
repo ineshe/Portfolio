@@ -1,18 +1,18 @@
-<section id="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-glow-orb"></div>
+<section id="hero" class="hero">
+    <div class="hero__bg-grid"></div>
+    <div class="hero__glow-orb"></div>
 
-    <div class="hero-inner">
-        <div class="hero-text reveal-left">
-            <p class="hero-eyebrow">Full-Stack Webentwicklerin</p>
-            <h1 class="hero-name">
-                <span class="hero-name-first">Ines</span>
-                <span class="hero-name-last">Heilmann</span>
+    <div class="hero__inner">
+        <div class="hero__text reveal-left">
+            <p class="hero__eyebrow">Full-Stack Webentwicklerin</p>
+            <h1 class="hero__name">
+                <span class="hero__name-first">Ines</span>
+                <span class="hero__name-last">Heilmann</span>
             </h1>
-            <p class="hero-desc">
+            <p class="hero__desc">
                 Ich entwickle durchdachte Web&shy;anwendungen — von der Idee bis zur fertigen Lösung. Mit Blick für Design und Nutzererfahrung.
             </p>
-            <div class="hero-ctas">
+            <div class="hero__action">
                 <a href="<?php echo $baseURL?>#projects" class="btn-primary">
                     Projekte ansehen
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <div class="hero-photo reveal-right">
+        <div class="hero__photo reveal-right">
             <img src="<?php echo $baseURL?>/assets/images/profilbild.webp"
                  alt="Ines Heilmann"
                  width="260" height="260"
@@ -28,9 +28,9 @@
         </div>
     </div>
 
-    <div class="hero-scroll-hint" aria-hidden="true">
+    <div class="hero__scroll-hint" aria-hidden="true">
         <span>SCROLL</span>
-        <div class="hero-scroll-line"></div>
+        <div class="hero__scroll-line"></div>
     </div>
 
     <style>
