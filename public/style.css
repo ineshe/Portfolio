@@ -160,7 +160,7 @@ main {
   color: #fff;
   font-family: "Mukta", sans-serif;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: clamp(0.95rem, 1.1vw, 1.125rem);
   padding: 12px 28px;
   border-radius: var(--radius-sm);
   text-decoration: none;
