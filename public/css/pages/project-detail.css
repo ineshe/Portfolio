@@ -216,8 +216,8 @@
 
 @media (hover: hover) {
   .info-btn:hover {
-    background-color: rgba(255, 255, 255, 0.07);
-    border-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(192, 95, 103, 0.15);
+    border-color: rgba(192, 95, 103, 0.4);
     color: var(--text);
   }
 
