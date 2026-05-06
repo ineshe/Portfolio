@@ -3,13 +3,13 @@ var slides = document.querySelectorAll(".slide");
 var dots = document.querySelectorAll(".dot-container");
 var prevBtn = document.getElementById("prev");
 var nextBtn = document.getElementById("next");
+var curCounter = document.getElementById("slide-cur");
 var current = 0;
 var startX = 0;
 var startY = 0;
 var isFullscreen = false;
 
 (function () {
-  // adds event listerers to buttons, if they exist
   if (prevBtn !== null && nextBtn !== null) {
     prevBtn.addEventListener("click", function () {
       showPreviousSlide();
@@ -19,14 +19,10 @@ var isFullscreen = false;
     });
   }
 
+  initDotControls();
   initTouchControl();
 
-  // initializes slideshow
-  for (i = 0; i < slides.length; i++) {
-    /*         slides.item(i).classList.remove('active');
-        if(dots.length > 0) {
-            dots.item(i).classList.remove('active');
-        } */
+  for (var i = 0; i < slides.length; i++) {
     deactivate(i, slides, dots);
   }
 
@@ -40,12 +36,15 @@ var isFullscreen = false;
   });
 })();
 
+function updateCounter() {
+  if (curCounter) curCounter.textContent = current + 1;
+}
+
 function showSlide(index) {
   deactivate(current, slides, dots);
-
   current = Number(index);
-
   activate(current, slides, dots);
+  updateCounter();
 }
 
 function deactivate(index, ...args) {
@@ -66,18 +65,16 @@ function activate(index, ...args) {
 
 function showPreviousSlide() {
   deactivate(current, slides, dots);
-
   current = (current - 1 + slides.length) % slides.length;
-
   activate(current, slides, dots);
+  updateCounter();
 }
 
 function showNextSlide() {
   deactivate(current, slides, dots);
-
   current = (current + 1) % slides.length;
-
   activate(current, slides, dots);
+  updateCounter();
 }
 
 function isMobileDevice() {
@@ -86,15 +83,14 @@ function isMobileDevice() {
 
 function toggleFullscreen() {
   if (isMobileDevice()) {
-    // enables full screen mode for mobile devices
     if (!isFullscreen) {
       if (slideshow.requestFullscreen) {
         slideshow.requestFullscreen();
-      } else if (image.mozRequestFullScreen) {
+      } else if (slideshow.mozRequestFullScreen) {
         slideshow.mozRequestFullScreen();
-      } else if (image.webkitRequestFullscreen) {
+      } else if (slideshow.webkitRequestFullscreen) {
         slideshow.webkitRequestFullscreen();
-      } else if (image.msRequestFullscreen) {
+      } else if (slideshow.msRequestFullscreen) {
         slideshow.msRequestFullscreen();
       }
     } else {
@@ -117,15 +113,6 @@ function handleFullscreenChange() {
     !!document.mozFullScreenElement ||
     !!document.webkitFullscreenElement ||
     !!document.msFullscreenElement;
-
-  // disables other event listeners when full screen mode is enabled
-  /*     if (isFullscreen) {
-        slideshow.removeEventListener('touchstart', handleTouchStart);
-        slideshow.removeEventListener('touchend', handleTouchEnd);
-    } else {
-        slideshow.addEventListener('touchstart', handleTouchStart);
-        slideshow.addEventListener('touchend', handleTouchEnd);
-    } */
 }
 
 function handleTouchStart(event) {
@@ -153,18 +140,15 @@ function handleTouchEnd(event) {
   }
 }
 
+function initDotControls() {
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", function () {
+      showSlide(index);
+    });
+  });
+}
+
 function initTouchControl() {
   slideshow.addEventListener("touchstart", handleTouchStart);
   slideshow.addEventListener("touchend", handleTouchEnd);
-
-  // document.addEventListener('fullscreenchange', handleFullscreenChange);
-  // document.addEventListener('mozfullscreenchange', handleFullscreenChange);
-  // document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
-  // document.addEventListener('msfullscreenchange', handleFullscreenChange);
-
-  dots.forEach((dot) => {
-    dot.addEventListener("touchstart", function (event) {
-      showSlide(dot.id.substring(4));
-    });
-  });
 }

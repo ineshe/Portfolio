@@ -4,6 +4,7 @@
     "slug": "lumines",
     "visibility": "1",
     "subtitle": "Interaktive Landingpage",
+    "year": 2024,
     "tech": ["React", "JavaScript", "CSS", "Motion"],
     "shortDescription": "Scrollgesteuerte Canvas-Animation für eine Lippenstiftserie mit React & Vite.",
     "mainImage": "/assets/projects/lumines/lumines-300X200.webp",
@@ -17,7 +18,8 @@
       {
         "link": "https://lumines.ines-heilmann.de",
         "target": "_blank",
-        "text": "Frontend"
+        "text": "Frontend",
+        "accent": true
       }
     ],
     "description": "<p>Dieses Projekt ist eine interaktive Landingpage für eine Lippenstiftserie, entwickelt mit React und Vite. Eine scrollgesteuerte Canvas-Animation präsentiert die Produkte dynamisch. Ergänzt wird das Ganze durch animierte USP-Abschnitte, einen Review-Slider und ein responsives UI.</p>\n\n<h3>Features</h3>\n<ul>\n    <li>Konzeption und Gestaltung des UI/UX-Designs</li>\n    <li>Umsetzung interaktiver Animationen mit React und Motion</li>\n    <li>Entwicklung eines responsiven, scrollgesteuerten Frontends</li>\n</ul>",
@@ -29,6 +31,7 @@
     "slug": "recines",
     "visibility": "1",
     "subtitle": "Full-Stack Webanwendung",
+    "year": 2024,
     "tech": ["Symfony", "Tailwind CSS", "MySQL", "Stimulus"],
     "shortDescription": "Rezeptverwaltung mit Kochmodus, Symfony, Stimulus und Tailwind CSS.",
     "mainImage": "/assets/projects/recines/recines-300X200.webp",
@@ -47,7 +50,8 @@
       {
         "link": "https://recines.ines-heilmann.de",
         "target": "_blank",
-        "text": "Frontend"
+        "text": "Frontend",
+        "accent": true
       },
       {
         "link": "https://recines.ines-heilmann.de/login",
