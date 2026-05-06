@@ -1,4 +1,5 @@
 <?php
+    /** @var array $projects */
     $slug = $_GET['slug'];
     $project = $projects[$slug];
 

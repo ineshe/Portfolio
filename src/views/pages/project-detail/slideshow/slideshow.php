@@ -1,4 +1,7 @@
-<?php $media = $project['media']; $count = count($media); ?>
+<?php
+/** @var array $project */
+$media = $project['media']; $count = count($media);
+?>
 <div class="slideshow-container" aria-roledescription="carousel">
 
     <div class="slideshow">
