@@ -1,10 +1,6 @@
 <?php
-    $projects = json_decode(file_get_contents(__DIR__ . "/../../../data/projects.json"), true);
-
-    if (isset($_GET['slug'])) {
-        $slug = $_GET['slug'];
-        $project = $projects[$slug];
-    }
+    $slug = $_GET['slug'];
+    $project = $projects[$slug];
 
     // Compute prev/next among visible projects for the pager
     $visibleSlugs = array_keys(array_filter($projects, fn($p) => ($p['visibility'] ?? '0') === '1'));
