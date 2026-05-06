@@ -1,48 +1,80 @@
-/* Breadcrumb */
+/* ── Section ── */
+#project {
+  padding: calc(var(--nav-height) + 3rem) var(--page-padding-x) 5rem;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 75% 0%, rgba(192, 95, 103, 0.11) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 85%, rgba(59, 26, 90, 0.1) 0%, transparent 50%), var(--body-bg);
+}
+
+#project::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(192, 95, 103, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(192, 95, 103, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+#project .content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Breadcrumb ── */
 #project .breadcrumb {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.375rem;
-  padding-bottom: 1.5rem;
-  font-size: 0.875rem;
+  padding-bottom: 1.75rem;
+  font-family: "Mukta", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
 }
 
 #project .breadcrumb a {
-  color: var(--text-muted, rgba(232, 232, 240, 0.55));
+  color: var(--text-muted);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 @media (hover: hover) {
   #project .breadcrumb a:hover {
-    color: var(--text, #e8e8f0);
+    color: var(--text);
   }
 }
 
 #project .breadcrumb .sep {
-  color: var(--text-muted, rgba(232, 232, 240, 0.35));
+  color: var(--text-dim);
 }
 
 #project .breadcrumb .current {
-  color: var(--text, #e8e8f0);
+  color: var(--text);
 }
 
-/* Eyebrow */
+/* ── Eyebrow ── */
 .project__eyebrow {
-  font-size: 0.78rem;
+  font-family: "Mukta", sans-serif;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-muted, rgba(232, 232, 240, 0.55));
-  margin: 0 0 0.875rem;
+  color: var(--accent);
+  margin: 0 0 1rem;
 }
 
-/* Head: title-block + slideshow */
+/* ── Head: title-block + slideshow ── */
 .project__head {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .project__title-block {
@@ -52,114 +84,184 @@
 }
 
 .project__title {
-  font-size: clamp(1.75rem, 5vw, 2.75rem);
-  margin: 0 0 0.5rem;
-  text-align: left;
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem;
 }
 
 .project__title .accent {
-  color: var(--primary-accent);
+  color: var(--accent);
 }
 
 .project__subline {
   font-size: 1.05rem;
-  color: var(--text-muted, rgba(232, 232, 240, 0.7));
+  color: var(--text-muted);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.65;
 }
 
-/* Body: description + info */
+/* ── Slideshow frame ── */
+#project .slideshow-container {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Body: description + info ── */
 .project__body {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
-.project__desc *:first-child {
+/* Description typography */
+.project__desc {
+  line-height: 1.75;
+}
+
+.project__desc > *:first-child {
   margin-top: 0;
 }
 
-/* Info aside */
+.project__desc h3 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin: 2rem 0 0.5rem;
+}
+
+.project__desc h3:first-child {
+  margin-top: 0;
+}
+
+.project__desc p,
+.project__desc li {
+  color: var(--text-muted);
+  font-size: 0.975rem;
+}
+
+.project__desc p + p {
+  margin-top: 0.75rem;
+}
+
+.project__desc ul {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* ── Info aside ── */
 .project__info {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  align-self: start;
 }
 
 .info-block-title {
-  font-size: 0.7rem;
+  font-family: "Mukta", sans-serif;
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-muted, rgba(232, 232, 240, 0.45));
-  margin: 0 0 0.6rem;
+  color: var(--text-dim);
+  margin: 0 0 0.625rem;
 }
 
-/* Info buttons */
+/* ── Info buttons ── */
 .info__buttons {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 0.5rem;
 }
 
 .info-btn {
-  display: inline-flex;
+  display: flex;
+  width: 100%;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.4rem 0.875rem;
+  padding: 0.45rem 0.875rem;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   background: transparent;
-  color: inherit;
+  color: var(--text-muted);
   text-decoration: none;
+  font-family: "Mukta", sans-serif;
   font-size: 0.875rem;
-  transition: background-color 0.2s, border-color 0.2s;
+  font-weight: 500;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    color 0.2s;
   cursor: pointer;
 }
 
 .info-btn--accent {
-  background-color: var(--primary-accent);
-  border-color: var(--primary-accent-border);
-  color: #111111;
+  background-color: var(--accent);
+  border-color: transparent;
+  color: #fff;
+  font-weight: 600;
 }
 
 @media (hover: hover) {
   .info-btn:hover {
     background-color: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--text);
   }
 
   .info-btn--accent:hover {
-    background-color: var(--primary-accent-hover);
+    background-color: var(--accent-hover);
+    color: #fff;
+    border-color: transparent;
   }
 }
 
 .info-btn .arrow {
   flex-shrink: 0;
+  opacity: 0.7;
 }
 
-/* Technologies */
+/* ── Technologies ── */
 .info__tech-list {
   margin: 0;
-  color: var(--text-muted, rgba(232, 232, 240, 0.7));
-  line-height: 1.6;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
 }
 
-/* Year */
+.info__tech-list .sep {
+  padding: 0 0.25rem;
+}
+
+/* ── Year ── */
 .info__year-value {
+  font-family: "Kanit", sans-serif;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   margin: 0;
+  color: var(--text);
 }
 
-/* Project pager */
+/* ── Project pager ── */
 .project-pager {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   padding-top: 1.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .project-pager__link {
@@ -168,7 +270,12 @@
   gap: 0.3rem;
   text-decoration: none;
   color: inherit;
-  transition: opacity 0.2s;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
 }
 
 .project-pager__link.next {
@@ -178,7 +285,8 @@
 
 @media (hover: hover) {
   .project-pager__link:hover {
-    opacity: 0.65;
+    border-color: var(--border);
+    background: var(--card-bg);
   }
 }
 
@@ -186,23 +294,29 @@
   display: flex;
   align-items: center;
   gap: 0.375rem;
-  font-size: 0.75rem;
-  color: var(--text-muted, rgba(232, 232, 240, 0.5));
+  font-family: "Mukta", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-dim);
 }
 
 .project-pager__title {
-  font-size: 1rem;
+  font-family: "Kanit", sans-serif;
+  font-size: 1.05rem;
   font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
 }
 
-/* Desktop layout */
+/* ── Desktop layout ── */
 @media (min-width: 1024px) {
   .project__head {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 2.5rem;
+    gap: 3rem;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
   }
 
   .project__body {
@@ -210,5 +324,16 @@
     grid-template-columns: 2fr 1fr;
     gap: 3rem 2.5rem;
     align-items: start;
+  }
+}
+
+/* ── Mobile ── */
+@media screen and (max-width: 767px) {
+  #project {
+    padding: calc(var(--nav-height) + 1.75rem) var(--page-padding-x-mobile) 4rem;
+  }
+
+  .project__info {
+    padding: 1.25rem;
   }
 }

@@ -104,7 +104,12 @@
 
                                 <div class="info__technologies">
                                     <p class="info-block-title">Technologien</p>
-                                    <p class="info__tech-list"><?= htmlspecialchars($project['technologies'], ENT_QUOTES, 'UTF-8') ?></p>
+                                    <p class="info__tech-list">
+                                        <?php foreach ($project['technologies'] as $i => $tech): ?>
+                                            <?php if ($i > 0): ?><span class="sep" aria-hidden="true">·</span><?php endif; ?>
+                                            <?= htmlspecialchars($tech, ENT_QUOTES, 'UTF-8') ?>
+                                        <?php endforeach; ?>
+                                    </p>
                                 </div>
 
                                 <?php if (!empty($project['year'])): ?>
