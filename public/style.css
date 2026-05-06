@@ -1,15 +1,15 @@
 :root {
-  --accent: #c05f67;
-  --accent-hover: #ad535a;
-  --body-bg: #1a1d2e;
-  --surface: #21253a;
-  --card-bg: #2a2e45;
-  --dark-bg: #0f111a;
-  --text: #e8e8f0;
-  --text-muted: rgba(232, 232, 240, 0.55);
-  --text-dim: rgba(232, 232, 240, 0.35);
-  --border: rgba(255, 255, 255, 0.07);
-  --border-hover: rgba(255, 255, 255, 0.5);
+  --accent: oklch(60.4% 0.1244 16.4);
+  --accent-hover: oklch(55.5% 0.1178 16.9);
+  --body-bg: oklch(23.6% 0.0331 275.9);
+  --surface: oklch(27.1% 0.0395 275.2);
+  --card-bg: oklch(30.8% 0.0418 276.1);
+  --dark-bg: oklch(18% 0.0189 274.6);
+  --text: oklch(93.3% 0.0108 286);
+  --text-muted: oklch(93.3% 0.0108 286 / 0.55);
+  --text-dim: oklch(93.3% 0.0108 286 / 0.35);
+  --border: oklch(100% 0 0 / 0.07);
+  --border-hover: oklch(100% 0 0 / 0.5);
   --radius: 8px;
   --radius-sm: 4px;
   --nav-height: 64px;
@@ -43,7 +43,7 @@ body {
 }
 
 ::selection {
-  background: rgba(192, 95, 103, 0.35);
+  background: oklch(from var(--accent) l c h / 0.35);
 }
 
 ::-webkit-scrollbar {
@@ -92,7 +92,12 @@ main {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(192, 95, 103, 0.4), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    oklch(from var(--accent) l c h / 0.4),
+    transparent
+  );
 }
 
 /* Section label + heading pattern */
@@ -101,8 +106,12 @@ main {
   font-size: 0.78rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(192, 95, 103, 0.8);
+  color: var(--accent);
   margin-bottom: 12px;
+}
+
+.accent {
+  color: var(--accent);
 }
 
 .section-heading {

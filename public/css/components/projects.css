@@ -40,7 +40,7 @@
   box-sizing: border-box;
 }
 .project-item:hover {
-  border-color: rgba(255, 255, 255, 0.35);
+  border-color: oklch(100% 0 0 / 0.35);
 }
 
 /* Article is layout-transparent; data-href click still works via event bubbling */
@@ -66,7 +66,7 @@
 .project-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(20, 22, 40, 0.8) 0%, transparent 55%);
+  background: linear-gradient(to top, oklch(20.8% 0.0358 278 / 0.8) 0%, transparent 55%);
 }
 
 /* Tech chips — visible on hover */
@@ -94,12 +94,12 @@
   font-family: "Mukta", sans-serif;
   font-weight: 600;
   padding: 0.1875rem 0.5625rem;
-  background: rgba(0, 0, 0, 0.55);
+  background: oklch(0% 0 0 / 0.55);
   backdrop-filter: blur(8px);
   border-radius: 0.1875rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: oklch(100% 0 0 / 0.85);
   letter-spacing: 0.04em;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid oklch(100% 0 0 / 0.12);
 }
 
 /* Body — subgrid over the 4 text-section tracks */
@@ -171,12 +171,12 @@
 }
 
 .project-btn--ghost {
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(232, 232, 240, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: oklch(100% 0 0 / 0.06);
+  color: oklch(from var(--text) l c h / 0.7);
+  border: 1px solid oklch(100% 0 0 / 0.12);
 }
 .project-btn--ghost:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: oklch(100% 0 0 / 0.12);
 }
 
 .project-btn--accent {
@@ -210,7 +210,7 @@
     color 0.2s;
 }
 .projects-more-link:hover {
-  border-color: rgba(192, 95, 103, 0.4);
+  border-color: oklch(from var(--accent) l c h / 0.4);
   color: var(--accent);
 }
 

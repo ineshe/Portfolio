@@ -19,7 +19,7 @@
 }
 
 .about-text {
-  color: rgba(232, 232, 240, 0.72);
+  color: oklch(from var(--text) l c h / 0.72);
   font-size: 1.05rem;
   line-height: 1.8;
   font-weight: 300;

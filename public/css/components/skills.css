@@ -21,7 +21,7 @@
 }
 
 .skill-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: oklch(100% 0 0 / 0.03);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.75rem;
@@ -60,9 +60,9 @@
   font-weight: 500;
   padding: 0.3125rem 0.875rem;
   border-radius: 1.25rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(232, 232, 240, 0.8);
+  background: oklch(100% 0 0 / 0.06);
+  border: 1px solid oklch(100% 0 0 / 0.1);
+  color: oklch(from var(--text) l c h / 0.8);
   letter-spacing: 0.03em;
   transition:
     background 0.2s,
@@ -71,8 +71,8 @@
   cursor: default;
 }
 .skill-pill:hover {
-  background: rgba(192, 95, 103, 0.15);
-  border-color: rgba(192, 95, 103, 0.4);
+  background: oklch(from var(--accent) l c h / 0.15);
+  border-color: oklch(from var(--accent) l c h / 0.4);
   color: var(--text);
 }
 
