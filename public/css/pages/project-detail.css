@@ -1,6 +1,6 @@
 /* ── Section ── */
 #project {
-  padding: calc(var(--nav-height) + 3rem) var(--page-padding-x) 5rem;
+  padding: calc(var(--nav-height) + 1.75rem) var(--page-padding-x-mobile) 4rem;
   position: relative;
   overflow: hidden;
   background:
@@ -120,6 +120,7 @@
 
 /* Description typography */
 .project__desc {
+  flex: 2;
   line-height: 1.75;
 }
 
@@ -165,8 +166,7 @@
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.5rem;
-  align-self: start;
+  padding: 1.25rem;
 }
 
 .info-block-title {
@@ -270,7 +270,7 @@
   gap: 0.3rem;
   text-decoration: none;
   color: inherit;
-  padding: 0.75rem 1rem;
+  padding: 1.5rem;
   border-radius: var(--radius-sm);
   border: 1px solid transparent;
   transition:
@@ -309,7 +309,25 @@
   color: var(--text);
 }
 
-/* ── Desktop layout ── */
+/* ── Tablet+ ── */
+@media (min-width: 768px) {
+  #project {
+    padding: calc(var(--nav-height) + 3rem) var(--page-padding-x) 5rem;
+  }
+
+  .project__info {
+    position: sticky;
+    top: calc(var(--nav-height) + 1.5rem);
+    padding: 1.5rem;
+  }
+
+  /* ── Body: description + info ── */
+  .project__body {
+    flex-direction: row;
+  }
+}
+
+/* ── Desktop ── */
 @media (min-width: 1024px) {
   .project__head {
     display: grid;
@@ -324,16 +342,5 @@
     grid-template-columns: 2fr 1fr;
     gap: 3rem 2.5rem;
     align-items: start;
-  }
-}
-
-/* ── Mobile ── */
-@media screen and (max-width: 767px) {
-  #project {
-    padding: calc(var(--nav-height) + 1.75rem) var(--page-padding-x-mobile) 4rem;
-  }
-
-  .project__info {
-    padding: 1.25rem;
   }
 }
