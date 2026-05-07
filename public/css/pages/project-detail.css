@@ -103,14 +103,6 @@
   line-height: 1.65;
 }
 
-/* ── Slideshow frame ── */
-#project .slideshow-container {
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid oklch(100% 0 0 / 0.08);
-  box-shadow: 0 8px 32px oklch(0% 0 0 / 0.35);
-}
-
 /* ── Body: description + info ── */
 .project__body {
   display: flex;
