@@ -25,17 +25,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.75rem;
-  position: relative;
   overflow: hidden;
-}
-
-.skill-card-top-line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 0.125rem;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
 }
 
 .skill-category {
