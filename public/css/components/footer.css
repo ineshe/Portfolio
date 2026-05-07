@@ -73,7 +73,12 @@ footer {
   transition: color 0.2s;
 }
 .footer-social a:hover {
-  color: var(--accent);
+  color: oklch(from var(--text) l c h / 0.7);
+}
+.footer-social svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
 }
 
 @media screen and (max-width: 767px) {
