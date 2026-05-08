@@ -37,20 +37,19 @@
 
 .cookie-consent__btn {
   background-color: white;
-  border: none;
+  border: 1px solid transparent;
   border-radius: var(--radius-sm);
   padding: 0.5625rem 1rem;
   cursor: pointer;
   color: black;
   font-weight: bold;
-  transition:
-    background-color 0.2s,
-    color 0.2s;
+  transition: all 0.2s;
 }
 
 @media (hover: hover) {
   .cookie-consent__btn:hover {
-    background-color: oklch(from var(--accent) l c h / 0.8);
+    background-color: transparent;
+    border: 1px solid white;
     color: white;
   }
 }
