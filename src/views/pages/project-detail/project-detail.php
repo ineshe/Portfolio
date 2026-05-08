@@ -30,6 +30,7 @@
             <?php include(dirname(__DIR__, 2).'/components/header/header.php'); ?>
             <main>
                 <article id="project" class="section">
+                    <div class="dot-pattern"></div>
                     <div class="content">
 
                         <nav class="breadcrumb" aria-label="Breadcrumb">

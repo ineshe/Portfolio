@@ -123,6 +123,19 @@ main {
   line-height: 1;
 }
 
+/* Staggered dot background — reusable across sections */
+.dot-pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, oklch(from var(--accent) l c h / 0.3) 1px, transparent 1px),
+    radial-gradient(circle, oklch(from var(--accent) l c h / 0.3) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
 /* Reveal animations */
 .reveal {
   opacity: 0;

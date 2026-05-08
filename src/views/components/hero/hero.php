@@ -1,5 +1,5 @@
 <section id="hero" class="hero">
-    <div class="hero__bg-grid"></div>
+    <div class="dot-pattern"></div>
     <div class="hero__glow-orb"></div>
 
     <div class="hero__inner">

@@ -9,16 +9,6 @@
     var(--body-bg);
 }
 
-#project::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(oklch(from var(--accent) l c h / 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, oklch(from var(--accent) l c h / 0.05) 1px, transparent 1px);
-  background-size: 60px 60px;
-  pointer-events: none;
-}
 
 #project .content {
   max-width: var(--max-width);
