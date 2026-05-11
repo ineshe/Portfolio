@@ -252,13 +252,6 @@
   text-align: right;
 }
 
-@media (hover: hover) {
-  .project-pager__link:hover {
-    border-color: var(--border);
-    background: var(--card-bg);
-  }
-}
-
 .project-pager__label {
   display: flex;
   align-items: center;
@@ -272,7 +265,7 @@
 
 .project-pager__title {
   font-family: "Kanit", sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--text);
