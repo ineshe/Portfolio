@@ -1,15 +1,17 @@
 #cookie-banner {
+  --banner-bg: oklch(from var(--body-bg) 0.33 0.045 275 / 1);
   box-sizing: border-box;
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #1b2430;
-  border-top: 1px solid #273446;
+  background-color: var(--banner-bg);
+  border-top: 1px solid oklch(from var(--banner-bg) 0.35 c h / 1);
   color: #f3f3f3;
   padding-inline: 1.875rem;
   padding-block: 3.125rem 3.5rem;
   text-align: center;
   display: none;
+  z-index: 999;
 }
 
 @media (min-width: 1025px) {
