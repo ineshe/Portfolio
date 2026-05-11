@@ -123,6 +123,7 @@
 
                     <?php if ($prevProject || $nextProject): ?>
                         <nav class="project-pager" aria-label="Projekt-Navigation">
+                            <div class="project-pager__inner">
                             <?php if ($prevProject): ?>
                                 <a class="project-pager__link prev" href="/project/<?= htmlspecialchars($prevProject['slug'], ENT_QUOTES, 'UTF-8') ?>">
                                     <span class="project-pager__label">
@@ -145,6 +146,7 @@
                                     </span>
                                 </a>
                             <?php endif; ?>
+                            </div>
                         </nav>
                     <?php endif; ?>
 

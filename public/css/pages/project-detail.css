@@ -222,15 +222,22 @@
 /* ── Project pager ── */
 .project-pager {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
   margin-top: 3.5rem;
   margin-bottom: -4rem;
   margin-left: calc(-1 * var(--page-padding-x-mobile));
   margin-right: calc(-1 * var(--page-padding-x-mobile));
-  padding: 1.75rem var(--page-padding-x-mobile);
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
   background: var(--surface);
+}
+
+.project-pager__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: calc(var(--max-width) + 2 * var(--page-padding-x-mobile));
+  margin: 0 auto;
+  padding: 0 var(--page-padding-x-mobile);
 }
 
 .project-pager__link {
@@ -242,9 +249,7 @@
   padding: 1.5rem;
   border-radius: var(--radius-sm);
   border: 1px solid transparent;
-  transition:
-    border-color 0.2s,
-    background 0.2s;
+  transition: color 0.2s;
 }
 
 .project-pager__link.next {
@@ -281,8 +286,11 @@
     margin-bottom: -5rem;
     margin-left: calc(-1 * var(--page-padding-x));
     margin-right: calc(-1 * var(--page-padding-x));
-    padding-left: var(--page-padding-x);
-    padding-right: var(--page-padding-x);
+  }
+
+  .project-pager__inner {
+    max-width: calc(var(--max-width) + 2 * var(--page-padding-x));
+    padding: 0 var(--page-padding-x);
   }
 
   .project__grid {
