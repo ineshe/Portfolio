@@ -221,6 +221,7 @@
 
 /* ── Project pager ── */
 .project-pager {
+  position: relative;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
