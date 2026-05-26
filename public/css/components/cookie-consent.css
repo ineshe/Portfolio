@@ -72,7 +72,7 @@
   .cookie-consent__btn--accept:hover {
     background-color: oklch(from var(--banner-bg) 0.58 0.05 h / 1);
     border-color: oklch(from var(--banner-bg) 0.76 0.075 h / 1);
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     box-shadow: 0 0.52rem 0.88rem oklch(from var(--banner-bg) 0.1 0.02 h / 0.42);
   }
 }
