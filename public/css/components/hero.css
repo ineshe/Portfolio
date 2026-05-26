@@ -51,11 +51,11 @@
 .hero__eyebrow {
   font-family: "Mukta", sans-serif;
   font-weight: 300;
-  font-size: clamp(0.85rem, 0.9vw, 1rem);
+  font-size: clamp(0.9rem, 1vw, 1rem);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: oklch(from var(--text) l c h / 0.75);
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
 }
 
 .hero__name {
@@ -64,7 +64,7 @@
   font-size: clamp(3.5rem, 8vw, 7rem);
   line-height: 1;
   letter-spacing: normal;
-  margin-block: 0.5em 1.5rem;
+  margin-block: 0.3em 1.5rem;
 }
 
 .hero__name > * {
