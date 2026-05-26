@@ -5,7 +5,8 @@
   bottom: 0;
   width: 100%;
   background-color: var(--banner-bg);
-  border-top: 1px solid oklch(from var(--banner-bg) 0.35 c h / 1);
+  border-top: 1px solid oklch(from var(--banner-bg) 0.48 c h / 0.9);
+  box-shadow: 0 -0.75rem 1.5rem oklch(from var(--body-bg) 0.12 0.02 275 / 0.22);
   color: #f3f3f3;
   padding-inline: 1.875rem;
   padding-block: 3.125rem 3.5rem;
