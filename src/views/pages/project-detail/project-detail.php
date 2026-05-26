@@ -126,11 +126,12 @@
                             <div class="project-pager__inner">
                             <?php if ($prevProject): ?>
                                 <a class="project-pager__link prev" href="/project/<?= htmlspecialchars($prevProject['slug'], ENT_QUOTES, 'UTF-8') ?>">
-                                    <span class="project-pager__label">
-                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-                                        Vorheriges Projekt
+                                    <span class="project-pager__arrow-circle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
+                                    <span class="project-pager__text-block">
+                                        <span class="project-pager__label">Vorheriges Projekt</span>
+                                        <span class="project-pager__title"><?= htmlspecialchars($prevProject['title'], ENT_QUOTES, 'UTF-8') ?></span>
+                                        <?php if (!empty($prevProject['subtitle'])): ?><span class="project-pager__subtitle"><?= htmlspecialchars($prevProject['subtitle'], ENT_QUOTES, 'UTF-8') ?></span><?php endif; ?>
                                     </span>
-                                    <span class="project-pager__title"><?= htmlspecialchars($prevProject['title'], ENT_QUOTES, 'UTF-8') ?></span>
                                 </a>
                             <?php else: ?>
                                 <span></span>
@@ -138,12 +139,12 @@
 
                             <?php if ($nextProject): ?>
                                 <a class="project-pager__link next" href="/project/<?= htmlspecialchars($nextProject['slug'], ENT_QUOTES, 'UTF-8') ?>">
-                                    <span class="project-pager__label">
-                                        Nächstes Projekt
+                                    <span class="project-pager__text-block">
+                                        <span class="project-pager__label">Nächstes Projekt</span>
+                                        <span class="project-pager__title"><?= htmlspecialchars($nextProject['title'], ENT_QUOTES, 'UTF-8') ?></span>
+                                        <?php if (!empty($nextProject['subtitle'])): ?><span class="project-pager__subtitle"><?= htmlspecialchars($nextProject['subtitle'], ENT_QUOTES, 'UTF-8') ?></span><?php endif; ?>
                                     </span>
-                                    <span class="project-pager__title"><?= htmlspecialchars($nextProject['title'], ENT_QUOTES, 'UTF-8') ?>
-                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                                    </span>
+                                    <span class="project-pager__arrow-circle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
                                 </a>
                             <?php endif; ?>
                             </div>
