@@ -1,6 +1,6 @@
 #about {
   padding: 6.25rem var(--page-padding-x);
-  background: var(--surface);
+  background: var(--body-bg);
   position: relative;
   overflow: hidden;
 }

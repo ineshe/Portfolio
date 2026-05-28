@@ -7,8 +7,8 @@
         </button>
         <nav class="navigation" id="main-nav">
             <ul class="menu">
-                <li><a class="menu__link" href="<?php echo $baseURL?>#about">Über mich</a></li>
                 <li><a class="menu__link" href="<?php echo $baseURL?>#projects">Projekte</a></li>
+                <li><a class="menu__link" href="<?php echo $baseURL?>#about">Über mich</a></li>
                 <li><a class="menu__link" href="<?php echo $baseURL?>#skills">Skills</a></li>
                 <li><a class="menu__link" href="<?php echo $baseURL?>#contact">Kontakt</a></li>
             </ul>

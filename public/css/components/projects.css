@@ -1,6 +1,6 @@
 #projects {
   padding: 6.25rem var(--page-padding-x);
-  background: var(--body-bg);
+  background: var(--surface);
   position: relative;
 }
 

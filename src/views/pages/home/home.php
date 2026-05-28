@@ -24,8 +24,8 @@
             <main>
                 <?php
                     include_once dirname(__DIR__, 2).'/components/hero/hero.php';
-                    include_once dirname(__DIR__, 2).'/components/about-me/about-me.php';
                     include_once dirname(__DIR__, 2).'/components/projects/projects.php';
+                    include_once dirname(__DIR__, 2).'/components/about-me/about-me.php';
                     include_once dirname(__DIR__, 2).'/components/skills/skills.php';
                     include_once dirname(__DIR__, 2).'/components/contact/contact.php';
                 ?>
