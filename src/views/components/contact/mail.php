@@ -1,6 +1,4 @@
 <?php
-    //Import PHPMailer classes into the global namespace
-    //These must be at the top of your script, not inside a function
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
@@ -13,13 +11,13 @@
         };
 
         $fail = static function (string $message, callable $redirectBack): void {
-            $_SESSION['confirm'] = "<p class='confirm fail'>{$message}</p>";
+            $_SESSION['confirm'] = 'fail';
             unset($_SESSION['contact_csrf_token'], $_SESSION['contact_form_loaded_at']);
             $redirectBack();
         };
 
-        $success = static function (string $message, callable $redirectBack): void {
-            $_SESSION['confirm'] = "<p class='confirm success'>{$message}</p>";
+        $success = static function (callable $redirectBack): void {
+            $_SESSION['confirm'] = 'success';
             unset($_SESSION['contact_csrf_token'], $_SESSION['contact_form_loaded_at']);
             $redirectBack();
         };
@@ -84,70 +82,60 @@
             $fail('Bitte gib eine Nachricht mit mindestens 10 Zeichen ein.', $redirectBack);
         }
 
-        $safeName = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
-        $safeEmail = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
+        $safeName    = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+        $safeEmail   = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
         $safeMessage = nl2br(htmlspecialchars($message, ENT_QUOTES, 'UTF-8'));
 
-        //Load Composer's autoloader
-        require dirname(__DIR__, 5) . '/vendor/autoload.php';
+        require dirname(__DIR__, 4) . '/vendor/autoload.php';
 
-        //Instantiation and passing `true` enables exceptions
-        $mail = new PHPMailer(true);
-        $response = new PHPMailer(true);
-        
+        define('OWNER_EMAIL', 'ines.heilmann1@gmx.de');
+
+        $smtpPassword = getenv('SMTP_PASSWORD');
+        if ($smtpPassword === false || $smtpPassword === '') {
+            error_log('Contact form: SMTP_PASSWORD environment variable is not set.');
+            $fail('', $redirectBack);
+        }
+
+        $createMailer = static function () use ($smtpPassword): PHPMailer {
+            $mailer = new PHPMailer(true);
+            $mailer->isSMTP();
+            $mailer->SMTPDebug  = SMTP::DEBUG_OFF;
+            $mailer->Host       = 'mail.gmx.net';
+            $mailer->SMTPAuth   = true;
+            $mailer->Username   = OWNER_EMAIL;
+            $mailer->Password   = $smtpPassword;
+            $mailer->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mailer->Port       = 587;
+            $mailer->CharSet    = 'UTF-8';
+            return $mailer;
+        };
+
         try {
-            //Server settings
-            $mail->isSMTP();                                        //Send using SMTP
-            $mail->SMTPDebug  = SMTP::DEBUG_OFF;
-            $mail->Host       = 'mail.gmx.net';                     //Set the SMTP server to send through
-            $mail->SMTPAuth   = true;                                //Enable SMTP authentication
-            $mail->Username   = 'ines.heilmann1@gmx.de';                     //SMTP username
-            $mail->Password   = getenv('SMTP_PASSWORD') ?: 'Nachricht';      //Prefer environment variable
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-            $mail->Port       = 587;                                 //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
-
-            //Recipients
-            $mail->setFrom('ines.heilmann1@gmx.de', 'Ines Heilmann');
-            $mail->addAddress('ines.heilmann1@gmx.de', 'Ines Heilmann');     //Add a recipient
+            $mail = $createMailer();
+            $mail->setFrom(OWNER_EMAIL, 'Ines Heilmann');
+            $mail->addAddress(OWNER_EMAIL, 'Ines Heilmann');
             $mail->addReplyTo($email, $name);
-
-            //Content
             $mail->isHTML(true);
-            $mail->CharSet    = 'UTF-8';
             $mail->Subject = 'Kontaktformular';
             $mail->Body    = '<p>' . $safeName . ' &lt;' . $safeEmail . '&gt; schrieb:</p><p>' . $safeMessage . '</p>';
             $mail->AltBody = $name . ' mit der E-Mail ' . $email . ' schrieb: ' . $message;
-
             $mail->send();
 
-            //Server settings
-            $response->isSMTP();
-            $response->SMTPDebug  = SMTP::DEBUG_OFF;
-            $response->Host       = 'mail.gmx.net';                     //Set the SMTP server to send through
-            $response->SMTPAuth   = true;
-            $response->Username   = 'ines.heilmann1@gmx.de';                     //SMTP username
-            $response->Password   = getenv('SMTP_PASSWORD') ?: 'Nachricht';      //Prefer environment variable
-            $response->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-            $response->Port       = 587;
-
-            //Recipients
-            $response->setFrom('ines.heilmann1@gmx.de', 'Ines Heilmann');
-            $response->addAddress($email, $name);     //Add a recipient
-
-            //Content
+            $response = $createMailer();
+            $response->setFrom(OWNER_EMAIL, 'Ines Heilmann');
+            $response->addAddress($email, $name);
             $response->isHTML(true);
-            $response->CharSet    = 'UTF-8';
-            $response->Subject = 'Empfangsbestätigung';
-            $response->Body    = '<p>Guten Tag, ' . $safeName . '.</p><p>Ich habe Ihre E-Mail erhalten und werde mich in Kuerze mit Ihnen in Verbindung setzen.</p><p>Mit freundlichen Gruessen<br>Ines Heilmann</p>';
-            $response->AltBody = 'Guten Tag, ' . $name . '. Ich habe Ihre E-Mail erhalten und werde mich in Kuerze mit Ihnen in Verbindung setzen. Mit freundlichen Gruessen Ines Heilmann';
-
+            $response->Subject = 'Danke für Ihre Nachricht';
+            $response->Body    = '<p>Guten Tag ' . $safeName . ',</p><p>Vielen Dank für Ihre Nachricht! Ich habe sie erhalten und werde mich in Kürze bei Ihnen melden.</p><p>Mit freundlichen Grüßen<br>Ines Heilmann</p>';
+            $response->AltBody = 'Guten Tag ' . $name . ', Vielen Dank für Ihre Nachricht! Ich habe sie erhalten und werde mich in Kürze bei Ihnen melden. Mit freundlichen Grüßen Ines Heilmann';
             $response->send();
+
             $_SESSION['contact_send_attempts'][] = $now;
-            $success('Ihre Nachricht wurde gesendet. Sie erhalten eine Empfangsbestaetigung an die angegebene E-Mail-Adresse.', $redirectBack);
-            
+            $success($redirectBack);
+
         } catch (Exception $e) {
             error_log('Contact form send failed: ' . $e->getMessage());
-            $fail('Ihre Nachricht konnte nicht gesendet werden. Bitte versuche es spaeter erneut.', $redirectBack);
+            $fail('', $redirectBack);
         }
     }
 ?>

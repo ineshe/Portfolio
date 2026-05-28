@@ -1,4 +1,3 @@
-<?php include_once __DIR__ . '/mail.php'; ?>
 <?php
     if (empty($_SESSION['contact_csrf_token'])) {
         $_SESSION['contact_csrf_token'] = bin2hex(random_bytes(32));
@@ -19,15 +18,14 @@
         </div>
 
         <?php if (isset($_SESSION['confirm'])): ?>
-        <div class="contact-confirm <?= strpos($_SESSION['confirm'], 'success') !== false ? 'contact-confirm--success' : 'contact-confirm--fail' ?>">
+        <?php $isSuccess = $_SESSION['confirm'] === 'success'; ?>
+        <div class="contact-confirm <?= $isSuccess ? 'contact-confirm--success' : 'contact-confirm--fail' ?>">
             <div class="contact-confirm-icon">✓</div>
             <p class="contact-confirm-title">
-                <?= strpos($_SESSION['confirm'], 'success') !== false ? 'Nachricht gesendet!' : 'Fehler beim Senden.' ?>
+                <?= $isSuccess ? 'Nachricht gesendet!' : 'Fehler beim Senden.' ?>
             </p>
             <p class="contact-confirm-sub">
-                <?= strpos($_SESSION['confirm'], 'success') !== false
-                    ? 'Ich melde mich so schnell wie möglich.'
-                    : 'Bitte versuche es später erneut.' ?>
+                <?= $isSuccess ? 'Ich melde mich so schnell wie möglich.' : 'Bitte versuche es später erneut.' ?>
             </p>
         </div>
         <?php unset($_SESSION['confirm']); ?>

@@ -7,3 +7,7 @@
     $host = $_SERVER['HTTP_HOST'] ?? '127.0.0.1:5500';
     $baseURL = "$https://$host";
 
+    $localConfig = dirname(__DIR__) . '/src/config.local.php';
+    if (file_exists($localConfig)) {
+        require_once $localConfig;
+    }
