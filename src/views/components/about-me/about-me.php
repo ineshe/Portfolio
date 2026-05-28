@@ -7,7 +7,7 @@
             <p class="about-text">
                 Hallo, ich bin Ines. Mein technischer Schwerpunkt liegt auf PHP und Symfony im Backend sowie React im Frontend.
             </p>
-            <p class="about-text about-text--dim">
+            <p class="about-text">
                 Durch meine Erfahrung in der Entwicklung von E-Commerce-Lösungen sowie die Arbeit an eigenen Projekten verbinde ich technisches Know-how mit einem ausgeprägten Gespür für Design. So entstehen Anwendungen, die nicht nur zuverlässig funktionieren, sondern auch mit durchdachter Nutzererfahrung überzeugen.
             </p>
         </div>
