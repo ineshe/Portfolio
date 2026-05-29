@@ -8,6 +8,8 @@
     $pageScripts = [
         '/js/components/redundant-card-click.js',
     ];
+
+    require_once dirname(__DIR__, 3).'/config.php';
 ?>
 <!DOCTYPE html>
 

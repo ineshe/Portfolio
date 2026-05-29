@@ -1,8 +1,9 @@
-<!DOCTYPE html>
 <?php
+    require_once dirname(__DIR__, 3).'/config.php';
     $pageTitle = '404 – Seite nicht gefunden | Ines Heilmann';
     $pageStyles = [];
 ?>
+<!DOCTYPE html>
 <html lang="de">
     <?php include_once dirname(__DIR__, 2).'/layout/head.php'; ?>
     <body>

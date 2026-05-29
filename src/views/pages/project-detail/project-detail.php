@@ -21,6 +21,8 @@
     $pageScripts = [
         '/js/components/slideshow.js',
     ];
+
+    require_once dirname(__DIR__, 3).'/config.php';
 ?>
 <!DOCTYPE html>
 <html lang="de">
