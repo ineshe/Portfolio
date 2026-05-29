@@ -1,7 +1,8 @@
-<!DOCTYPE html>
-<?php 
+<?php
     include(dirname(__DIR__, 3).'/config.php');
-
+?>
+<!DOCTYPE html>
+<?php
     $pageTitle = 'Impressum | Ines Heilmann';
     $pageStyles = [
         '/css/components/projects.css',
