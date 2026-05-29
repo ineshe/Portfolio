@@ -88,7 +88,7 @@
 
         require dirname(__DIR__, 4) . '/vendor/autoload.php';
 
-        define('OWNER_EMAIL', 'ines.heilmann1@gmx.de');
+        define('OWNER_EMAIL', 'dist@ines-heilmann.de');
 
         $smtpPassword = getenv('SMTP_PASSWORD');
         if ($smtpPassword === false || $smtpPassword === '') {
