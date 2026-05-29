@@ -20,7 +20,7 @@
         <?php if (isset($_SESSION['confirm'])): ?>
         <?php $isSuccess = $_SESSION['confirm'] === 'success'; ?>
         <div class="contact-confirm <?= $isSuccess ? 'contact-confirm--success' : 'contact-confirm--fail' ?>">
-            <div class="contact-confirm-icon">✓</div>
+            <div class="contact-confirm-icon"><?= $isSuccess ? '✓' : '✗' ?></div>
             <p class="contact-confirm-title">
                 <?= $isSuccess ? 'Nachricht gesendet!' : 'Fehler beim Senden.' ?>
             </p>
