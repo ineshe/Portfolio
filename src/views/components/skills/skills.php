@@ -1,8 +1,8 @@
 <?php
 $skills = [
-    'Backend'  => ['PHP', 'Symfony', 'MySQL', 'REST APIs', 'Node.js'],
-    'Frontend' => ['React', 'JavaScript', 'TypeScript', 'CSS / SASS', 'HTML', 'Vite'],
-    'Tools'    => ['Git', 'Figma', 'Adobe Photoshop', 'Shopware', 'Composer'],
+    'E-Commerce & Backend'  => ['Shopware', 'Symfony', 'PHP', 'MySQL'],
+    'Frontend' => ['React', 'JavaScript', 'TypeScript', 'HTML', 'Twig', 'CSS', 'Tailwind CSS', 'Bootstrap'],
+    'Tools'    => ['Git', 'Docker', 'Adobe Photoshop']
 ];
 ?>
 
