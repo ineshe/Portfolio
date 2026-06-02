@@ -111,13 +111,6 @@
                                         <?php endforeach; ?>
                                     </p>
                                 </div>
-
-                                <?php if (!empty($project['year'])): ?>
-                                    <div>
-                                        <p class="info-block-title">Jahr</p>
-                                        <p class="info__year-value"><?= htmlspecialchars((string)$project['year'], ENT_QUOTES, 'UTF-8') ?></p>
-                                    </div>
-                                <?php endif; ?>
                             </aside>
                         </div>
 
