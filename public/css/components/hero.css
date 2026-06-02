@@ -135,6 +135,7 @@
     0 0 0 6px oklch(from var(--accent) l c h / 0.13),
     0 0 40px oklch(from var(--accent) l c h / 0.18);
   z-index: 1;
+  background-color: var(--body-bg);
 }
 
 .hero__scroll-hint {
