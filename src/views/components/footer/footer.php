@@ -1,8 +1,7 @@
 <footer>
     <div class="footer-inner">
         <div class="footer-left">
-            <a href="<?php echo $baseURL?>" class="footer-logo" aria-label="Startseite">IH</a>
-            <span class="footer-copy">© 2025 Ines Heilmann</span>
+            <span class="footer-copy">© Ines Heilmann 2026</span>
         </div>
         <div class="footer-right">
             <nav class="footer-links" aria-label="Rechtliches">

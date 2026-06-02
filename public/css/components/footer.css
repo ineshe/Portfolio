@@ -20,22 +20,6 @@ footer {
   gap: 0.625rem;
 }
 
-.footer-logo {
-  background: var(--accent);
-  color: #fff;
-  width: 1.75rem;
-  height: 1.75rem;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Kanit", sans-serif;
-  font-size: 0.82rem;
-  font-weight: 800;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
 .footer-copy {
   font-family: "Mukta", sans-serif;
   font-size: 0.85rem;
