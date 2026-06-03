@@ -28,12 +28,4 @@
         </div>
     </div>
 
-    <div class="hero__scroll-hint" aria-hidden="true">
-        <span>SCROLL</span>
-        <div class="hero__scroll-line"></div>
-    </div>
-
-    <style>
-        @keyframes scrollPulse { 0%,100%{opacity:0.3} 50%{opacity:1} }
-    </style>
 </section>
