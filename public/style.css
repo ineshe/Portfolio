@@ -128,8 +128,8 @@ main {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle, oklch(from var(--accent) l c h / 0.3) 0.8px, transparent 1.5px),
-    radial-gradient(circle, oklch(from var(--accent) l c h / 0.3) 0.8px, transparent 1.5px);
+    radial-gradient(circle, oklch(from var(--accent) l c h / 0.3) 0.5px, transparent 1px),
+    radial-gradient(circle, oklch(from var(--accent) l c h / 0.3) 0.5px, transparent 1px);
   background-size: 28px 28px;
   background-position:
     0 0,
