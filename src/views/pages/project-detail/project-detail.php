@@ -36,7 +36,7 @@
                     <div class="content">
 
                         <nav class="breadcrumb" aria-label="Breadcrumb">
-                            <a href="/">Startseite</a>
+                            <a href="/">Home</a>
                             <span class="sep">/</span>
                             <a href="/#projects">Projekte</a>
                             <span class="sep">/</span>
