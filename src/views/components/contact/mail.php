@@ -100,12 +100,12 @@
             $mailer = new PHPMailer(true);
             $mailer->isSMTP();
             $mailer->SMTPDebug  = SMTP::DEBUG_OFF;
-            $mailer->Host       = 'mail.gmx.net';
+            $mailer->Host       = 'mx2eb7.netcup.net';
             $mailer->SMTPAuth   = true;
             $mailer->Username   = OWNER_EMAIL;
             $mailer->Password   = $smtpPassword;
-            $mailer->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mailer->Port       = 587;
+            $mailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mailer->Port       = 465;
             $mailer->CharSet    = 'UTF-8';
             return $mailer;
         };
