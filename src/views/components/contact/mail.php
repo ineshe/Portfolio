@@ -6,7 +6,8 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $redirectBack = static function (): void {
-            header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
+            $uri = strtok($_SERVER['REQUEST_URI'], '#');
+            header("Location: {$uri}#contact", true, 303);
             exit();
         };
 
