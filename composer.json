@@ -3,6 +3,6 @@
     "phpmailer/phpmailer": "^6.4"
   },
   "scripts": {
-    "start": "php -S 127.0.0.1:5500 -t public"
+    "start": "php -S 127.0.0.1:8000 -t public"
   }
 }
