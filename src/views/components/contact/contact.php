@@ -20,7 +20,8 @@
         <?php if (isset($_SESSION['confirm'])): ?>
         <?php $isSuccess = $_SESSION['confirm'] === 'success'; ?>
         <div class="contact-confirm <?= $isSuccess ? 'contact-confirm--success' : 'contact-confirm--fail' ?>">
-            <div class="contact-confirm-icon"><?= $isSuccess ? '✓' : '✗' ?></div>
+            <p class="sr-only" role="status"><?= $isSuccess ? 'Erfolg: Nachricht gesendet.' : 'Fehler: Nachricht konnte nicht gesendet werden.' ?></p>
+            <div class="contact-confirm-icon" aria-hidden="true"><?= $isSuccess ? '✓' : '✗' ?></div>
             <p class="contact-confirm-title">
                 <?= $isSuccess ? 'Nachricht gesendet!' : 'Fehler beim Senden.' ?>
             </p>
@@ -36,21 +37,27 @@
             <input type="text" name="website" value="" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;pointer-events:none;height:0;width:0;">
             <div class="contact-row">
                 <div class="contact-field">
-                    <input type="text" id="fname" name="fname" placeholder="Name" required
+                    <label for="fname">Name <span class="contact-required" aria-hidden="true">*</span></label>
+                    <input type="text" id="fname" name="fname" placeholder="Max Mustermann" required aria-required="true"
                            pattern="^[^\d&quot;§$%&amp;/()=?²³{}\[\]\\@€~#&lt;&gt;|,;.:_*\-+]{1,60}$">
                 </div>
                 <div class="contact-field">
-                    <input type="email" id="email" name="email" placeholder="E-Mail" required>
+                    <label for="email">E-Mail <span class="contact-required" aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="name@beispiel.de" required aria-required="true">
                 </div>
             </div>
             <div class="contact-field">
-                <textarea id="message" name="message" placeholder="Deine Nachricht…" rows="6" required></textarea>
+                <label for="message">Nachricht <span class="contact-required" aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" placeholder="Deine Nachricht…" rows="6" required aria-required="true"></textarea>
             </div>
             <input type="hidden" name="lname" value="">
             <input type="hidden" name="salutation" value="">
-            <button type="submit" name="submitBtn" class="btn-primary contact-submit">
-                Senden →
-            </button>
+            <div class="contact-footer">
+                <button type="submit" name="submitBtn" class="btn-primary contact-submit">
+                    Senden →
+                </button>
+                <p class="contact-required-note"><span class="contact-required">*</span> Pflichtfeld</p>
+            </div>
         </form>
         <?php endif; ?>
     </div>
