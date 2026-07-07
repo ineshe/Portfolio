@@ -26,10 +26,16 @@
                 <?= $isSuccess ? 'Nachricht gesendet!' : 'Fehler beim Senden.' ?>
             </p>
             <p class="contact-confirm-sub">
-                <?= $isSuccess ? 'Ich melde mich so schnell wie möglich.' : 'Bitte versuche es später erneut.' ?>
+                <?php if ($isSuccess): ?>
+                    Ich melde mich so schnell wie möglich.
+                <?php elseif (!empty($_SESSION['confirm_detail'])): ?>
+                    <?= htmlspecialchars($_SESSION['confirm_detail'], ENT_QUOTES, 'UTF-8') ?>
+                <?php else: ?>
+                    Bitte versuche es später erneut.
+                <?php endif; ?>
             </p>
         </div>
-        <?php unset($_SESSION['confirm']); ?>
+        <?php unset($_SESSION['confirm'], $_SESSION['confirm_detail']); ?>
         <?php else: ?>
         <form class="contact-form" action="" method="POST" novalidate>
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['contact_csrf_token'], ENT_QUOTES, 'UTF-8') ?>">
