@@ -121,14 +121,16 @@
   text-align: center;
   padding: 3rem;
   border-radius: var(--radius);
-  background: oklch(from var(--accent) l c h / var(--confirm-bg-alpha, 0.08));
-  border: 1px solid oklch(from var(--accent) l c h / var(--confirm-border-alpha, 0.2));
+  background: oklch(from var(--confirm-color, var(--accent)) l c h / var(--confirm-bg-alpha, 0.08));
+  border: 1px solid oklch(from var(--confirm-color, var(--accent)) l c h / var(--confirm-border-alpha, 0.2));
 }
 .contact-confirm--success {
+  --confirm-color: var(--success);
   --confirm-bg-alpha: 0.08;
   --confirm-border-alpha: 0.2;
 }
 .contact-confirm--fail {
+  --confirm-color: var(--error);
   --confirm-bg-alpha: 0.05;
   --confirm-border-alpha: 0.15;
 }
@@ -139,7 +141,7 @@
 .contact-confirm-title {
   font-family: "Kanit", sans-serif;
   font-size: 1.3rem;
-  color: var(--accent);
+  color: var(--confirm-color, var(--accent));
   font-weight: 600;
 }
 .contact-confirm-sub {
