@@ -93,6 +93,18 @@
   outline-offset: 2px;
 }
 
+.contact-field input:-webkit-autofill,
+.contact-field input:-webkit-autofill:hover,
+.contact-field input:-webkit-autofill:focus,
+.contact-field textarea:-webkit-autofill,
+.contact-field textarea:-webkit-autofill:hover,
+.contact-field textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text);
+  caret-color: var(--text);
+  box-shadow: 0 0 0 1000px color-mix(in oklch, white 4%, var(--body-bg) 96%) inset;
+  transition: background-color 600000s ease-in-out 0s;
+}
+
 .contact-field textarea {
   resize: vertical;
 }
