@@ -97,6 +97,21 @@
   resize: vertical;
 }
 
+.field-error {
+  display: none;
+  margin: 0;
+  font-size: 0.8rem;
+  color: oklch(65% 0.2 25);
+}
+.field-error.active {
+  display: block;
+}
+
+.contact-field input[aria-invalid="true"],
+.contact-field textarea[aria-invalid="true"] {
+  border-color: oklch(65% 0.2 25 / 0.6);
+}
+
 .contact-submit {
   align-self: flex-start;
 }

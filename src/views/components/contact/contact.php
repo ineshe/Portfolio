@@ -39,16 +39,22 @@
                 <div class="contact-field">
                     <label for="fname">Name <span class="contact-required" aria-hidden="true">*</span></label>
                     <input type="text" id="fname" name="fname" placeholder="Max Mustermann" required aria-required="true"
+                           minlength="2" maxlength="60" aria-describedby="fname-error"
                            pattern="^[^\d&quot;§$%&amp;/()=?²³{}\[\]\\@€~#&lt;&gt;|,;.:_*\-+]{1,60}$">
+                    <p class="field-error" id="fname-error" aria-live="polite"></p>
                 </div>
                 <div class="contact-field">
                     <label for="email">E-Mail <span class="contact-required" aria-hidden="true">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="name@beispiel.de" required aria-required="true">
+                    <input type="email" id="email" name="email" placeholder="name@beispiel.de" required aria-required="true"
+                           maxlength="254" aria-describedby="email-error">
+                    <p class="field-error" id="email-error" aria-live="polite"></p>
                 </div>
             </div>
             <div class="contact-field">
                 <label for="message">Nachricht <span class="contact-required" aria-hidden="true">*</span></label>
-                <textarea id="message" name="message" placeholder="Deine Nachricht…" rows="6" required aria-required="true"></textarea>
+                <textarea id="message" name="message" placeholder="Deine Nachricht…" rows="6" required aria-required="true"
+                          minlength="10" maxlength="3000" aria-describedby="message-error"></textarea>
+                <p class="field-error" id="message-error" aria-live="polite"></p>
             </div>
             <input type="hidden" name="lname" value="">
             <input type="hidden" name="salutation" value="">
