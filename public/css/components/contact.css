@@ -101,7 +101,7 @@
   display: none;
   margin: 0;
   font-size: 0.8rem;
-  color: oklch(65% 0.2 25);
+  color: var(--error);
 }
 .field-error.active {
   display: block;
@@ -109,7 +109,7 @@
 
 .contact-field input[aria-invalid="true"],
 .contact-field textarea[aria-invalid="true"] {
-  border-color: oklch(65% 0.2 25 / 0.6);
+  border-color: oklch(from var(--error) l c h / 0.6);
 }
 
 .contact-submit {
