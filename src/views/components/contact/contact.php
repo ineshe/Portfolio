@@ -14,7 +14,7 @@
         <div class="contact-header">
             <p class="section-eyebrow">Zusammenarbeiten?</p>
             <h2 class="section-heading" style="margin-bottom: 16px;">Kontakt</h2>
-            <p class="contact-sub">Schreib mir gerne – ich freue mich auf deine Nachricht.</p>
+            <p class="contact-sub">Schreib mir gerne. Ich freue mich auf deine Nachricht.</p>
         </div>
 
         <?php if (isset($_SESSION['confirm'])): ?>
