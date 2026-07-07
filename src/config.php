@@ -9,5 +9,5 @@
     }
 
     $https = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
-    $host = $_SERVER['HTTP_HOST'] ?? '127.0.0.1:5500';
+    $host = $_SERVER['HTTP_HOST'] ?? '127.0.0.1:8000';
     $baseURL = "$https://$host";

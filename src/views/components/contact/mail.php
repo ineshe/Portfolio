@@ -6,12 +6,16 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $redirectBack = static function (): void {
-            header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
+            $uri = strtok($_SERVER['REQUEST_URI'], '#');
+            header("Location: {$uri}#contact", true, 303);
             exit();
         };
 
-        $fail = static function (string $message, callable $redirectBack): void {
+        $fail = static function (string $message, callable $redirectBack, bool $showDetail = false): void {
             $_SESSION['confirm'] = 'fail';
+            if ($showDetail && $message !== '') {
+                $_SESSION['confirm_detail'] = $message;
+            }
             unset($_SESSION['contact_csrf_token'], $_SESSION['contact_form_loaded_at']);
             $redirectBack();
         };
@@ -71,15 +75,15 @@
         $message = trim((string) ($_POST['message'] ?? ''));
 
         if ($name === '' || mb_strlen($name) < 2 || mb_strlen($name) > 60 || preg_match('/[\r\n]/', $name)) {
-            $fail('Bitte gib einen gueltigen Namen ein.', $redirectBack);
+            $fail('Bitte gib einen gültigen Namen ein.', $redirectBack, true);
         }
 
         if ($email === '' || mb_strlen($email) > 254 || filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-            $fail('Bitte gib eine gueltige E-Mail-Adresse ein.', $redirectBack);
+            $fail('Bitte gib eine gültige E-Mail-Adresse ein.', $redirectBack, true);
         }
 
         if ($message === '' || mb_strlen($message) < 10 || mb_strlen($message) > 3000) {
-            $fail('Bitte gib eine Nachricht mit mindestens 10 Zeichen ein.', $redirectBack);
+            $fail('Bitte gib eine Nachricht mit mindestens 10 Zeichen ein.', $redirectBack, true);
         }
 
         $safeName    = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');

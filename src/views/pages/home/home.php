@@ -11,6 +11,7 @@
     ];
     $pageScripts = [
         '/js/components/scroll-reveal.js',
+        '/js/pages/validation.js',
     ];
 
     // Process contact form POST before any HTML output so redirects can set headers safely.
