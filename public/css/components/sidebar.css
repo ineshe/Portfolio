@@ -21,7 +21,7 @@
   width: 2.375rem;
   height: 2.375rem;
   border-radius: var(--radius-sm);
-  background: oklch(20.8% 0.0358 278 / 0.85);
+  background: oklch(from var(--nav-bg) l c h / 0.85);
   border: 1px solid oklch(100% 0 0 / 0.1);
   color: oklch(from var(--text) l c h / 0.45);
   text-decoration: none;

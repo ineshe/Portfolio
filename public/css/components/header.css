@@ -14,7 +14,7 @@
 }
 
 .top-bar.scrolled {
-  background: oklch(20.8% 0.0358 278 / 0.92);
+  background: oklch(from var(--nav-bg) l c h / 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom-color: oklch(100% 0 0 / 0.06);
@@ -93,7 +93,7 @@
   }
   .top-bar.scrolled,
   .top-bar:has(.navigation.open) {
-    background: oklch(20.8% 0.0358 278 / 0.96);
+    background: oklch(from var(--nav-bg) l c h / 0.96);
     border-bottom-color: oklch(100% 0 0 / 0.06);
   }
 
