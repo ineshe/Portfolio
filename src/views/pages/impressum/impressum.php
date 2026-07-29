@@ -18,12 +18,12 @@
             <main>
                 <article id="project" class="section">
                     <div class="content">
-                        <h2>Impressum</h2>
+                        <h2 class="section-heading">Impressum</h2>
                         <div class="grid">
                             <h3>Angaben gemäß § 5 TMG</h3>
                             <p>Ines Heilmann<br> 
-                                Waldstraße 8<br> 
-                                12487 Berlin<br> 
+                                Neugasse 11<br> 
+                                09306 Königsfeld<br> 
                             </p>
                             <p><h3>Vertreten durch:</h3>
                                 Ines Heilmann
