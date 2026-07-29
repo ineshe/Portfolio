@@ -34,7 +34,7 @@
 
                         <p>Verantwortlicher Anbieter dieses Internetauftritts im datenschutzrechtlichen Sinne ist:</p>
 
-                        Ines Heilmann<br>Waldstraße 8<br>12487 Berlin
+                        <p>Ines Heilmann<br>Neugasse 11<br>09306 Königsfeld</p>
 
                         <p>Telefon: +49 176 55923795<br>E-Mail: contact@ines-heilmann.de</p>
 

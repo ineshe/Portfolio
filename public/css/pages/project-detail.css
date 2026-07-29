@@ -279,6 +279,19 @@
 .project-pager__arrow-circle {
   font-size: 1.5rem;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  border-radius: 8px;
+  border: 1.5px solid currentColor;
+}
+
+.project-pager__arrow-circle svg {
+  width: 0.8em;
+  height: 0.8em;
+  transition: transform 0.2s ease;
 }
 
 .project-pager__label {
@@ -305,20 +318,6 @@
   transition: color 0.2s;
 }
 
-.project-pager__arrow-circle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2em;
-  height: 2em;
-  border-radius: 8px;
-  border: 1.5px solid currentColor;
-}
-
-.project-pager__arrow-circle svg {
-  transition: transform 0.2s ease;
-}
-
 @media (hover: hover) {
   .project-pager__link.next:hover .project-pager__arrow-circle svg {
     transform: translateX(1px);
@@ -327,11 +326,6 @@
   .project-pager__link.prev:hover .project-pager__arrow-circle svg {
     transform: translateX(-1px);
   }
-}
-
-.project-pager__arrow-circle svg {
-  width: 0.8em;
-  height: 0.8em;
 }
 
 /* ── Tablet+ ── */

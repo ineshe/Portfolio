@@ -14,7 +14,7 @@
 }
 
 .top-bar.scrolled {
-  background: oklch(20.8% 0.0358 278 / 0.92);
+  background: oklch(from var(--nav-bg) l c h / 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom-color: oklch(100% 0 0 / 0.06);
@@ -40,6 +40,7 @@
 .menu {
   list-style: none;
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 2rem;
   margin: 0 2rem 0 0;
@@ -93,7 +94,7 @@
   }
   .top-bar.scrolled,
   .top-bar:has(.navigation.open) {
-    background: oklch(20.8% 0.0358 278 / 0.96);
+    background: oklch(from var(--nav-bg) l c h / 0.96);
     border-bottom-color: oklch(100% 0 0 / 0.06);
   }
 
@@ -136,7 +137,7 @@
     left: 0;
     right: 0;
     height: calc(100dvh - var(--nav-height));
-    background: oklch(18% 0.0189 274.6 / 0.98);
+    background: oklch(from var(--dark-bg) l c h / 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-top: 1px solid oklch(100% 0 0 / 0.06);
