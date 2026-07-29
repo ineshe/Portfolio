@@ -25,14 +25,17 @@
                                 Neugasse 11<br> 
                                 09306 Königsfeld<br> 
                             </p>
-                            <p><h3>Vertreten durch:</h3>
+                            <h3>Vertreten durch:</h3>
+                            <p>
                                 Ines Heilmann
                             </p>
-                            <p><h3>Kontakt:</h3>
+                            <h3>Kontakt:</h3>
+                            <p>
                                 Telefon: +49 176 55923795<br>
                                 E-Mail: <a href='mailto:contact@ines-heilmann.de'>contact@ines-heilmann.de</a></br>
                             </p>
-                            <p><h3>Haftungsausschluss: </h3>
+                            <h3>Haftungsausschluss: </h3>
+                            <p>
 
                                 <strong>Haftung für Links</strong><br>
                                 Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir
