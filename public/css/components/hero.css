@@ -71,10 +71,7 @@
   display: block;
 }
 
-.hero__name-first {
-  color: var(--accent);
-}
-
+.hero__name-first,
 .hero__name-last {
   color: var(--accent);
 }
