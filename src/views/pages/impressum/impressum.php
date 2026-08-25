@@ -7,6 +7,9 @@
     $pageStyles = [
         '/css/components/projects.css',
     ];
+    $pageScripts = [
+        '/js/components/mail-obfuscation.js',
+    ];
 ?>
 <html lang="de">
     <?php include_once dirname(__DIR__, 2).'/layout/head.php'; ?>
@@ -32,7 +35,7 @@
                             <h3>Kontakt:</h3>
                             <p>
                                 Telefon: <a href="tel:+4917655923795">+49 176 55923795</a><br>
-                                E-Mail: <a href='mailto:contact@ines-heilmann.de'>contact@ines-heilmann.de</a></br>
+                                E-Mail: <span class="js-mail" data-user="tcatnoc" data-domain="ed.nnamlieh-seni"><noscript>contact (at) ines-heilmann.de</noscript></span>
                             </p>
                             <h3>Haftungsausschluss: </h3>
                             <p>
