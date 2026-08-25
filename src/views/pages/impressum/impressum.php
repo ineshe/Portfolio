@@ -31,7 +31,7 @@
                             </p>
                             <h3>Kontakt:</h3>
                             <p>
-                                Telefon: +49 176 55923795<br>
+                                Telefon: <a href="tel:+4917655923795">+49 176 55923795</a><br>
                                 E-Mail: <a href='mailto:contact@ines-heilmann.de'>contact@ines-heilmann.de</a></br>
                             </p>
                             <h3>Haftungsausschluss: </h3>
