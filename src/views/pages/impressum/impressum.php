@@ -20,7 +20,7 @@
                     <div class="content">
                         <h2 class="section-heading">Impressum</h2>
                         <div class="grid">
-                            <h3>Angaben gemäß § 5 TMG</h3>
+                            <h3>Angaben gemäß § 5 DDG</h3>
                             <p>Ines Heilmann<br> 
                                 Neugasse 11<br> 
                                 09306 Königsfeld<br> 
