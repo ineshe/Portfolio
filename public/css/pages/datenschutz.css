@@ -1,11 +1,7 @@
 /* ── Section ──
-   Rechtstext-Seite: erbt die Prosa-Typografie aus .section .content
-   (style.css) und ergänzt hier nur die dokumentspezifischen Bausteine. */
-#privacy .content {
-  /* Die globale --max-width (1200px) ergibt für Fließtext eine viel zu
-     lange Zeile — hier auf eine lesbare Zeilenlänge begrenzt. */
-  max-width: 45rem;
-}
+   Rechtstext-Seite: erbt die Prosa-Typografie und die Seitenbreite
+   (--max-width) aus .section .content (style.css) und ergänzt hier nur
+   die dokumentspezifischen Bausteine. */
 
 /* ── Dokumentkopf ── */
 .legal-header {
@@ -27,7 +23,9 @@
   color: var(--text-dim);
 }
 
-/* ── Inhaltsübersicht ── */
+/* ── Inhaltsübersicht ──
+   Einspaltiges Layout bis zum Desktop-Breakpoint: Kasten über dem
+   Dokument; ab 1024px als Spalte links daneben (Media Query am Ende). */
 .legal-toc {
   background: oklch(100% 0 0 / 0.03);
   border: 1px solid var(--border);
@@ -98,13 +96,19 @@
 /* ── Abschnittsüberschriften ──
    Kleiner als die generische Prosa-h2, damit die 15 Abschnitte den
    Seitentitel nicht überstimmen; Sprungziel-Offset für die fixe Navigation. */
-#privacy .content > h2 {
+#privacy .legal-body > h2 {
   font-size: 1.45rem;
   margin: 3.25rem 0 1rem;
   scroll-margin-top: calc(var(--nav-height) + 1.5rem);
 }
 
-#privacy .content > h2::before {
+/* Die erste Abschnittsüberschrift schließt bündig an den Dokumentkopf
+   bzw. an die Oberkante der Inhaltsübersicht an. */
+#privacy .legal-body > h2:first-child {
+  margin-top: 0;
+}
+
+#privacy .legal-body > h2::before {
   content: "";
   display: block;
   width: 2rem;
@@ -242,5 +246,32 @@
   }
   .legal-top-link {
     justify-content: center;
+  }
+}
+
+/* ── Desktop ──
+   Inhaltsübersicht als mitlaufende Spalte links neben dem Dokument. */
+@media screen and (min-width: 1024px) {
+  .legal-layout {
+    display: grid;
+    grid-template-columns: 20rem minmax(0, 1fr);
+    column-gap: 4rem;
+    align-items: start;
+  }
+
+  .legal-toc {
+    position: sticky;
+    top: calc(var(--nav-height) + 1.5rem);
+    /* Bei niedrigen Fenstern scrollt die Übersicht in sich selbst,
+       statt unten aus dem Viewport zu laufen. */
+    max-height: calc(100vh - var(--nav-height) - 3rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    margin-bottom: 0;
+    padding: 1.5rem;
+  }
+
+  .legal-toc__list {
+    grid-template-columns: 1fr;
   }
 }
