@@ -8,6 +8,7 @@
                 <a href="<?php echo $baseURL?>/impressum">Impressum</a>
                 <a href="<?php echo $baseURL?>/datenschutz">Datenschutz</a>
             </nav>
+            <button type="button" class="footer-cookie-settings" onclick="openCookieSettings()">Cookie Einstellungen</button>
             <div class="footer-social">
                 <a href="https://github.com/ineshe" target="_blank" rel="noreferrer" aria-label="GitHub">
                     <?php include __DIR__ . '/../../../../public/assets/icons/github.svg'; ?>

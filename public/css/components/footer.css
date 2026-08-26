@@ -29,7 +29,8 @@ footer {
 .footer-right {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
 }
 
 .footer-links {
@@ -45,6 +46,24 @@ footer {
 }
 .footer-links a:hover {
   color: oklch(from var(--text) l c h / 0.7);
+}
+
+.footer-cookie-settings {
+  font-family: "Mukta", sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.footer-cookie-settings:hover {
+  color: oklch(from var(--text) l c h / 0.7);
+}
+.footer-cookie-settings:focus-visible {
+  outline: 2px solid oklch(from var(--accent) 0.78 c h / 1);
+  outline-offset: 2px;
 }
 
 .footer-social {
