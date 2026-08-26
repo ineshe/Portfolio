@@ -1,0 +1,277 @@
+/* ── Section ──
+   Rechtstext-Seite: erbt die Prosa-Typografie und die Seitenbreite
+   (--max-width) aus .section .content (style.css) und ergänzt hier nur
+   die dokumentspezifischen Bausteine. */
+
+/* ── Dokumentkopf ── */
+.legal-header {
+  padding-bottom: 2.25rem;
+  margin-bottom: 2.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-header .section-heading {
+  margin-bottom: 0.75rem;
+}
+
+.legal-updated {
+  font-family: "Mukta", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+/* ── Inhaltsübersicht ──
+   Einspaltiges Layout bis zum Desktop-Breakpoint: Kasten über dem
+   Dokument; ab 1024px als Spalte links daneben (Media Query am Ende). */
+.legal-toc {
+  background: oklch(100% 0 0 / 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+.legal-toc__title {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1.25rem;
+}
+
+.legal-toc__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.625rem 1.75rem;
+  counter-reset: toc;
+}
+
+.legal-toc__list li {
+  counter-increment: toc;
+}
+
+.legal-toc__link {
+  display: flex;
+  gap: 0.625rem;
+  font-family: "Mukta", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.legal-toc__link::before {
+  content: counter(toc, decimal-leading-zero);
+  flex: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.75;
+  color: var(--text-dim);
+  transition: color 0.2s;
+}
+
+@media (hover: hover) {
+  .legal-toc__link:hover,
+  .legal-toc__link:hover::before {
+    color: var(--accent);
+  }
+}
+
+/* Lange URLs im Fließtext (z. B. EU-Kommission, Google) dürfen umbrechen,
+   damit sie auf schmalen Viewports nicht über den Rand laufen. */
+#privacy .content a {
+  overflow-wrap: anywhere;
+}
+
+/* ── Abschnittsüberschriften ──
+   Kleiner als die generische Prosa-h2, damit die 15 Abschnitte den
+   Seitentitel nicht überstimmen; Sprungziel-Offset für die fixe Navigation. */
+#privacy .legal-body > h2 {
+  font-size: 1.45rem;
+  margin: 3.25rem 0 1rem;
+  scroll-margin-top: calc(var(--nav-height) + 1.5rem);
+}
+
+/* Die erste Abschnittsüberschrift schließt bündig an den Dokumentkopf
+   bzw. an die Oberkante der Inhaltsübersicht an. */
+#privacy .legal-body > h2:first-child {
+  margin-top: 0;
+}
+
+#privacy .legal-body > h2::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background: var(--accent);
+  margin-bottom: 0.875rem;
+}
+
+#privacy .content h3 {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+/* ── Verarbeitungs-Steckbriefe (Datenarten, Zwecke, Rechtsgrundlagen …) ── */
+#privacy .m-elements {
+  list-style: none;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 2px solid oklch(from var(--accent) l c h / 0.5);
+  border-radius: var(--radius-sm);
+}
+
+#privacy .m-elements li {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+#privacy .m-elements > li > strong:first-child {
+  color: var(--accent);
+}
+
+/* ── Begriffsdefinitionen ── */
+#privacy .glossary {
+  list-style: none;
+  padding: 0;
+  gap: 1.25rem;
+}
+
+#privacy .glossary li {
+  padding-left: 1rem;
+  border-left: 2px solid var(--border);
+  transition: border-color 0.2s;
+}
+
+@media (hover: hover) {
+  #privacy .glossary li:hover {
+    border-left-color: oklch(from var(--accent) l c h / 0.5);
+  }
+}
+
+#privacy .glossary strong {
+  display: block;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+/* ── Fuß des Dokuments ── */
+.legal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.legal-top-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: none;
+  font-family: "Mukta", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.5rem 1.125rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+
+@media (hover: hover) {
+  .legal-top-link:hover {
+    border-color: oklch(from var(--accent) l c h / 0.4);
+    color: var(--accent);
+  }
+}
+
+#privacy .legal-seal {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+#privacy .legal-seal a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  #privacy .legal-seal a:hover {
+    color: var(--text-muted);
+  }
+}
+
+/* Platzhalter des Datenschutz-Generators für lizenzpflichtige Textstellen —
+   visuell zurückgenommen, damit sie nicht als Fließtext gelesen werden. */
+.dsg-license-content-blurred {
+  filter: blur(3px);
+  opacity: 0.45;
+  user-select: none;
+}
+
+/* ── Mobile ── */
+@media screen and (max-width: 767px) {
+  .legal-toc {
+    padding: 1.375rem;
+  }
+  .legal-toc__list {
+    grid-template-columns: 1fr;
+  }
+  .legal-footer {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+  .legal-top-link {
+    justify-content: center;
+  }
+}
+
+/* ── Desktop ──
+   Inhaltsübersicht als mitlaufende Spalte links neben dem Dokument. */
+@media screen and (min-width: 1024px) {
+  .legal-layout {
+    display: grid;
+    grid-template-columns: 20rem minmax(0, 1fr);
+    column-gap: 4rem;
+    align-items: start;
+  }
+
+  .legal-toc {
+    position: sticky;
+    top: calc(var(--nav-height) + 1.5rem);
+    /* Bei niedrigen Fenstern scrollt die Übersicht in sich selbst,
+       statt unten aus dem Viewport zu laufen. */
+    max-height: calc(100vh - var(--nav-height) - 3rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    margin-bottom: 0;
+    padding: 1.5rem;
+  }
+
+  .legal-toc__list {
+    grid-template-columns: 1fr;
+  }
+}
