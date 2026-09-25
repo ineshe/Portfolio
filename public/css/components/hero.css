@@ -54,7 +54,7 @@
   font-size: clamp(0.85rem, 0.95vw, 0.95rem);
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: oklch(from var(--text) l c h / 0.82);
   margin-bottom: 1.25rem;
 }
 
@@ -71,7 +71,7 @@
 
 .hero__desc {
   font-size: clamp(1.05rem, 1.3vw, 1.3rem);
-  color: var(--text-muted);
+  color: oklch(from var(--text) l c h / 0.82);
   max-width: 520px;
   line-height: 1.7;
   margin-bottom: 2.25rem;
