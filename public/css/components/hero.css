@@ -50,36 +50,29 @@
 
 .hero__eyebrow {
   font-family: "Mukta", sans-serif;
-  font-weight: 300;
-  font-size: clamp(0.9rem, 1vw, 1rem);
-  letter-spacing: 0.25em;
+  font-weight: 400;
+  font-size: clamp(0.85rem, 0.95vw, 0.95rem);
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: oklch(from var(--text) l c h / 0.75);
-  margin-bottom: 0.65rem;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
 }
 
-.hero__name {
+.hero__headline {
   font-family: "Kanit", sans-serif;
   font-weight: 700;
-  font-size: clamp(3.5rem, 8vw, 7rem);
-  line-height: 1;
-  letter-spacing: normal;
-  margin-block: 0.3em 1.5rem;
-}
-
-.hero__name > * {
-  display: block;
-}
-
-.hero__name-first,
-.hero__name-last {
-  color: var(--accent);
+  font-size: clamp(2.25rem, 4.2vw, 3.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  max-width: 16ch;
+  margin-bottom: 1.5rem;
+  text-wrap: balance;
 }
 
 .hero__desc {
-  font-size: clamp(1rem, 1.2vw, 1.3rem);
+  font-size: clamp(1.05rem, 1.3vw, 1.3rem);
   color: var(--text-muted);
-  max-width: 480px;
+  max-width: 520px;
   line-height: 1.7;
   margin-bottom: 2.25rem;
   font-weight: 300;
