@@ -32,7 +32,7 @@
   font-family: "Kanit", sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
-  color: var(--accent);
+  color: var(--accent-text);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
@@ -46,7 +46,7 @@
 
 .skill-pill {
   font-family: "Karla", sans-serif;
-  font-size: 0.83rem;
+  font-size: 0.875rem;
   font-weight: 500;
   padding: 0.3125rem 0.875rem;
   border-radius: 1.25rem;

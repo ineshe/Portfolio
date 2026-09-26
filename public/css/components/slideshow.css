@@ -38,7 +38,7 @@
 }
 
 .slideshow-controls__counter {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: oklch(100% 0 0 / 0.6);
   min-width: 2.5rem;
 }

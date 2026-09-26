@@ -17,7 +17,6 @@
 .contact-sub {
   color: var(--text-muted);
   font-size: 1rem;
-  font-weight: 300;
 }
 
 /* Form */
@@ -40,7 +39,7 @@
 }
 
 .contact-field label {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: var(--text-muted);
   font-weight: 400;
   letter-spacing: 0.03em;
@@ -55,13 +54,13 @@
 }
 
 .contact-required-note {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: var(--text-muted);
   margin: 0;
 }
 
 .contact-required {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .contact-field input,
@@ -72,14 +71,14 @@
   padding: 0.875rem 1rem;
   color: var(--text);
   font-family: "Karla", sans-serif;
-  font-size: 0.95rem;
+  font-size: 1rem;
   outline: none;
   transition: border-color 0.2s;
   box-sizing: border-box;
 }
 .contact-field input::placeholder,
 .contact-field textarea::placeholder {
-  color: oklch(from var(--text) l c h / 0.45);
+  color: oklch(from var(--text) l c h / 0.6);
 }
 .contact-field input:focus,
 .contact-field textarea:focus {
@@ -110,7 +109,7 @@
 .field-error {
   display: none;
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: var(--error);
 }
 .field-error.active {

@@ -16,9 +16,9 @@
 
 .legal-updated {
   font-family: "Karla", sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-dim);
 }
@@ -37,10 +37,10 @@
 .legal-toc__title {
   font-family: "Kanit", sans-serif;
   font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.18em;
+  font-size: 0.875rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   margin: 0 0 1.25rem;
 }
 
@@ -72,10 +72,8 @@
 .legal-toc__link::before {
   content: counter(toc, decimal-leading-zero);
   flex: none;
-  font-size: 0.75rem;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
-  line-height: 1.75;
   color: var(--text-dim);
   transition: color 0.2s;
 }
@@ -83,7 +81,7 @@
 @media (hover: hover) {
   .legal-toc__link:hover,
   .legal-toc__link:hover::before {
-    color: var(--accent);
+    color: var(--accent-text);
   }
 }
 
@@ -91,6 +89,13 @@
    damit sie auf schmalen Viewports nicht über den Rand laufen. */
 #privacy .content a {
   overflow-wrap: anywhere;
+}
+
+/* ── Dokumentspalte ──
+   Die ganze Spalte folgt der Zeilenlänge der Absätze (~70 Zeichen), damit
+   die Steckbrief-Kästen bündig mit dem Fließtext abschließen. */
+.legal-body {
+  max-width: 34em;
 }
 
 /* ── Abschnittsüberschriften ──
@@ -140,7 +145,7 @@
 }
 
 #privacy .m-elements > li > strong:first-child {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* ── Begriffsdefinitionen ── */
@@ -189,7 +194,7 @@
   gap: 0.5rem;
   flex: none;
   font-family: "Karla", sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: var(--text-muted);
   text-decoration: none;
@@ -204,12 +209,12 @@
 @media (hover: hover) {
   .legal-top-link:hover {
     border-color: oklch(from var(--accent) l c h / 0.4);
-    color: var(--accent);
+    color: var(--accent-text);
   }
 }
 
 #privacy .legal-seal {
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   color: var(--text-dim);
 }
 
