@@ -46,16 +46,16 @@ function getErrorMessage(field) {
   const { validity } = field;
 
   if (field.id === "fname") {
-    if (validity.valueMissing) return "Bitte gib deinen Namen ein.";
+    if (validity.valueMissing) return "Bitte geben Sie Ihren Namen ein.";
     if (validity.patternMismatch) return "Zahlen und Sonderzeichen sind im Namen nicht erlaubt.";
     if (validity.tooShort) return "Der Name muss mindestens 2 Zeichen lang sein.";
   } else if (field.id === "email") {
-    if (validity.valueMissing) return "Bitte gib deine E-Mail-Adresse ein.";
-    if (validity.typeMismatch) return "Bitte gib eine gültige E-Mail-Adresse ein.";
+    if (validity.valueMissing) return "Bitte geben Sie Ihre E-Mail-Adresse ein.";
+    if (validity.typeMismatch) return "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
   } else if (field.id === "message") {
-    if (validity.valueMissing) return "Bitte gib eine Nachricht ein.";
+    if (validity.valueMissing) return "Bitte geben Sie eine Nachricht ein.";
     if (validity.tooShort) return "Die Nachricht muss mindestens 10 Zeichen lang sein.";
   }
 
-  return "Bitte überprüfe dieses Feld.";
+  return "Bitte überprüfen Sie dieses Feld.";
 }

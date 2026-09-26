@@ -14,7 +14,7 @@
         <div class="contact-header">
             <p class="section-eyebrow">Zusammenarbeiten?</p>
             <h2 class="section-heading" style="margin-bottom: 16px;">Kontakt</h2>
-            <p class="contact-sub">Schreib mir gerne. Ich freue mich auf deine Nachricht.</p>
+            <p class="contact-sub">Schreiben Sie mir gerne. Ich freue mich auf Ihre Nachricht.</p>
         </div>
 
         <?php if (isset($_SESSION['confirm'])): ?>
@@ -31,7 +31,7 @@
                 <?php elseif (!empty($_SESSION['confirm_detail'])): ?>
                     <?= htmlspecialchars($_SESSION['confirm_detail'], ENT_QUOTES, 'UTF-8') ?>
                 <?php else: ?>
-                    Bitte versuche es später erneut.
+                    Bitte versuchen Sie es später erneut.
                 <?php endif; ?>
             </p>
         </div>
@@ -58,7 +58,7 @@
             </div>
             <div class="contact-field">
                 <label for="message">Nachricht <span class="contact-required" aria-hidden="true">*</span></label>
-                <textarea id="message" name="message" placeholder="Deine Nachricht…" rows="6" required aria-required="true"
+                <textarea id="message" name="message" placeholder="Ihre Nachricht…" rows="6" required aria-required="true"
                           minlength="10" maxlength="3000" aria-describedby="message-error"></textarea>
                 <p class="field-error" id="message-error" aria-live="polite"></p>
             </div>

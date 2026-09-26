@@ -30,7 +30,7 @@
         $sessionCsrfToken = isset($_SESSION['contact_csrf_token']) ? (string) $_SESSION['contact_csrf_token'] : '';
 
         if ($csrfToken === '' || $sessionCsrfToken === '' || !hash_equals($sessionCsrfToken, $csrfToken)) {
-            $fail('Sicherheitsprüfung fehlgeschlagen. Bitte versuche es erneut.', $redirectBack);
+            $fail('Sicherheitsprüfung fehlgeschlagen. Bitte versuchen Sie es erneut.', $redirectBack);
         }
 
         // Honeypots should stay empty; filled values strongly indicate bot traffic.
@@ -39,20 +39,20 @@
         $honeypotSalutation = isset($_POST['salutation']) ? trim((string) $_POST['salutation']) : '';
 
         if ($honeypotWebsite !== '' || $honeypotLastname !== '' || $honeypotSalutation !== '') {
-            $fail('Sicherheitsprüfung fehlgeschlagen. Bitte versuche es erneut.', $redirectBack);
+            $fail('Sicherheitsprüfung fehlgeschlagen. Bitte versuchen Sie es erneut.', $redirectBack);
         }
 
         $postedStartedAt = isset($_POST['form_started_at']) ? (int) $_POST['form_started_at'] : 0;
         $sessionStartedAt = isset($_SESSION['contact_form_loaded_at']) ? (int) $_SESSION['contact_form_loaded_at'] : 0;
 
         if ($postedStartedAt <= 0 || $sessionStartedAt <= 0 || $postedStartedAt !== $sessionStartedAt) {
-            $fail('Sicherheitsprüfung fehlgeschlagen. Bitte versuche es erneut.', $redirectBack);
+            $fail('Sicherheitsprüfung fehlgeschlagen. Bitte versuchen Sie es erneut.', $redirectBack);
         }
 
         $now = time();
         $secondsSinceLoad = $now - $sessionStartedAt;
         if ($secondsSinceLoad < 2 || $secondsSinceLoad > 3600) {
-            $fail('Bitte sende das Formular erneut ab.', $redirectBack);
+            $fail('Bitte senden Sie das Formular erneut ab.', $redirectBack);
         }
 
         if (!isset($_SESSION['contact_send_attempts']) || !is_array($_SESSION['contact_send_attempts'])) {
@@ -67,7 +67,7 @@
         );
 
         if (count($_SESSION['contact_send_attempts']) >= 3) {
-            $fail('Zu viele Anfragen in kurzer Zeit. Bitte versuche es spaeter erneut.', $redirectBack);
+            $fail('Zu viele Anfragen in kurzer Zeit. Bitte versuchen Sie es später erneut.', $redirectBack);
         }
 
         $name = trim((string) ($_POST['fname'] ?? ''));
@@ -75,15 +75,15 @@
         $message = trim((string) ($_POST['message'] ?? ''));
 
         if ($name === '' || mb_strlen($name) < 2 || mb_strlen($name) > 60 || preg_match('/[\r\n]/', $name)) {
-            $fail('Bitte gib einen gültigen Namen ein.', $redirectBack, true);
+            $fail('Bitte geben Sie einen gültigen Namen ein.', $redirectBack, true);
         }
 
         if ($email === '' || mb_strlen($email) > 254 || filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-            $fail('Bitte gib eine gültige E-Mail-Adresse ein.', $redirectBack, true);
+            $fail('Bitte geben Sie eine gültige E-Mail-Adresse ein.', $redirectBack, true);
         }
 
         if ($message === '' || mb_strlen($message) < 10 || mb_strlen($message) > 3000) {
-            $fail('Bitte gib eine Nachricht mit mindestens 10 Zeichen ein.', $redirectBack, true);
+            $fail('Bitte geben Sie eine Nachricht mit mindestens 10 Zeichen ein.', $redirectBack, true);
         }
 
         $safeName    = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
