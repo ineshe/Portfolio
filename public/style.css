@@ -106,7 +106,7 @@ main {
 /* Section label + heading pattern */
 .section-eyebrow {
   font-family: "Mukta", sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
