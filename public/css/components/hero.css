@@ -41,7 +41,7 @@
   margin: 0 auto;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 3.75rem;
   position: relative;
@@ -56,6 +56,10 @@
   text-transform: uppercase;
   color: oklch(from var(--text) l c h / 0.82);
   margin-bottom: 1.25rem;
+}
+
+.hero__eyebrow-part {
+  white-space: nowrap;
 }
 
 .hero__headline {
@@ -131,7 +135,7 @@
 /* Tablet */
 @media screen and (max-width: 900px) {
   .hero__inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     justify-items: center;
     text-align: center;
     gap: 2.5rem;
@@ -167,6 +171,20 @@
   .hero__photo img {
     width: 10rem;
     height: 10rem;
+  }
+  .hero__eyebrow {
+    letter-spacing: 0.16em;
+  }
+  /* Name and role on their own lines instead of breaking mid-role */
+  .hero__eyebrow-part {
+    display: block;
+  }
+  .hero__eyebrow-sep {
+    display: none;
+  }
+  /* "Webanwendungen" must fit on one line down to 320px */
+  .hero__headline {
+    font-size: clamp(1.75rem, 8.5vw, 2.25rem);
   }
   .hero__action {
     justify-content: center;
