@@ -73,9 +73,26 @@ h2 {
   margin-top: 0;
 }
 
+/* Long German compounds ("Datenschutzerklärung") must never push past
+   narrow viewports: headings only hyphenate words of 10+ characters,
+   break-word is the last resort for anything without a hyphenation point. */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 10 4 4;
+  text-wrap: balance;
+}
+
 p {
   hyphens: auto;
   -webkit-hyphens: auto;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
 }
 
 .page {
@@ -123,7 +140,7 @@ main {
   font-size: clamp(2rem, 4vw, 3.5rem);
   color: var(--text);
   letter-spacing: -0.02em;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 /* Generic content pages (Impressum, Datenschutz, 404) — plain
@@ -214,6 +231,10 @@ main {
 @media screen and (max-width: 767px) {
   .section {
     padding: calc(var(--nav-height) + 2.5rem) var(--page-padding-x-mobile) 4rem;
+  }
+  /* Scale with the viewport below ~380px so single long words still fit */
+  .section-heading {
+    font-size: clamp(1.75rem, 8.5vw, 2rem);
   }
 }
 
