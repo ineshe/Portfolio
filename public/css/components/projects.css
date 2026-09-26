@@ -91,7 +91,7 @@
 
 .tech-chip {
   font-size: 0.75rem;
-  font-family: "Mukta", sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 600;
   padding: 0.1875rem 0.5625rem;
   background: oklch(0% 0 0 / 0.55);
@@ -114,7 +114,7 @@
   grid-row: 1;
   padding-top: 1.25rem;
   font-size: 0.75rem;
-  font-family: "Mukta", sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -159,7 +159,7 @@
   align-items: center;
   gap: 0.3125rem;
   font-size: 0.75rem;
-  font-family: "Mukta", sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 600;
   padding: 0.3125rem 0.75rem;
   border-radius: 1.25rem;
@@ -199,7 +199,7 @@
   gap: 0.5rem;
   color: var(--text-muted);
   font-size: 0.9rem;
-  font-family: "Mukta", sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 500;
   text-decoration: none;
   border: 1px solid var(--border);

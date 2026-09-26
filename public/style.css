@@ -37,7 +37,7 @@ html {
 body {
   background: var(--body-bg);
   color: var(--text);
-  font-family: "Mukta", sans-serif;
+  font-family: "Karla", sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
   min-height: 100%;
@@ -122,7 +122,7 @@ main {
 
 /* Section label + heading pattern */
 .section-eyebrow {
-  font-family: "Mukta", sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -189,7 +189,7 @@ main {
 }
 
 :where(.content) h5 {
-  font-family: "Mukta", sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
   color: var(--text);
@@ -316,7 +316,7 @@ main {
   gap: 8px;
   background: var(--accent);
   color: #fff;
-  font-family: "Mukta", sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 600;
   font-size: clamp(0.95rem, 1.1vw, 1.125rem);
   padding: 12px 28px;
@@ -336,52 +336,52 @@ main {
 /* Font faces */
 @font-face {
   font-display: swap;
-  font-family: "Mukta";
+  font-family: "Karla";
   font-style: normal;
   font-weight: 200;
-  src: url("assets/fonts/mukta-v14-latin-200.woff2") format("woff2");
+  src: url("assets/fonts/karla-v33-latin-200.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: "Mukta";
+  font-family: "Karla";
   font-style: normal;
   font-weight: 300;
-  src: url("assets/fonts/mukta-v14-latin-300.woff2") format("woff2");
+  src: url("assets/fonts/karla-v33-latin-300.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: "Mukta";
+  font-family: "Karla";
   font-style: normal;
   font-weight: 400;
-  src: url("assets/fonts/mukta-v14-latin-regular.woff2") format("woff2");
+  src: url("assets/fonts/karla-v33-latin-regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: "Mukta";
+  font-family: "Karla";
   font-style: normal;
   font-weight: 500;
-  src: url("assets/fonts/mukta-v14-latin-500.woff2") format("woff2");
+  src: url("assets/fonts/karla-v33-latin-500.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: "Mukta";
+  font-family: "Karla";
   font-style: normal;
   font-weight: 600;
-  src: url("assets/fonts/mukta-v14-latin-600.woff2") format("woff2");
+  src: url("assets/fonts/karla-v33-latin-600.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: "Mukta";
+  font-family: "Karla";
   font-style: normal;
   font-weight: 700;
-  src: url("assets/fonts/mukta-v14-latin-700.woff2") format("woff2");
+  src: url("assets/fonts/karla-v33-latin-700.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: "Mukta";
+  font-family: "Karla";
   font-style: normal;
   font-weight: 800;
-  src: url("assets/fonts/mukta-v14-latin-800.woff2") format("woff2");
+  src: url("assets/fonts/karla-v33-latin-800.woff2") format("woff2");
 }
 
 @font-face {

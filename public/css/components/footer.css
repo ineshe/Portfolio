@@ -21,7 +21,7 @@ footer {
 }
 
 .footer-copy {
-  font-family: "Mukta", sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 0.85rem;
   color: var(--text-dim);
 }
@@ -41,7 +41,7 @@ footer {
   font-size: 0.8rem;
   color: var(--text-dim);
   text-decoration: none;
-  font-family: "Mukta", sans-serif;
+  font-family: "Karla", sans-serif;
   transition: color 0.2s;
 }
 .footer-links a:hover {
@@ -49,7 +49,7 @@ footer {
 }
 
 .footer-cookie-settings {
-  font-family: "Mukta", sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 0.8rem;
   color: var(--text-dim);
   background: none;
