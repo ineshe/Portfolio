@@ -25,7 +25,6 @@
                              alt="<?= htmlspecialchars($project['title']) ?>"
                              height="200" width="300"
                              loading="eager" decoding="async">
-                        <div class="project-img-overlay"></div>
                         <?php if (!empty($techItems)): ?>
                         <div class="project-tech-chips">
                             <?php foreach ($techItems as $t): ?>
