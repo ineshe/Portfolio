@@ -1,3 +1,4 @@
 .vscode/
 .claude/
 src/config.local.php
+.mcp.json
