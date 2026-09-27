@@ -4,10 +4,14 @@
     "slug": "lumines",
     "visibility": "1",
     "subtitle": "Interaktive Landingpage",
-    "year": 2024,
     "tech": ["React", "JavaScript", "CSS", "Motion"],
     "shortDescription": "Landingpage für eine Lippenstiftserie, deren Produktanimation dem Scrollen folgt – von der Gestaltung bis zur Umsetzung.",
-    "mainImage": "/assets/projects/lumines/lumines-300X200.webp",
+    "mainImage": "/assets/projects/lumines/lumines-preview-640X360.webp",
+    "mainImageSrcset": [
+      "/assets/projects/lumines/lumines-preview-640X360.webp 640w",
+      "/assets/projects/lumines/lumines-preview-960X540.webp 960w",
+      "/assets/projects/lumines/lumines-preview-1280X720.webp 1280w"
+    ],
     "media": ["../../../assets/projects/lumines/lumines-video-cutted.mp4"],
     "buttons": [
       {
@@ -31,10 +35,14 @@
     "slug": "recines",
     "visibility": "1",
     "subtitle": "Full-Stack-Webanwendung",
-    "year": 2024,
     "tech": ["Symfony", "Tailwind CSS", "MySQL", "Stimulus"],
     "shortDescription": "Rezeptverwaltung mit Kochmodus, der Schritt für Schritt durch die Zubereitung führt – samt Zutatensuche und Admin-Bereich.",
-    "mainImage": "/assets/projects/recines/recines-300X200.webp",
+    "mainImage": "/assets/projects/recines/recines-preview-640X360.webp",
+    "mainImageSrcset": [
+      "/assets/projects/recines/recines-preview-640X360.webp 640w",
+      "/assets/projects/recines/recines-preview-960X540.webp 960w",
+      "/assets/projects/recines/recines-preview-1280X720.webp 1280w"
+    ],
     "media": [
       "../../../assets/projects/recines/recines-960X540-1.webp",
       "../../../assets/projects/recines/recines-960X540-2.webp",

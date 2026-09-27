@@ -21,20 +21,16 @@
                 <article class="project-card">
                     <div class="project-img-wrap">
                         <img src="<?= htmlspecialchars($baseURL . $project['mainImage']) ?>"
+                             <?php if (!empty($project['mainImageSrcset'])): ?>
+                             srcset="<?= htmlspecialchars(implode(', ', array_map(fn($candidate) => $baseURL . $candidate, $project['mainImageSrcset']))) ?>"
+                             sizes="(max-width: 767px) 100vw, 586px"
+                             <?php endif; ?>
                              alt=""
-                             height="200" width="300"
+                             height="360" width="640"
                              loading="lazy" decoding="async">
                     </div>
 
                     <div class="project-body">
-                        <p class="project-subtitle">
-                            <span><?= !empty($project['subtitle']) ? htmlspecialchars($project['subtitle']) : '' ?></span>
-                            <?php if (!empty($project['year'])): ?><span class="project-year"><?= htmlspecialchars((string) $project['year']) ?></span><?php endif; ?>
-                        </p>
-                        <h3 class="project-title">
-                            <a class="project-link" href="<?= htmlspecialchars($baseURL . '/project/' . $project['slug']) ?>"><?= htmlspecialchars($project['title']) ?><svg class="project-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                        </h3>
-                        <p class="project-desc"><?= htmlspecialchars($project['shortDescription']) ?></p>
                         <?php if (!empty($techItems)): ?>
                         <ul class="project-tech" aria-label="Technologien">
                             <?php foreach ($techItems as $t): ?>
@@ -42,6 +38,11 @@
                             <?php endforeach; ?>
                         </ul>
                         <?php endif; ?>
+                        <p class="project-subtitle"><?= htmlspecialchars($project['subtitle'] ?? '') ?></p>
+                        <h3 class="project-title">
+                            <a class="project-link" href="<?= htmlspecialchars($baseURL . '/project/' . $project['slug']) ?>"><?= htmlspecialchars($project['title']) ?><svg class="project-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        </h3>
+                        <p class="project-desc"><?= htmlspecialchars($project['shortDescription']) ?></p>
                         <?php if (!empty($project['buttons'])): ?>
                         <div class="project-links">
                             <?php foreach ($project['buttons'] as $btn):
