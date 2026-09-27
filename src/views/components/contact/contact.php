@@ -45,8 +45,7 @@
                 <div class="contact-field">
                     <label for="fname">Name <span class="contact-required" aria-hidden="true">*</span></label>
                     <input type="text" id="fname" name="fname" placeholder="Max Mustermann" required aria-required="true"
-                           minlength="2" maxlength="60" aria-describedby="fname-error"
-                           pattern="^[^\d&quot;§$%&amp;/()=?²³{}\[\]\\@€~#&lt;&gt;|,;.:_*\-+]{1,60}$">
+                           minlength="2" maxlength="60" aria-describedby="fname-error">
                     <p class="field-error" id="fname-error" aria-live="polite"></p>
                 </div>
                 <div class="contact-field">

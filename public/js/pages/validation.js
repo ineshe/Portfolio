@@ -47,7 +47,6 @@ function getErrorMessage(field) {
 
   if (field.id === "fname") {
     if (validity.valueMissing) return "Bitte geben Sie Ihren Namen ein.";
-    if (validity.patternMismatch) return "Zahlen und Sonderzeichen sind im Namen nicht erlaubt.";
     if (validity.tooShort) return "Der Name muss mindestens 2 Zeichen lang sein.";
   } else if (field.id === "email") {
     if (validity.valueMissing) return "Bitte geben Sie Ihre E-Mail-Adresse ein.";
