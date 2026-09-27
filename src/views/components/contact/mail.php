@@ -3,6 +3,20 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
+    // Only the contact form needs a session (CSRF token, fill time, rate limit),
+    // so it starts here instead of setting PHPSESSID on every page.
+    if (session_status() === PHP_SESSION_NONE) {
+        ini_set('session.use_strict_mode', '1');
+        session_set_cookie_params([
+            'lifetime' => 0,
+            'path'     => '/',
+            'secure'   => isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on',
+            'httponly' => true,
+            'samesite' => 'Lax',
+        ]);
+        session_start();
+    }
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $redirectBack = static function (): void {
