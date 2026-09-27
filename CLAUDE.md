@@ -16,7 +16,7 @@ Production runs on Apache (netcup); `public/.htaccess` rewrites every non-file r
 
 ## Architecture
 
-**Request flow:** `public/index.php` is the router — a `switch` on `$_SERVER['REQUEST_URI']` that `require`s a page from `src/views/pages/<name>/<name>.php`. The full URI including any query string is matched, so `/impressum?x=1` falls through to the 404 page. New routes need a `case` there.
+**Request flow:** `public/index.php` is the router — a `switch` on `$_SERVER['REQUEST_URI']` that `require`s a page from `src/views/pages/<name>/<name>.php`. Only the path is matched; the query string is stripped, so `/?utm_source=…` still reaches the home page. New routes need a `case` there.
 
 **Page pattern:** every page sets `$pageTitle`, `$pageStyles` and `$pageScripts` (arrays of paths under `public/`), requires `src/config.php`, then includes `src/views/layout/head.php`, which merges those arrays with the site-wide defaults (normalize, `style.css`, header/footer/cookie-consent CSS; navigation and consent JS) and emits the `<head>`. Pages then `include` components from `src/views/components/<name>/<name>.php`. A component's CSS lives separately in `public/css/components/<name>.css` and must be added to `$pageStyles` by each page that uses it; page-only CSS goes in `public/css/pages/`. `src/views/global-styles.php` is unused legacy — don't extend it.
 

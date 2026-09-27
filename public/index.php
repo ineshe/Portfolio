@@ -1,7 +1,8 @@
 <?php
 declare(strict_types=1);
 
-$request = $_SERVER['REQUEST_URI'] ?? '/';
+// Route on the path only, so shared links with ?utm_source=… or ?fbclid=… still resolve.
+$request = explode('?', $_SERVER['REQUEST_URI'] ?? '/', 2)[0];
 $viewDir = dirname(__DIR__, 1).'/src/views';
 
 switch ($request) {
