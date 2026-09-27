@@ -68,6 +68,7 @@
   font-size: clamp(2.25rem, 4.2vw, 3.75rem);
   line-height: 1.1;
   letter-spacing: -0.01em;
+  color: var(--accent-text);
   max-width: 16ch;
   margin-bottom: 1.5rem;
   text-wrap: balance;
@@ -181,7 +182,7 @@
   .hero__eyebrow-sep {
     display: none;
   }
-  /* "Webanwendungen" must fit on one line down to 320px */
+  /* Longest word must fit on one line down to 320px */
   .hero__headline {
     font-size: clamp(1.75rem, 8.5vw, 2.25rem);
   }
