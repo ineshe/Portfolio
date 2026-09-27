@@ -17,6 +17,7 @@
     // Process contact form POST before any HTML output so redirects can set headers safely.
     include_once dirname(__DIR__, 2).'/components/contact/mail.php';
 ?>
+<!DOCTYPE html>
 <html lang="de">
     <?php include_once dirname(__DIR__, 2).'/layout/head.php'; ?>
     <body>
