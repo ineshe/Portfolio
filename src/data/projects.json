@@ -6,7 +6,7 @@
     "subtitle": "Interaktive Landingpage",
     "year": 2024,
     "tech": ["React", "JavaScript", "CSS", "Motion"],
-    "shortDescription": "Scrollgesteuerte Canvas-Animation für eine Lippenstiftserie mit React & Vite.",
+    "shortDescription": "Landingpage für eine Lippenstiftserie, deren Produktanimation dem Scrollen folgt – von der Gestaltung bis zur Umsetzung.",
     "mainImage": "/assets/projects/lumines/lumines-300X200.webp",
     "media": ["../../../assets/projects/lumines/lumines-video-cutted.mp4"],
     "buttons": [
@@ -33,7 +33,7 @@
     "subtitle": "Full-Stack-Webanwendung",
     "year": 2024,
     "tech": ["Symfony", "Tailwind CSS", "MySQL", "Stimulus"],
-    "shortDescription": "Rezeptverwaltung mit Kochmodus, Symfony, Stimulus und Tailwind CSS.",
+    "shortDescription": "Rezeptverwaltung mit Kochmodus, der Schritt für Schritt durch die Zubereitung führt – samt Zutatensuche und Admin-Bereich.",
     "mainImage": "/assets/projects/recines/recines-300X200.webp",
     "media": [
       "../../../assets/projects/recines/recines-960X540-1.webp",
