@@ -34,7 +34,7 @@
                                                     <h3 class="project-title">
                                                         <a class="js-primary-link" href="<?= $baseURL . '/project/' . $project->slug ?>"><?= $project->title ?></a>
                                                     </h3>
-                                                    <p class="project-technologies"><?= $project->technologies ?></p>
+                                                    <p class="project-technologies"><?= htmlspecialchars(implode(', ', $project->technologies ?? []), ENT_QUOTES, 'UTF-8') ?></p>
                                                 </div>
                                             </article>
                                         </li>
