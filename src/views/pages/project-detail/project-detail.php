@@ -69,7 +69,7 @@
                                                     $href   = $button['link']   ?? '';
                                                     $target = $button['target'] ?? '';
                                                     $text   = $button['text']   ?? '';
-                                                    $isAccent = $button['accent'] ?? false;
+                                                    $isAccent = ($button['type'] ?? '') === 'live';
                                                     $rel = '';
 
                                                     if ($target === '_blank') {
@@ -105,7 +105,7 @@
                                 <div class="info__technologies">
                                     <p class="info-block-title">Technologien</p>
                                     <p class="info__tech-list">
-                                        <?php foreach ($project['technologies'] as $i => $tech): ?>
+                                        <?php foreach ($project['tech'] ?? [] as $i => $tech): ?>
                                             <?php if ($i > 0): ?><span class="sep" aria-hidden="true">·</span><?php endif; ?>
                                             <?= htmlspecialchars($tech, ENT_QUOTES, 'UTF-8') ?>
                                         <?php endforeach; ?>
