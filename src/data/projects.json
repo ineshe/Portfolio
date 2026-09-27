@@ -5,7 +5,7 @@
     "visibility": "1",
     "subtitle": "Interaktive Landingpage",
     "tech": ["React", "JavaScript", "CSS", "Motion"],
-    "shortDescription": "Landingpage für eine Lippenstiftserie, deren Produktanimation dem Scrollen folgt – von der Gestaltung bis zur Umsetzung.",
+    "shortDescription": "Landingpage für eine Lippenstiftserie, deren Produktanimation dem Scrollen folgt. Von der Gestaltung bis zur Umsetzung.",
     "mainImage": "/assets/projects/lumines/lumines-preview-640X360.webp",
     "mainImageSrcset": [
       "/assets/projects/lumines/lumines-preview-640X360.webp 640w",
@@ -36,7 +36,7 @@
     "visibility": "1",
     "subtitle": "Full-Stack-Webanwendung",
     "tech": ["Symfony", "Tailwind CSS", "MySQL", "Stimulus"],
-    "shortDescription": "Rezeptverwaltung mit Kochmodus, der Schritt für Schritt durch die Zubereitung führt – samt Zutatensuche und Admin-Bereich.",
+    "shortDescription": "Rezeptverwaltung mit Kochmodus, der Schritt für Schritt durch die Zubereitung führt. Samt Zutatensuche und Admin-Bereich.",
     "mainImage": "/assets/projects/recines/recines-preview-640X360.webp",
     "mainImageSrcset": [
       "/assets/projects/recines/recines-preview-640X360.webp 640w",
