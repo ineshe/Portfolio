@@ -128,8 +128,6 @@
                                         <?php if (!empty($prevProject['subtitle'])): ?><span class="project-pager__subtitle"><?= htmlspecialchars($prevProject['subtitle'], ENT_QUOTES, 'UTF-8') ?></span><?php endif; ?>
                                     </span>
                                 </a>
-                            <?php else: ?>
-                                <span></span>
                             <?php endif; ?>
 
                             <?php if ($nextProject): ?>

@@ -234,8 +234,8 @@
 
 .project-pager__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 2rem;
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
   max-width: calc(var(--max-width) + 2 * var(--page-padding-x-mobile));
   margin: 0 auto;
   padding: 0 var(--page-padding-x-mobile);
@@ -264,7 +264,6 @@
 }
 
 .project-pager__link.next {
-  grid-column: 2;
   justify-content: flex-end;
 }
 
@@ -341,9 +340,14 @@
   }
 
   .project-pager__inner {
+    grid-template-columns: 1fr 1fr;
     column-gap: 2.5rem;
     max-width: calc(var(--max-width) + 2 * var(--page-padding-x));
     padding: 0 var(--page-padding-x);
+  }
+
+  .project-pager__link.next {
+    grid-column: 2;
   }
 
   .project__grid {
