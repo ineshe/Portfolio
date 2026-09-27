@@ -38,7 +38,6 @@
                             <?php endforeach; ?>
                         </ul>
                         <?php endif; ?>
-                        <p class="project-subtitle"><?= htmlspecialchars($project['subtitle'] ?? '') ?></p>
                         <h3 class="project-title">
                             <a class="project-link" href="<?= htmlspecialchars($baseURL . '/project/' . $project['slug']) ?>"><?= htmlspecialchars($project['title']) ?><svg class="project-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                         </h3>
