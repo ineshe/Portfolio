@@ -30,7 +30,7 @@
     "title": "Recines",
     "slug": "recines",
     "visibility": "1",
-    "subtitle": "Full-Stack Webanwendung",
+    "subtitle": "Full-Stack-Webanwendung",
     "year": 2024,
     "tech": ["Symfony", "Tailwind CSS", "MySQL", "Stimulus"],
     "shortDescription": "Rezeptverwaltung mit Kochmodus, Symfony, Stimulus und Tailwind CSS.",
