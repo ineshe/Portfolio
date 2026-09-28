@@ -5,7 +5,7 @@
     <div class="hero__inner">
         <div class="hero__text reveal-left">
             <p class="hero__eyebrow"><span class="hero__eyebrow-part">Ines Heilmann</span><span class="hero__eyebrow-sep" aria-hidden="true"> · </span> <span class="hero__eyebrow-part">Full-Stack-Webentwicklerin</span></p>
-            <h1 class="hero__headline">Von der Idee zur fertigen Anwendung<span class="accent">.</span></h1>
+            <h1 class="hero__headline">Von der Idee zur fertigen Lösung</h1>
             <p class="hero__desc">
                 Ich verbinde solide Technik mit einem Blick für Design, damit am Ende etwas entsteht, das Menschen gerne nutzen.
             </p>
