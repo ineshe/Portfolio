@@ -2,6 +2,7 @@
     require_once dirname(__DIR__, 3).'/config.php';
 
     $pageTitle = 'Ines Heilmann – Full-Stack Webentwicklerin';
+    $pageDescription = 'Portfolio von Ines Heilmann, Full-Stack-Webentwicklerin mit Schwerpunkt PHP, Symfony und React: ausgewählte Projekte, Skills und Kontakt.';
     $pageStyles = [
         '/css/components/hero.css',
         '/css/components/about-me.css',

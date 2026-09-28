@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <?php
     $pageTitle = 'Datenschutzerklärung | Ines Heilmann';
+    $pageDescription = 'Datenschutzerklärung der Website von Ines Heilmann: welche Daten verarbeitet werden, welche Cookies zum Einsatz kommen und welche Rechte Sie haben.';
     $pageStyles = [
         '/css/pages/datenschutz.css',
     ];

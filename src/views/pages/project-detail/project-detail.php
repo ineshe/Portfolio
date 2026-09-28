@@ -14,6 +14,7 @@
         : null;
 
     $pageTitle = $project['title'] . ' | Ines Heilmann';
+    $pageDescription = $project['shortDescription'];
     $pageStyles = [
         '/css/pages/project-detail.css',
         '/css/components/slideshow.css',

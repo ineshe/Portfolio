@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <?php
     $pageTitle = 'Impressum | Ines Heilmann';
+    $pageDescription = 'Impressum der Website von Ines Heilmann mit Anbieterangaben, Kontaktdaten und Haftungshinweisen.';
     $pageStyles = [
         '/css/components/projects.css',
     ];
