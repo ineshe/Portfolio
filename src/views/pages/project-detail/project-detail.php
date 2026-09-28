@@ -49,9 +49,9 @@
 
                         <div class="project__grid">
                             <div class="project__title-block">
-                                <h2 class="project__title">
+                                <h1 class="project__title">
                                     <?= htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8') ?><span class="accent">.</span>
-                                </h2>
+                                </h1>
                                 <p class="project__subline"><?= htmlspecialchars($project['shortDescription'], ENT_QUOTES, 'UTF-8') ?></p>
                             </div>
                             <?php include("slideshow/slideshow.php"); ?>
@@ -59,7 +59,7 @@
                                 <?= $project['description'] ?>
                             </div>
 
-                            <aside class="project__info">
+                            <div class="project__info">
                                 <?php if (!empty($project['buttons'])): ?>
                                     <div>
                                         <p class="info-block-title">Links</p>
@@ -111,7 +111,7 @@
                                         <?php endforeach; ?>
                                     </p>
                                 </div>
-                            </aside>
+                            </div>
                         </div>
 
                     </div>

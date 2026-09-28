@@ -167,16 +167,21 @@ main {
 }
 
 /* Prose typography, low-specificity so it never outranks a
-   component's own classes (e.g. .project__title) inside .content */
-:where(.content) h2 {
+   component's own classes (e.g. .project__title) inside .content.
+   A page title placed directly in .content (Impressum, 404) looks like an h2. */
+:where(.content) h2,
+:where(.content) > h1 {
   font-family: "Kanit", sans-serif;
   font-weight: 700;
   font-size: clamp(1.75rem, 4vw, 2.75rem);
   letter-spacing: -0.02em;
+  margin-top: 0;
   margin-bottom: 1.5rem;
 }
 
-:where(.content) h3 {
+/* .content-subheading: a section heading one level up that keeps the h3 look */
+:where(.content) h3,
+.content-subheading {
   font-family: "Kanit", sans-serif;
   font-weight: 600;
   font-size: 1.2rem;

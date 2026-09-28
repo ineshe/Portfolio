@@ -93,7 +93,7 @@
   margin-top: 0;
 }
 
-.project__desc h3 {
+.project__desc h2 {
   font-family: "Kanit", sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
@@ -102,7 +102,7 @@
   margin: 2rem 0 0.5rem;
 }
 
-.project__desc h3:first-child {
+.project__desc h2:first-child {
   margin-top: 0;
 }
 
