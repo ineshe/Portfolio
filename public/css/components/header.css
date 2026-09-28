@@ -147,11 +147,18 @@
     padding-top: 2.5rem;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    /* visibility keeps the closed menu out of the tab order and away from screen readers;
+       it switches only after the fade-out has finished */
+    visibility: hidden;
+    transition:
+      opacity 0.3s ease,
+      visibility 0s linear 0.3s;
   }
   .navigation.open {
     opacity: 1;
     pointer-events: all;
+    visibility: visible;
+    transition: opacity 0.3s ease;
   }
 
   .menu {
