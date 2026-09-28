@@ -93,10 +93,16 @@
 }
 
 .hero__photo {
+  /* The photo diameter drives the solid ring (1/24, about 12px here) and the
+     faint halo (3/4 of the ring), so both scale with the photo. Breakpoints
+     only change --photo-size. */
+  --photo-size: 18.25rem;
+  --ring-width: calc(var(--photo-size) / 24);
+  --halo-width: calc(var(--ring-width) * 0.75);
   flex-shrink: 0;
   position: relative;
-  width: 20.25rem;
-  height: 20.25rem;
+  width: 20.75rem;
+  height: 20.75rem;
 }
 .hero__photo::before {
   content: "";
@@ -114,8 +120,9 @@
   z-index: 0;
 }
 .hero__photo img {
-  width: 19.25rem;
-  height: 19.25rem;
+  /* border-box: the ring sits inside this size */
+  width: calc(var(--photo-size) + 2 * var(--ring-width));
+  height: calc(var(--photo-size) + 2 * var(--ring-width));
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
@@ -124,9 +131,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 8px solid oklch(from var(--accent) l c h / 0.8);
+  border: var(--ring-width) solid oklch(from var(--accent) l c h / 0.8);
   box-shadow:
-    0 0 0 6px oklch(from var(--accent) l c h / 0.13),
+    0 0 0 var(--halo-width) oklch(from var(--accent) l c h / 0.13),
     0 0 40px oklch(from var(--accent) l c h / 0.18);
   z-index: 1;
   background-color: var(--body-bg);
@@ -146,13 +153,10 @@
     align-items: center;
   }
   .hero__photo {
+    --photo-size: 11.5rem;
     order: -1;
     width: 13.75rem;
     height: 13.75rem;
-  }
-  .hero__photo img {
-    width: 12.5rem;
-    height: 12.5rem;
   }
   .hero__glow-orb {
     right: 5%;
@@ -165,12 +169,9 @@
     padding: 6.25rem 1.5rem 3.75rem;
   }
   .hero__photo {
+    --photo-size: 9rem;
     width: 11.25rem;
     height: 11.25rem;
-  }
-  .hero__photo img {
-    width: 10rem;
-    height: 10rem;
   }
   .hero__eyebrow {
     letter-spacing: 0.16em;
