@@ -21,6 +21,8 @@ var isFullscreen = false;
 
   initDotControls();
   initTouchControl();
+  document.addEventListener("fullscreenchange", handleFullscreenChange);
+  document.addEventListener("webkitfullscreenchange", handleFullscreenChange);
 
   for (var i = 0; i < slides.length; i++) {
     deactivate(i, slides, dots);
@@ -36,15 +38,22 @@ var isFullscreen = false;
   });
 })();
 
-function updateCounter() {
+function updateIndicators() {
   if (curCounter) curCounter.textContent = current + 1;
+  dots.forEach((dot, index) => {
+    if (index === current) {
+      dot.setAttribute("aria-current", "true");
+    } else {
+      dot.removeAttribute("aria-current");
+    }
+  });
 }
 
 function showSlide(index) {
   deactivate(current, slides, dots);
   current = Number(index);
   activate(current, slides, dots);
-  updateCounter();
+  updateIndicators();
 }
 
 function deactivate(index, ...args) {
@@ -67,14 +76,14 @@ function showPreviousSlide() {
   deactivate(current, slides, dots);
   current = (current - 1 + slides.length) % slides.length;
   activate(current, slides, dots);
-  updateCounter();
+  updateIndicators();
 }
 
 function showNextSlide() {
   deactivate(current, slides, dots);
   current = (current + 1) % slides.length;
   activate(current, slides, dots);
-  updateCounter();
+  updateIndicators();
 }
 
 function isMobileDevice() {
