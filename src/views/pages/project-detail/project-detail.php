@@ -105,13 +105,11 @@
 
                                 <div class="info__technologies">
                                     <p class="info-block-title">Technologien</p>
-                                    <p class="info__tech-list">
-                                        <?php $techs = $project['tech'] ?? []; ?>
-                                        <?php foreach ($techs as $i => $tech): ?>
-                                            <?php /* The separator sticks to its item, so a line never starts with "·" */ ?>
-                                            <span class="info__tech"><?= htmlspecialchars($tech, ENT_QUOTES, 'UTF-8') ?><?php if ($i < count($techs) - 1): ?> <span class="sep" aria-hidden="true">·</span><?php endif; ?></span>
+                                    <ul class="info__tech-list">
+                                        <?php foreach ($project['tech'] ?? [] as $tech): ?>
+                                            <li class="info__tech"><?= htmlspecialchars($tech, ENT_QUOTES, 'UTF-8') ?></li>
                                         <?php endforeach; ?>
-                                    </p>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

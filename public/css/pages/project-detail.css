@@ -199,19 +199,35 @@
 }
 
 /* ── Technologies ── */
+/* The "·" sits in the gap before each item. overflow: hidden clips it
+   for the first item of every line, so no line starts or ends with one. */
 .info__tech-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0 1.2em;
   margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
   color: var(--text);
   font-size: 0.9rem;
   line-height: 1.65;
 }
 
-.info__tech-list .sep {
-  padding: 0 0.25rem;
+.info__tech {
+  position: relative;
+  white-space: nowrap;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
-.info__tech {
-  white-space: nowrap;
+.info__tech::before {
+  content: "·" / "";
+  position: absolute;
+  right: 100%;
+  width: 1.2em;
+  text-align: center;
 }
 
 /* ── Year ── */
