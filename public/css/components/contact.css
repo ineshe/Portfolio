@@ -142,6 +142,7 @@
   --confirm-color: var(--error);
   --confirm-bg-alpha: 0.05;
   --confirm-border-alpha: 0.15;
+  margin-bottom: 1.5rem;
 }
 .contact-confirm-icon {
   font-size: 2.5rem;

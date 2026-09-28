@@ -30,6 +30,12 @@
             if ($showDetail && $message !== '') {
                 $_SESSION['confirm_detail'] = $message;
             }
+            // Kept for the next page view only, so the visitor can resend without retyping.
+            $_SESSION['contact_input'] = [
+                'fname'   => mb_substr(trim((string) ($_POST['fname'] ?? '')), 0, 60),
+                'email'   => mb_substr(trim((string) ($_POST['email'] ?? '')), 0, 254),
+                'message' => mb_substr(trim((string) ($_POST['message'] ?? '')), 0, 3000),
+            ];
             unset($_SESSION['contact_csrf_token'], $_SESSION['contact_form_loaded_at']);
             $redirectBack();
         };
