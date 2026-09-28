@@ -13,7 +13,7 @@
                 <article class="section">
                     <div class="content">
                         <p class="section-eyebrow">404</p>
-                        <h2>Seite nicht gefunden<span class="accent">.</span></h2>
+                        <h1>Seite nicht gefunden<span class="accent">.</span></h1>
                         <p>Die gesuchte Seite existiert nicht oder wurde verschoben.</p>
                         <a class="btn-primary" href="/" style="margin-top:2rem">
                             Zur Startseite

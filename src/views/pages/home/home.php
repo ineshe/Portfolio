@@ -1,7 +1,8 @@
 <?php
     require_once dirname(__DIR__, 3).'/config.php';
 
-    $pageTitle = 'Ines Heilmann – Full-Stack Webentwicklerin';
+    $pageTitle = 'Ines Heilmann – Full-Stack-Webentwicklerin';
+    $pageDescription = 'Portfolio von Ines Heilmann, Full-Stack-Webentwicklerin mit Schwerpunkt PHP, Symfony und React: ausgewählte Projekte, Skills und Kontakt.';
     $pageStyles = [
         '/css/components/hero.css',
         '/css/components/about-me.css',
@@ -17,6 +18,7 @@
     // Process contact form POST before any HTML output so redirects can set headers safely.
     include_once dirname(__DIR__, 2).'/components/contact/mail.php';
 ?>
+<!DOCTYPE html>
 <html lang="de">
     <?php include_once dirname(__DIR__, 2).'/layout/head.php'; ?>
     <body>

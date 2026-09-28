@@ -22,12 +22,4 @@
   if (sidebar) {
     setTimeout(() => sidebar.classList.add("visible"), 800);
   }
-
-  // Project cards: make entire card clickable
-  document.querySelectorAll(".project-card[data-href]").forEach((card) => {
-    card.addEventListener("click", (e) => {
-      if (e.target.closest("a")) return;
-      window.location.href = card.dataset.href;
-    });
-  });
 })();

@@ -14,6 +14,7 @@
         : null;
 
     $pageTitle = $project['title'] . ' | Ines Heilmann';
+    $pageDescription = $project['shortDescription'];
     $pageStyles = [
         '/css/pages/project-detail.css',
         '/css/components/slideshow.css',
@@ -49,9 +50,9 @@
 
                         <div class="project__grid">
                             <div class="project__title-block">
-                                <h2 class="project__title">
+                                <h1 class="project__title">
                                     <?= htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8') ?><span class="accent">.</span>
-                                </h2>
+                                </h1>
                                 <p class="project__subline"><?= htmlspecialchars($project['shortDescription'], ENT_QUOTES, 'UTF-8') ?></p>
                             </div>
                             <?php include("slideshow/slideshow.php"); ?>
@@ -59,7 +60,7 @@
                                 <?= $project['description'] ?>
                             </div>
 
-                            <aside class="project__info">
+                            <div class="project__info">
                                 <?php if (!empty($project['buttons'])): ?>
                                     <div>
                                         <p class="info-block-title">Links</p>
@@ -69,7 +70,7 @@
                                                     $href   = $button['link']   ?? '';
                                                     $target = $button['target'] ?? '';
                                                     $text   = $button['text']   ?? '';
-                                                    $isAccent = $button['accent'] ?? false;
+                                                    $isAccent = ($button['type'] ?? '') === 'live';
                                                     $rel = '';
 
                                                     if ($target === '_blank') {
@@ -104,14 +105,13 @@
 
                                 <div class="info__technologies">
                                     <p class="info-block-title">Technologien</p>
-                                    <p class="info__tech-list">
-                                        <?php foreach ($project['technologies'] as $i => $tech): ?>
-                                            <?php if ($i > 0): ?><span class="sep" aria-hidden="true">·</span><?php endif; ?>
-                                            <?= htmlspecialchars($tech, ENT_QUOTES, 'UTF-8') ?>
+                                    <ul class="info__tech-list">
+                                        <?php foreach ($project['tech'] ?? [] as $tech): ?>
+                                            <li class="info__tech"><?= htmlspecialchars($tech, ENT_QUOTES, 'UTF-8') ?></li>
                                         <?php endforeach; ?>
-                                    </p>
+                                    </ul>
                                 </div>
-                            </aside>
+                            </div>
                         </div>
 
                     </div>
@@ -128,8 +128,6 @@
                                         <?php if (!empty($prevProject['subtitle'])): ?><span class="project-pager__subtitle"><?= htmlspecialchars($prevProject['subtitle'], ENT_QUOTES, 'UTF-8') ?></span><?php endif; ?>
                                     </span>
                                 </a>
-                            <?php else: ?>
-                                <span></span>
                             <?php endif; ?>
 
                             <?php if ($nextProject): ?>

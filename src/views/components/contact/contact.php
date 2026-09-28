@@ -6,6 +6,11 @@
     if (empty($_SESSION['contact_form_loaded_at'])) {
         $_SESSION['contact_form_loaded_at'] = time();
     }
+
+    // After a failed send the form is shown again below the error, pre-filled once with the last input.
+    $isSuccess = ($_SESSION['confirm'] ?? '') === 'success';
+    $contactInput = $_SESSION['contact_input'] ?? [];
+    unset($_SESSION['contact_input']);
 ?>
 
 <section id="contact">
@@ -13,12 +18,11 @@
     <div class="contact-inner reveal">
         <div class="contact-header">
             <p class="section-eyebrow">Zusammenarbeiten?</p>
-            <h2 class="section-heading" style="margin-bottom: 16px;">Kontakt</h2>
-            <p class="contact-sub">Schreib mir gerne. Ich freue mich auf deine Nachricht.</p>
+            <h2 class="section-heading" style="margin-bottom: 16px;">Kontakt<span class="accent">.</span></h2>
+            <p class="contact-sub">Schreiben Sie mir gerne. Ich freue mich auf Ihre Nachricht.</p>
         </div>
 
         <?php if (isset($_SESSION['confirm'])): ?>
-        <?php $isSuccess = $_SESSION['confirm'] === 'success'; ?>
         <div class="contact-confirm <?= $isSuccess ? 'contact-confirm--success' : 'contact-confirm--fail' ?>">
             <p class="sr-only" role="status"><?= $isSuccess ? 'Erfolg: Nachricht gesendet.' : 'Fehler: Nachricht konnte nicht gesendet werden.' ?></p>
             <div class="contact-confirm-icon" aria-hidden="true"><?= $isSuccess ? '✓' : '✗' ?></div>
@@ -31,12 +35,13 @@
                 <?php elseif (!empty($_SESSION['confirm_detail'])): ?>
                     <?= htmlspecialchars($_SESSION['confirm_detail'], ENT_QUOTES, 'UTF-8') ?>
                 <?php else: ?>
-                    Bitte versuche es später erneut.
+                    Bitte versuchen Sie es später erneut.
                 <?php endif; ?>
             </p>
         </div>
         <?php unset($_SESSION['confirm'], $_SESSION['confirm_detail']); ?>
-        <?php else: ?>
+        <?php endif; ?>
+        <?php if (!$isSuccess): ?>
         <form class="contact-form" action="" method="POST" novalidate>
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['contact_csrf_token'], ENT_QUOTES, 'UTF-8') ?>">
             <input type="hidden" name="form_started_at" value="<?= (int) $_SESSION['contact_form_loaded_at'] ?>">
@@ -46,20 +51,21 @@
                     <label for="fname">Name <span class="contact-required" aria-hidden="true">*</span></label>
                     <input type="text" id="fname" name="fname" placeholder="Max Mustermann" required aria-required="true"
                            minlength="2" maxlength="60" aria-describedby="fname-error"
-                           pattern="^[^\d&quot;§$%&amp;/()=?²³{}\[\]\\@€~#&lt;&gt;|,;.:_*\-+]{1,60}$">
+                           value="<?= htmlspecialchars($contactInput['fname'] ?? '', ENT_QUOTES, 'UTF-8') ?>">
                     <p class="field-error" id="fname-error" aria-live="polite"></p>
                 </div>
                 <div class="contact-field">
                     <label for="email">E-Mail <span class="contact-required" aria-hidden="true">*</span></label>
                     <input type="email" id="email" name="email" placeholder="name@beispiel.de" required aria-required="true"
-                           maxlength="254" aria-describedby="email-error">
+                           maxlength="254" aria-describedby="email-error"
+                           value="<?= htmlspecialchars($contactInput['email'] ?? '', ENT_QUOTES, 'UTF-8') ?>">
                     <p class="field-error" id="email-error" aria-live="polite"></p>
                 </div>
             </div>
             <div class="contact-field">
                 <label for="message">Nachricht <span class="contact-required" aria-hidden="true">*</span></label>
-                <textarea id="message" name="message" placeholder="Deine Nachricht…" rows="6" required aria-required="true"
-                          minlength="10" maxlength="3000" aria-describedby="message-error"></textarea>
+                <textarea id="message" name="message" placeholder="Ihre Nachricht…" rows="6" required aria-required="true"
+                          minlength="10" maxlength="3000" aria-describedby="message-error"><?= htmlspecialchars($contactInput['message'] ?? '', ENT_QUOTES, 'UTF-8') ?></textarea>
                 <p class="field-error" id="message-error" aria-live="polite"></p>
             </div>
             <input type="hidden" name="lname" value="">

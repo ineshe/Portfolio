@@ -21,8 +21,8 @@ footer {
 }
 
 .footer-copy {
-  font-family: "Mukta", sans-serif;
-  font-size: 0.85rem;
+  font-family: "Karla", sans-serif;
+  font-size: 0.875rem;
   color: var(--text-dim);
 }
 
@@ -38,19 +38,19 @@ footer {
   gap: 1.25rem;
 }
 .footer-links a {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: var(--text-dim);
   text-decoration: none;
-  font-family: "Mukta", sans-serif;
+  font-family: "Karla", sans-serif;
   transition: color 0.2s;
 }
 .footer-links a:hover {
-  color: oklch(from var(--text) l c h / 0.7);
+  color: var(--text);
 }
 
 .footer-cookie-settings {
-  font-family: "Mukta", sans-serif;
-  font-size: 0.8rem;
+  font-family: "Karla", sans-serif;
+  font-size: 0.875rem;
   color: var(--text-dim);
   background: none;
   border: 0;
@@ -59,7 +59,7 @@ footer {
   transition: color 0.2s;
 }
 .footer-cookie-settings:hover {
-  color: oklch(from var(--text) l c h / 0.7);
+  color: var(--text);
 }
 .footer-cookie-settings:focus-visible {
   outline: 2px solid oklch(from var(--accent) 0.78 c h / 1);
@@ -76,7 +76,7 @@ footer {
   transition: color 0.2s;
 }
 .footer-social a:hover {
-  color: oklch(from var(--text) l c h / 0.7);
+  color: var(--text);
 }
 .footer-social svg {
   width: 22px;

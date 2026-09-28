@@ -41,7 +41,7 @@
   margin: 0 auto;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 3.75rem;
   position: relative;
@@ -49,40 +49,37 @@
 }
 
 .hero__eyebrow {
-  font-family: "Mukta", sans-serif;
-  font-weight: 300;
-  font-size: clamp(0.9rem, 1vw, 1rem);
-  letter-spacing: 0.25em;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.85rem, 0.95vw, 0.95rem);
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: oklch(from var(--text) l c h / 0.75);
-  margin-bottom: 0.65rem;
+  color: oklch(from var(--text) l c h / 0.82);
+  margin-bottom: 1.25rem;
 }
 
-.hero__name {
+.hero__eyebrow-part {
+  white-space: nowrap;
+}
+
+.hero__headline {
   font-family: "Kanit", sans-serif;
   font-weight: 700;
-  font-size: clamp(3.5rem, 8vw, 7rem);
-  line-height: 1;
-  letter-spacing: normal;
-  margin-block: 0.3em 1.5rem;
-}
-
-.hero__name > * {
-  display: block;
-}
-
-.hero__name-first,
-.hero__name-last {
-  color: var(--accent);
+  font-size: clamp(2.25rem, 4.2vw, 3.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--accent-text);
+  max-width: 16ch;
+  margin-bottom: 1.5rem;
+  text-wrap: balance;
 }
 
 .hero__desc {
-  font-size: clamp(1rem, 1.2vw, 1.3rem);
-  color: var(--text-muted);
-  max-width: 480px;
+  font-size: clamp(1.05rem, 1.3vw, 1.3rem);
+  color: oklch(from var(--text) l c h / 0.82);
+  max-width: 520px;
   line-height: 1.7;
   margin-bottom: 2.25rem;
-  font-weight: 300;
   hyphens: auto;
   -webkit-hyphens: auto;
   hyphenate-limit-chars: auto 5;
@@ -96,10 +93,16 @@
 }
 
 .hero__photo {
+  /* The photo diameter drives the solid ring (1/24, about 12px here) and the
+     faint halo (3/4 of the ring), so both scale with the photo. Breakpoints
+     only change --photo-size. */
+  --photo-size: 18.25rem;
+  --ring-width: calc(var(--photo-size) / 24);
+  --halo-width: calc(var(--ring-width) * 0.75);
   flex-shrink: 0;
   position: relative;
-  width: 20.25rem;
-  height: 20.25rem;
+  width: 20.75rem;
+  height: 20.75rem;
 }
 .hero__photo::before {
   content: "";
@@ -117,8 +120,9 @@
   z-index: 0;
 }
 .hero__photo img {
-  width: 19.25rem;
-  height: 19.25rem;
+  /* border-box: the ring sits inside this size */
+  width: calc(var(--photo-size) + 2 * var(--ring-width));
+  height: calc(var(--photo-size) + 2 * var(--ring-width));
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
@@ -127,9 +131,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 8px solid oklch(from var(--accent) l c h / 0.8);
+  border: var(--ring-width) solid oklch(from var(--accent) l c h / 0.8);
   box-shadow:
-    0 0 0 6px oklch(from var(--accent) l c h / 0.13),
+    0 0 0 var(--halo-width) oklch(from var(--accent) l c h / 0.13),
     0 0 40px oklch(from var(--accent) l c h / 0.18);
   z-index: 1;
   background-color: var(--body-bg);
@@ -138,7 +142,7 @@
 /* Tablet */
 @media screen and (max-width: 900px) {
   .hero__inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     justify-items: center;
     text-align: center;
     gap: 2.5rem;
@@ -149,13 +153,10 @@
     align-items: center;
   }
   .hero__photo {
+    --photo-size: 11.5rem;
     order: -1;
     width: 13.75rem;
     height: 13.75rem;
-  }
-  .hero__photo img {
-    width: 12.5rem;
-    height: 12.5rem;
   }
   .hero__glow-orb {
     right: 5%;
@@ -168,12 +169,24 @@
     padding: 6.25rem 1.5rem 3.75rem;
   }
   .hero__photo {
+    --photo-size: 9rem;
     width: 11.25rem;
     height: 11.25rem;
   }
-  .hero__photo img {
-    width: 10rem;
-    height: 10rem;
+  .hero__eyebrow {
+    letter-spacing: 0.16em;
+    line-height: 2;
+  }
+  /* Name and role on their own lines instead of breaking mid-role */
+  .hero__eyebrow-part {
+    display: block;
+  }
+  .hero__eyebrow-sep {
+    display: none;
+  }
+  /* Longest word must fit on one line down to 320px */
+  .hero__headline {
+    font-size: clamp(1.75rem, 8.5vw, 2.25rem);
   }
   .hero__action {
     justify-content: center;

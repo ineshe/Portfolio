@@ -27,9 +27,9 @@ $media = $project['media']; $count = count($media);
                 <strong id="slide-cur">1</strong> / <span id="slide-tot"><?= $count ?></span>
             </span>
             <div class="slideshow-controls__center">
-                <div class="dots" role="tablist">
+                <div class="dots">
                     <?php for ($d = 0; $d < $count; ++$d): ?>
-                        <button class="dot-container<?= $d === 0 ? ' active' : '' ?>" aria-label="Bild <?= $d + 1 ?>">
+                        <button type="button" class="dot-container<?= $d === 0 ? ' active' : '' ?>" aria-label="Bild <?= $d + 1 ?>"<?= $d === 0 ? ' aria-current="true"' : '' ?>>
                             <span class="dot"></span>
                         </button>
                     <?php endfor; ?>

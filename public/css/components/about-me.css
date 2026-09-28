@@ -19,10 +19,9 @@
 }
 
 .about-text {
-  color: oklch(from var(--text) l c h / 0.72);
+  color: var(--text-muted);
   font-size: 1.05rem;
   line-height: 1.8;
-  font-weight: 300;
   margin-bottom: 1rem;
   hyphens: auto;
 }

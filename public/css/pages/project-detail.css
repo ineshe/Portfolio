@@ -19,8 +19,8 @@
   flex-wrap: wrap;
   gap: 0.375rem;
   padding-bottom: 1.75rem;
-  font-family: "Mukta", sans-serif;
-  font-size: 0.8rem;
+  font-family: "Karla", sans-serif;
+  font-size: 0.875rem;
   letter-spacing: 0.02em;
 }
 
@@ -46,12 +46,12 @@
 
 /* ── Eyebrow ── */
 .project__eyebrow {
-  font-family: "Mukta", sans-serif;
-  font-size: 0.75rem;
+  font-family: "Karla", sans-serif;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   margin: 0 0 1rem;
 }
 
@@ -93,7 +93,7 @@
   margin-top: 0;
 }
 
-.project__desc h3 {
+.project__desc h2 {
   font-family: "Kanit", sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
@@ -102,14 +102,14 @@
   margin: 2rem 0 0.5rem;
 }
 
-.project__desc h3:first-child {
+.project__desc h2:first-child {
   margin-top: 0;
 }
 
 .project__desc p,
 .project__desc li {
   color: var(--text-muted);
-  font-size: 0.975rem;
+  font-size: 1rem;
 }
 
 .project__desc p + p {
@@ -135,8 +135,8 @@
 }
 
 .info-block-title {
-  font-family: "Mukta", sans-serif;
-  font-size: 0.68rem;
+  font-family: "Karla", sans-serif;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -162,7 +162,7 @@
   background: transparent;
   color: var(--text-muted);
   text-decoration: none;
-  font-family: "Mukta", sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   transition:
@@ -199,15 +199,35 @@
 }
 
 /* ── Technologies ── */
+/* The "·" sits in the gap before each item. overflow: hidden clips it
+   for the first item of every line, so no line starts or ends with one. */
 .info__tech-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0 1.2em;
   margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
   color: var(--text);
   font-size: 0.9rem;
   line-height: 1.65;
 }
 
-.info__tech-list .sep {
-  padding: 0 0.25rem;
+.info__tech {
+  position: relative;
+  white-space: nowrap;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.info__tech::before {
+  content: "·" / "";
+  position: absolute;
+  right: 100%;
+  width: 1.2em;
+  text-align: center;
 }
 
 /* ── Year ── */
@@ -234,8 +254,8 @@
 
 .project-pager__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 2rem;
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
   max-width: calc(var(--max-width) + 2 * var(--page-padding-x-mobile));
   margin: 0 auto;
   padding: 0 var(--page-padding-x-mobile);
@@ -264,7 +284,6 @@
 }
 
 .project-pager__link.next {
-  grid-column: 2;
   justify-content: flex-end;
 }
 
@@ -298,8 +317,8 @@
   display: flex;
   align-items: center;
   gap: 0.375rem;
-  font-family: "Mukta", sans-serif;
-  font-size: 0.7rem;
+  font-family: "Karla", sans-serif;
+  font-size: 0.875rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--text-dim);
@@ -341,9 +360,14 @@
   }
 
   .project-pager__inner {
+    grid-template-columns: 1fr 1fr;
     column-gap: 2.5rem;
     max-width: calc(var(--max-width) + 2 * var(--page-padding-x));
     padding: 0 var(--page-padding-x);
+  }
+
+  .project-pager__link.next {
+    grid-column: 2;
   }
 
   .project__grid {

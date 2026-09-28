@@ -4,13 +4,10 @@
 
     <div class="hero__inner">
         <div class="hero__text reveal-left">
-            <p class="hero__eyebrow">Full-Stack Webentwicklerin</p>
-            <h1 class="hero__name">
-                <span class="hero__name-first">Ines</span>
-                <span class="hero__name-last">Heilmann</span>
-            </h1>
+            <p class="hero__eyebrow"><span class="hero__eyebrow-part">Ines Heilmann</span><span class="hero__eyebrow-sep" aria-hidden="true"> · </span> <span class="hero__eyebrow-part">Full-Stack-Webentwicklerin</span></p>
+            <h1 class="hero__headline">Von der Idee zur fertigen Lösung</h1>
             <p class="hero__desc">
-                Ich entwickle durchdachte Webanwendungen von der Idee bis zur fertigen Lösung. Mit Blick für Design und Nutzererfahrung.
+                Ich verbinde solide Technik mit einem Blick für Design, damit am Ende etwas entsteht, das Menschen gerne nutzen.
             </p>
             <div class="hero__action">
                 <a href="<?php echo $baseURL?>#projects" class="btn-primary">

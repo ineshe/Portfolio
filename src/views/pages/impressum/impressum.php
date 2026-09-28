@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <?php
     $pageTitle = 'Impressum | Ines Heilmann';
+    $pageDescription = 'Impressum der Website von Ines Heilmann mit Anbieterangaben, Kontaktdaten und Haftungshinweisen.';
     $pageStyles = [
         '/css/components/projects.css',
     ];
@@ -21,19 +22,19 @@
             <main>
                 <article id="project" class="section">
                     <div class="content">
-                        <h2 class="section-heading">Impressum</h2>
+                        <h1 class="section-heading">Impressum<span class="accent">.</span></h1>
                         <div class="grid">
-                            <h3>Angaben gemäß § 5 DDG</h3>
+                            <h2 class="content-subheading">Angaben gemäß § 5 DDG</h2>
                             <p>Ines Heilmann<br> 
                                 Neugasse 11<br> 
                                 09306 Königsfeld<br> 
                             </p>
-                            <h3>Kontakt:</h3>
+                            <h2 class="content-subheading">Kontakt:</h2>
                             <p>
                                 Telefon: <a href="tel:+4917655923795">+49 176 55923795</a><br>
                                 E-Mail: <span class="js-mail" data-user="tcatnoc" data-domain="ed.nnamlieh-seni"><noscript>contact (at) ines-heilmann.de</noscript></span>
                             </p>
-                            <h3>Haftungsausschluss: </h3>
+                            <h2 class="content-subheading">Haftungsausschluss:</h2>
                             <p>
 
                                 <strong>Haftung für Links</strong><br>

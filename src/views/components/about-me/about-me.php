@@ -3,7 +3,7 @@
     <div class="about-inner">
         <div class="reveal">
             <p class="section-eyebrow">Über mich</p>
-            <h2 class="section-heading" style="margin-bottom: 24px;">Ines Heilmann</h2>
+            <h2 class="section-heading" style="margin-bottom: 24px;">Ines Heilmann<span class="accent">.</span></h2>
             <p class="about-text">
                 Hallo, ich bin Ines. Mein technischer Schwerpunkt liegt auf PHP und Symfony im Backend sowie React im Frontend.
             </p>

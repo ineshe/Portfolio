@@ -1,6 +1,6 @@
 <header class="top-bar">
     <div class="content">
-        <button id="hamburger" aria-label="Navigation öffnen" aria-expanded="false">
+        <button type="button" id="hamburger" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="main-nav">
             <span class="line line-1"></span>
             <span class="line line-2"></span>
             <span class="line line-3"></span>
