@@ -15,7 +15,8 @@ switch ($request) {
 
         $projects = json_decode(file_get_contents(dirname(__DIR__, 1).'/src/data/projects.json'), true);
 
-        if (array_key_exists($matches[1], $projects)) {
+        // Unpublished projects (visibility other than "1") stay offline, even by direct link.
+        if (($projects[$matches[1]]['visibility'] ?? '0') === '1') {
             require $viewDir . '/pages/project-detail/project-detail.php';
         } else {
             http_response_code(404);
