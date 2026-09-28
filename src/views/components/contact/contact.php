@@ -18,7 +18,7 @@
     <div class="contact-inner reveal">
         <div class="contact-header">
             <p class="section-eyebrow">Zusammenarbeiten?</p>
-            <h2 class="section-heading" style="margin-bottom: 16px;">Kontakt</h2>
+            <h2 class="section-heading" style="margin-bottom: 16px;">Kontakt<span class="accent">.</span></h2>
             <p class="contact-sub">Schreiben Sie mir gerne. Ich freue mich auf Ihre Nachricht.</p>
         </div>
 

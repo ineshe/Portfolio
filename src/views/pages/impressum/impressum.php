@@ -22,7 +22,7 @@
             <main>
                 <article id="project" class="section">
                     <div class="content">
-                        <h1 class="section-heading">Impressum</h1>
+                        <h1 class="section-heading">Impressum<span class="accent">.</span></h1>
                         <div class="grid">
                             <h2 class="content-subheading">Angaben gemäß § 5 DDG</h2>
                             <p>Ines Heilmann<br> 

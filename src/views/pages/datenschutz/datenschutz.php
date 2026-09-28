@@ -21,7 +21,7 @@
                     <div class="content">
                         <header class="legal-header">
                             <p class="section-eyebrow">Rechtliches</p>
-                            <h1 class="section-heading">Datenschutz&shy;erklärung</h1>
+                            <h1 class="section-heading">Datenschutz&shy;erklärung<span class="accent">.</span></h1>
                             <p class="legal-updated">Stand: 28. September 2026</p>
                         </header>
                         <div class="legal-layout">

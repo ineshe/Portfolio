@@ -7,7 +7,7 @@
     <div class="projects-inner">
         <div class="projects-header reveal">
             <p class="section-eyebrow">Ausgewählte Arbeiten</p>
-            <h2 class="section-heading">Projekte</h2>
+            <h2 class="section-heading">Projekte<span class="accent">.</span></h2>
         </div>
 
         <ul class="project-cards">

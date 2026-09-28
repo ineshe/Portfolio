@@ -11,7 +11,7 @@ $skills = [
     <div class="skills-inner">
         <div class="skills-header reveal">
             <p class="section-eyebrow">Technologien</p>
-            <h2 class="section-heading">Skills</h2>
+            <h2 class="section-heading">Skills<span class="accent">.</span></h2>
         </div>
 
         <div class="skills-grid">
